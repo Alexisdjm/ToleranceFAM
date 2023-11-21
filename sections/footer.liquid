@@ -152,6 +152,24 @@
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                  {%- when 'mixed' -%}
+                    <div class="flex-column gap-5 footer-block--mixed-box">
+                      <div class="footer-block--mixed-flex">
+                        <div class="footer-block--mixed-img-c">
+                          <img 
+                          src="{{ block.settings.logo | img_url: 'master' }}" 
+                          alt="logo" 
+                          loading="lazy" 
+                          class="footer-block--mixed-img">
+                        </div>
+                        {{ block.settings.Stitle }}
+                      </div>
+                      <div class="footer-block--mixed-text">
+                        {{ block.settings.text_content }}
+                      </div>
+                    </div>
+                  {%- when 'social' -%}
+                    
                 {%- endcase -%}
               </div>
             {%- endfor -%}
@@ -475,6 +493,43 @@
             }
           ],
           "default": "center"
+        }
+      ]
+    },
+    {
+      "name": "mixed",
+      "type": "mixed",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "Stitle",
+          "default": "Store Name",
+          "label": "Store title"
+        },
+        {
+          "type": "richtext",
+          "id": "text_content",
+          "default": "<p>Text</p>",
+          "label": "Text content"
+        }
+      ]
+    },
+    {
+      "name": "social",
+      "type": "social",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick Links",
+          "label": "Block title"
         }
       ]
     }

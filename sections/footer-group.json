@@ -17,14 +17,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "80cd426b-246e-4541-990b-13378575cbfa": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "menu": "main-menu-footer"
           }
         },
         "7c85d032-7617-4f37-9589-0322774e7689": {
@@ -32,20 +25,27 @@
           "settings": {
             "heading": "Follow Us"
           }
+        },
+        "80cd426b-246e-4541-990b-13378575cbfa": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "menu": "legal"
+          }
         }
       },
       "block_order": [
         "aedb606f-cef6-4919-b671-756885ca9acf",
         "3110e1db-4c65-433f-81ce-2215e4e2d489",
-        "80cd426b-246e-4541-990b-13378575cbfa",
-        "7c85d032-7617-4f37-9589-0322774e7689"
+        "7c85d032-7617-4f37-9589-0322774e7689",
+        "80cd426b-246e-4541-990b-13378575cbfa"
       ],
       "settings": {
         "color_scheme": "scheme-c0935eb0-df92-4271-9d6a-6889914d46dc",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,

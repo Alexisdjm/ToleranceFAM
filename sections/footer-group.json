@@ -5,6 +5,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "aedb606f-cef6-4919-b671-756885ca9acf": {
+          "type": "mixed",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Logo_318fa30d-61f7-4859-9d26-f1c0d5da8e1a.png",
+            "Stitle": "TOLERENCE CLOTHING",
+            "text_content": "<p>Tolerence Clothing is a Men's streetwear fashion brand that focus's on sleek and vibrant pieces. We focus on using the highest of quality garments. Tolerence is known for its' bold <br\/>and poppy designs on upscale materials.<\/p>"
+          }
+        },
         "3110e1db-4c65-433f-81ce-2215e4e2d489": {
           "type": "link_list",
           "settings": {
@@ -18,11 +26,19 @@
             "heading": "Quick links",
             "menu": "footer"
           }
+        },
+        "7c85d032-7617-4f37-9589-0322774e7689": {
+          "type": "social",
+          "settings": {
+            "heading": "Quick Links"
+          }
         }
       },
       "block_order": [
+        "aedb606f-cef6-4919-b671-756885ca9acf",
         "3110e1db-4c65-433f-81ce-2215e4e2d489",
-        "80cd426b-246e-4541-990b-13378575cbfa"
+        "80cd426b-246e-4541-990b-13378575cbfa",
+        "7c85d032-7617-4f37-9589-0322774e7689"
       ],
       "settings": {
         "color_scheme": "scheme-c0935eb0-df92-4271-9d6a-6889914d46dc",

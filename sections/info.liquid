@@ -1,0 +1,172 @@
+<style>
+.info.section_padding-{{section.settings.id }}{
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.info__column-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    align-items: start;
+}
+.info__column {
+    text-align: center;
+}
+
+img.info__img {
+    width: 51px;
+    height: 51px;
+    margin-bottom:34px;
+}
+
+.info__heading {
+    color: #1E1E1E;
+    text-align: center;
+    margin:0;
+    margin-bottom:61px;
+    font-family: 'Monument Extended', sans-serif !important;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.info__info-title{
+    color:#101828;
+    margin:0;
+    text-align: center;
+    font-family: 'Monument Extended', sans-serif !important;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
+    text-transform: uppercase;
+}
+.info_sub {
+    color: #475467;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin:0;
+    line-height: 24px; /* 150% */
+}
+.info__data {
+    color: #129F3C;
+}
+
+</style>
+
+<div class="info section_padding-{{section.settings.id }}" >
+    <div class="info__container page-width">
+        <div class="info__inner">
+            <div class="info__title">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'heading' -%}
+                <h2 class="info__heading">{{block.settings.title}}</h2>
+               
+            </div>
+            <div class="info__column-container">
+                {%- when 'Item' -%}
+                <div class="info__column">
+                <img class="info__img"src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.info_title }}">
+                   <h3 class="info__info-title"> {{block.settings.info_title}}</h3>
+                   <p class="info__sub">{{block.settings.info_sub}}</p>
+                   <p class="info__data">{{block.settings.info_data}}</p>
+                </div>
+            {%- endcase -%}
+        {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Info",
+  "tag": "section",
+  "class": "section",
+  "settings": [     
+    {
+    "type": "range",
+    "id": "padding_top",
+    "min": 0,
+    "max": 200,
+    "step": 10,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_top",
+    "default": 120
+    },
+    {
+    "type": "range",
+    "id": "padding_bottom",
+    "min": 0,
+    "max": 200,
+    "step": 10,
+    "unit": "px",
+    "label": "t:sections.all.padding.padding_bottom",
+    "default": 120
+    }
+  ],
+  "blocks":[
+    {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+    },
+    {
+        "type": "Item",
+        "name": "Item",
+        "limit":3,
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "info_title",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "info_sub",
+            "label": "Sub heading"
+        },
+        {
+            "type": "textarea",
+            "id": "info_data",
+            "label": "Sub heading"
+        }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+            "type": "Item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

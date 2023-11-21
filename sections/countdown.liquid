@@ -1,0 +1,224 @@
+<style>
+  .section-{{section.settings.id }} {
+     background-color : {{ section.settings.count_bg }};
+     padding-top: {{ section.settings.padding_top }}px;
+     padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  .countdown__heading{
+    color:  #FFF;
+    font-family: 'Monument Extended', sans-serif !important;
+    font-size: 32px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+    width: 404px;
+    margin:0;
+    margin-bottom: 10px !important;
+  }
+
+  .countdown__desc{
+    color:  #FFF;
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+    margin: 0;
+  }
+  .countdown__col.countdown--timer {
+    display: flex;
+    align-items: center;
+  }
+
+  .countdown__col.countdown--button {
+      display: flex;
+      align-items: center;
+  }
+  .countdown__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+  }
+  .countdown__inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center
+
+  }
+  .countdown__time {
+    text-align: center
+  }
+  .countdown__time p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Monument Extended', sans-serif !important;
+    padding:0;
+    margin:0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .countdown__num{
+    background-color: #0A511F;
+    display: flex;
+    padding: 12px 25px 12px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color:  #FFF;
+    font-family: 'Monument Extended', sans-serif !important;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width:78px;
+    margin-bottom:10px;
+  }
+
+  
+</style>
+<div class="countdown section-{{ section.settings.id }}" >
+    <div class="countdown__container page-width">
+        <div class="countdown__inner-container">
+            <div class="countdown__col countdown--heading">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'heading' -%}
+                    <h3 class="countdown__heading">
+                    {{ block.settings.countdown__heading }}
+                    </h3>
+                  
+                    {%- when 'paragraph' -%}
+                    <p class="countdown__desc"> {{ block.settings.paragraph }}</p>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            <div class="countdown__col countdown--timer">
+              <div class="countdown__content">
+                <div class="countdown__time countdown--days">
+                  <div class="countdown__num">3</div>
+                <p class="countdown__count">DAYS</p>
+                </div>
+                <div class="countdown__time countdown--hours">
+                  <div class="countdown__num">2</div>
+                <p class="countdown__count">HRS</p>
+                </div>
+                <div class="countdown__time countdown--minutes">
+                  <div class="countdown__num">13</div>
+                <p class="countdown__count">MINS</p></div>
+                <div class="countdown__time countdown--seconds">
+                  <div class="countdown__num">53</div>
+              
+                <p class="countdown__count">SECS</p></div>
+              </div>
+            </div>
+            <div class="countdown__col countdown--button">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'button' -%}
+                 
+                  <a href="{{block.settings.button_link}}" class="button button--outline">{{block.settings.btn_label}}</a>
+            
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Countdown",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "count_bg",
+      "label": "Background color",
+      "default": "#073D17"
+    },  
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 54
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 54
+    }
+  ],
+  "blocks":[
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "countdown__heading",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Sub heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "paragraph",
+          "label": "Sub heading"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },{"type":"button"}
+      ]
+    }
+  ]
+}
+{% endschema %}

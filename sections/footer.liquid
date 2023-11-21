@@ -67,7 +67,7 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' or block.type = 'social' %} footer-custom--linklist{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.type == 'mixed' %} footer-custom--mixed{% endif %}"
+                class="footer-block grid__item{% if block.type == 'link_list' or block.type == 'social' %} footer-custom--linklist{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if block.type == 'mixed' %} footer-custom--mixed{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade

@@ -40,6 +40,18 @@
           "settings": {
             "instagram_image": "shopify:\/\/shop_images\/Mask_group_2.png"
           }
+        },
+        "d1e761a9-55de-45fd-9c1d-f3eb4cb7d2fb": {
+          "type": "text",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/Mask_group_4.png"
+          }
+        },
+        "2956db72-29f8-4ccb-aeba-bc4838deee95": {
+          "type": "text",
+          "settings": {
+            "instagram_image": "shopify:\/\/shop_images\/Mask_group_3.png"
+          }
         }
       },
       "block_order": [
@@ -48,7 +60,9 @@
         "e7d56284-3bd9-4173-af65-1fa1fabb9ceb",
         "f81ac57b-6e26-4e55-bb66-83b65b0221ec",
         "ae7b1ada-3204-4c10-b5a6-245aeb80bc1a",
-        "ad4b99ce-adc6-4f6a-8ff3-f7230e08629a"
+        "ad4b99ce-adc6-4f6a-8ff3-f7230e08629a",
+        "d1e761a9-55de-45fd-9c1d-f3eb4cb7d2fb",
+        "2956db72-29f8-4ccb-aeba-bc4838deee95"
       ],
       "settings": {
       }

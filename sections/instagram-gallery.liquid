@@ -1,15 +1,19 @@
-<div class="custom-ig--grandpa">
-  <div>
-    <div>
-      <img>
-      <div>
-        <h1></h1>
-        <p></p>
+<div class="custom-ig--grandpa" style="background-color: {{ section.settings.bg_color }}">
+  <div class="custom-ig--instagram-content">
+    <div class="custom-ig--inner-flex">
+      <img 
+      src="{{ section.settings.logo | img_url: 'master' }}" 
+      class="custom-ig--logo" 
+      loading="lazy" 
+      alt="logo">
+      <div class="custom-ig--text-flex">
+        <h1>{{ section.settings.name }}</h1>
+        {{ section.settings.small_text }}
       </div>
     </div>
-    <a href="" class="custom-ig--redirect">
+    <a href="{{ settings.social_instagram_link }}" class="custom-ig--redirect">
       {%- render 'icon-instagram' -%}
-      Follow us on instagram
+      <p>{{ section.settings.btn }}</p>
     </a>
   </div>
   <div class="custom-ig--father">
@@ -94,6 +98,30 @@
           "type": "image_picker",
           "id": "logo",
           "label": "Logo"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "default": "#FFF",
+            "label": "Background color"
+        },
+        {
+            "type": "text",
+            "id": "name",
+            "default": "@tolerencefam",
+            "label": "Instagram profile"
+        },
+        {
+            "type": "text",
+            "id": "btn",
+            "default": "Follow us on instagram",
+            "label": "Button text"
+        },
+        {
+            "type": "richtext",
+            "id": "small_text",
+            "label": "Followers and following",
+            "default": "<p>default</p>"
         }
       ],
        "presets": [

@@ -38,8 +38,8 @@
 
     prevButton.addEventListener('click', (e) => {
         // currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      if (CcurrentIndex < 0) {
-          CcurrentIndex = Cslides.length - displayed - 1
+      if (currentIndex < 0) {
+          currentIndex = slides.length - displayed - 1
         }
         updateSlider();
         e.preventDefault()

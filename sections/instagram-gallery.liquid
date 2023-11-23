@@ -27,7 +27,7 @@
     let slideWidth = slides[0].clientWidth;
     let currentIndex = 0;
     let displayed = 5
-      console.log(slides.length, currentIndex)
+      console.log(slides.length - displayed)
 
     nextButton.addEventListener('click', (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - displayed);

@@ -65,6 +65,11 @@
         "2956db72-29f8-4ccb-aeba-bc4838deee95"
       ],
       "settings": {
+        "logo": "shopify:\/\/shop_images\/logo_2.png",
+        "bg_color": "#FFF",
+        "name": "@tolerencefam",
+        "btn": "Follow us on instagram",
+        "small_text": "<p>1,352 Followers  |  665 Following<\/p>"
       }
     },
     "footer": {

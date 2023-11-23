@@ -28,7 +28,7 @@
     let currentIndex = 0;
 
     nextButton.addEventListener('click', (e) => {
-        currentIndex = (currentIndex + 1) % (slides.length - 6);
+        currentIndex = (currentIndex + 1) % slides.length;
         updateSlider();
         e.preventDefault()
     });

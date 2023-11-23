@@ -30,14 +30,17 @@
       console.log(slides.length - displayed)
 
     nextButton.addEventListener('click', (e) => {
-        currentIndex = (currentIndex + 1) % (slides.length - displayed);
+      currentIndex = (currentIndex + 1) % (slides.length - displayed);
       console.log(currentIndex)
         updateSlider();
         e.preventDefault()
     });
 
     prevButton.addEventListener('click', (e) => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        // currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      if (CcurrentIndex < 0) {
+          CcurrentIndex = Cslides.length - displayed - 1
+        }
         updateSlider();
         e.preventDefault()
     });

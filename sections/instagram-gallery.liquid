@@ -26,9 +26,11 @@
     const nextButton = document.querySelector('.next-btn--'+id);
     let slideWidth = slides[0].clientWidth;
     let currentIndex = 0;
+    let displayed = 6
+      console.log(slides.length)
 
     nextButton.addEventListener('click', (e) => {
-        currentIndex = (currentIndex + 1) % (slides.length - 6);
+        currentIndex = (currentIndex + 1) % (slides.length - 4);
         updateSlider();
         e.preventDefault()
     });

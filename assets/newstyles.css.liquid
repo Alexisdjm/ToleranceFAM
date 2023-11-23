@@ -309,6 +309,7 @@ li.list-social__item.footer-custom--list p {
 .custom-ig--text-flex {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -320,6 +321,7 @@ li.list-social__item.footer-custom--list p {
     letter-spacing: 0em;
     text-align: left;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .custom-ig--text-flex p {
@@ -329,6 +331,7 @@ li.list-social__item.footer-custom--list p {
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
+    margin: 0;
 }
 
 .custom-ig--logo {
@@ -430,13 +433,27 @@ li.list-social__item.footer-custom--list p {
     }
 }
 
+@media only screen and (min-width: 901px) and (max-width: 1023px) {
+    .custom-ig--instagram-content {
+        margin: 50px auto;
+    }
+
+    .custom-ig--text-flex h1 {
+        font-size: 30px;
+    }
+
+    .custom-ig--instagram-content {
+        padding: 40px 0;
+        max-width: 90%;
+    }
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1120px) {
     .custom-ig--instagram-content {
         margin: 50px auto;
     }
 
     .custom-ig--text-flex h1 {
-        margin: 0;
         font-size: 35px;
     }
 

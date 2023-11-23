@@ -1,18 +1,18 @@
 <div class="custom-ig--grandpa" style="background-color: {{ section.settings.bg_color }}">
   <div class="custom-ig--instagram-content">
     <div class="custom-ig--inner-flex">
-      <!-- <img 
+      <img 
       src="{{ section.settings.logo | img_url: 'master' }}" 
       class="custom-ig--logo" 
       loading="lazy" 
-      alt="logo"> -->
+      alt="logo">
       <div class="custom-ig--text-flex">
         <h1>{{ section.settings.name }}</h1>
         {{ section.settings.small_text }}
       </div>
     </div>
     <a href="{{ settings.social_instagram_link }}" class="custom-ig--redirect">
-      <!-- {%- render 'icon-instagram' -%} -->
+      {%- render 'icon-instagram' -%}
       <p>{{ section.settings.btn }}</p>
     </a>
   </div>

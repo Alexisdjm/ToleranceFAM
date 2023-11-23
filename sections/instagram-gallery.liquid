@@ -1,21 +1,25 @@
-<div class="custom-ig--father">
-    <div id="arrows-container" class="custom--ig-btn-box">
-        <button class="prev-btn--{{ section.id }} ig--btn">&#139;</button>
-        <button class="next-btn--{{ section.id }} ig--btn">&#155;</button>
-    </div>
-    <div class="slider-ig--{{ section.id }} custom-ig--slider">
-        {% for block in section.blocks %}
-        <div class="slide-ig--{{ section.id }} custom-ig--slide">
-            <img 
-            class="custom-ig--img" 
-            src="{{ block.settings.instagram_image | img_url: 'master' }}" 
-            alt="post"
-            loading="lazy">
-            {%- render 'icon-instagram' -%}
-        </div>
-        {% endfor %}      
-    </div>
+<div class="custom-ig--grandpa">
+  
+  <div class="custom-ig--father">
+      <div id="arrows-container" class="custom--ig-btn-box">
+          <button class="prev-btn--{{ section.id }} ig--btn">&#139;</button>
+          <button class="next-btn--{{ section.id }} ig--btn">&#155;</button>
+      </div>
+      <div class="slider-ig--{{ section.id }} custom-ig--slider">
+          {% for block in section.blocks %}
+          <div class="slide-ig--{{ section.id }} custom-ig--slide">
+              <img 
+              class="custom-ig--img" 
+              src="{{ block.settings.instagram_image | img_url: 'master' }}" 
+              alt="post"
+              loading="lazy">
+              {%- render 'icon-instagram' -%}
+          </div>
+          {% endfor %}      
+      </div>
+  </div>
 </div>
+
 
 <script>
     function BuildReviews(id) {

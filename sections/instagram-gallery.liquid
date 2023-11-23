@@ -30,7 +30,7 @@
       console.log(slides.length, currentIndex)
 
     nextButton.addEventListener('click', (e) => {
-        currentIndex = (currentIndex + 1) % (slides.length - displayed - 1);
+        currentIndex = (currentIndex + 1) % (slides.length - displayed);
       console.log(currentIndex)
         updateSlider();
         e.preventDefault()

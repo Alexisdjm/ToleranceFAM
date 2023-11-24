@@ -51,6 +51,12 @@
     let displayed = 5
       console.log(slides.length - displayed)
 
+    if (window.innerWidth <= 1023 && window.innerWidth >= 464 ) {
+      displayed = 3
+    } else if (window.innerWidth <= 464) {
+      displayed = 2
+    }
+
     nextButton.addEventListener('click', (e) => {
       currentIndex = (currentIndex + 1) % (slides.length - displayed);
       console.log(currentIndex)

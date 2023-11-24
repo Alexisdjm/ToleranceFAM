@@ -376,6 +376,96 @@ li.list-social__item.footer-custom--list p {
   color: black;
 }
 
+/* --------------------------------------------------- custom flex section --------------------------------------------------- */
+
+
+.custom-flex--father {
+    width: 1005;
+    margin: 50px 0;
+}
+
+.custom--flex-box {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.custom-flex--centering {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.custom-flex--main-content-box {
+    gap: 0;
+    display: flex;
+    width: fit-content;
+}
+
+.custom-flex--info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 25px;
+    max-width: 480px;
+}
+
+.custom-flex--info-container h1 {
+    font-family: 'Monument Extended', sans-serif !important;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin: none;
+}
+
+.custom-flex--info-container p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin: none;
+
+}
+
+.custom-flex--img-box {
+    width: 550px;
+    height: 570px;
+    overflow: hidden;
+}
+
+.custom-flex--img {
+    width: 100%;
+    height: 100%;
+}
+
+.no-presence {
+    display: none;
+}
+
+.heading-img {
+    display: inline-block;
+}
+
+.custom-flex--btn {
+    display: block;
+    padding: 20px;
+    border: 1.5px solid white;
+    text-transform: uppercase;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    width: fit-content;
+}
+
 /* --------------------------------------------------- media queries --------------------------------------------------------- */
 
 @media only screen and (max-width: 463px) {
@@ -457,6 +547,10 @@ li.list-social__item.footer-custom--list p {
         align-items: center !important;
     }
 
+    .no-presence {
+        display: block;
+    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -514,6 +608,10 @@ li.list-social__item.footer-custom--list p {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+    }
+
+    .no-presence {
+        display: block;
     }
 }
 

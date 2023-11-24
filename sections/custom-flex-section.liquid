@@ -1,0 +1,123 @@
+<div class="custom-flex--father" {% if condition %}{% endif %}>
+    <div class="custom--flex-box">
+        <div class="custom-flex--centering">
+            <div class="custom-flex--main-content-box">
+                <div class="custom-flex--img-box {% if section.settings.align == "left" %}no-presence{% endif %}"">
+                    <img 
+                    src="{{ section.settings.main_img }}" 
+                    alt="main" 
+                    class="custom-flex--img" 
+                    loading="lazy">
+                </div>
+                <div class="custom-flex--info-container">
+                    <h1>{{ section.settings.heading }}</h1>
+                    {% if section.settings.heading_img != blank %}
+                        <img 
+                        src="{{ section.settings.heading_img }}" 
+                        alt="heading" 
+                        class="heading-img" 
+                        loading="lazy">   
+                    {% endif %}
+                    {{ section.settings.content }}
+                    {% if section.settings.btn_url != blank %}
+                        <a href="{{ section.settings.btn_url }}" class="custom-flex--btn">
+                            {{ section.settings.btn_text }}
+                        </a> 
+                    {% endif %}
+                </div>
+                {% if section.settings.align == "left" %}
+                    <div class="custom-flex--img-box">
+                        <img 
+                        src="{{ section.settings.main_img }}" 
+                        alt="main" 
+                        class="custom-flex--img" 
+                        loading="lazy">
+                    </div>  
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "custom flex section",
+        "class": "custom-flex--section",
+        "settings": [
+            {
+                "type": "select",
+                "id": "bg_options",
+                "options": [
+                    {
+                        "label": "image",
+                        "value": "image"
+                    },
+                    {
+                        "label": "color",
+                        "value": "color"
+                    }
+                ],
+                "default": "image",
+                "label": "Background content"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_img",
+                "label": "Background image"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background color"
+            },
+            {
+                "type": "select",
+                "id": "align",
+                "options": [
+                    {
+                        "label": "left",
+                        "value": "left"
+                    },
+                    {
+                        "label": "right",
+                        "value": "right"
+                    }
+                ],
+                "default": "left",
+                "label": "Image position"
+            },
+            {
+                "type": "image_picker",
+                "id": "main_img",
+                "label": "Main image"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "default": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "image_picker",
+                "id": "heading_img",
+                "label": "Heading img"
+            },
+            {
+                "type": "richtext",
+                "id": "content",
+                "default": "<p>content</p>",
+                "label": "Content"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Link"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button text"
+            }
+        ]
+    }
+{% endschema %}

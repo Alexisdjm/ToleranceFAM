@@ -1,4 +1,5 @@
-<div class="custom-flex--father" {% if condition %}{% endif %}>
+<div class="custom-flex--father" {% if section.settings.bg_options == "image" %}
+style="background-image: url('{{ section.settings.bg_img }}');"{% else% %}style="background-color: {{ section.settings.bg_color }}"{% endif %}>
     <div class="custom--flex-box">
         <div class="custom-flex--centering">
             <div class="custom-flex--main-content-box">

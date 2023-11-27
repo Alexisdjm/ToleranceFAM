@@ -121,6 +121,21 @@
         "padding_bottom": 95
       }
     },
+    "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7": {
+      "type": "custom-flex-section",
+      "settings": {
+        "bg_options": "image",
+        "bg_img": "shopify:\/\/shop_images\/Diseno_sin_titulo.png",
+        "bg_color": "",
+        "align": "left",
+        "main_img": "shopify:\/\/shop_images\/img-what-is-tolerence.png",
+        "heading": "What is",
+        "heading_img": "shopify:\/\/shop_images\/ezgif_2.png",
+        "content": "<p>Tolerence Clothing is a Men's streetwear fashion brand that focus's on sleek and vibrant pieces. We focus on using the highest of quality garments. Tolerence is known for its' bold and poppy designs on upscale materials. Our main products are luxury fashion tees but have since made more custom pieces like denim jackets, hats, bags and other accessories. As our fanbase grows, so does Tolerence- So thank you for your support!<\/p>",
+        "btn_url": "shopify:\/\/collections",
+        "btn_text": "learn more"
+      }
+    },
     "8409f8ee-206c-4d21-9a59-586783a5ef39": {
       "type": "info",
       "blocks": {
@@ -168,21 +183,6 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
-    },
-    "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7": {
-      "type": "custom-flex-section",
-      "settings": {
-        "bg_options": "image",
-        "bg_img": "shopify:\/\/shop_images\/Diseno_sin_titulo.png",
-        "bg_color": "",
-        "align": "left",
-        "main_img": "shopify:\/\/shop_images\/img-what-is-tolerence.png",
-        "heading": "What is",
-        "heading_img": "shopify:\/\/shop_images\/ezgif_2.png",
-        "content": "<p>Tolerence Clothing is a Men's streetwear fashion brand that focus's on sleek and vibrant pieces. We focus on using the highest of quality garments. Tolerence is known for its' bold and poppy designs on upscale materials. Our main products are luxury fashion tees but have since made more custom pieces like denim jackets, hats, bags and other accessories. As our fanbase grows, so does Tolerence- So thank you for your support!<\/p>",
-        "btn_url": "shopify:\/\/collections",
-        "btn_text": "learn more"
-      }
     }
   },
   "order": [
@@ -190,7 +190,7 @@
     "b9674fab-dd8d-4300-8c15-df92fc6f866e",
     "c9af4edb-2653-4518-8aa6-215df3d5984e",
     "727f0c05-c732-4a1a-bf29-635a1b0f6300",
-    "8409f8ee-206c-4d21-9a59-586783a5ef39",
-    "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7"
+    "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
+    "8409f8ee-206c-4d21-9a59-586783a5ef39"
   ]
 }

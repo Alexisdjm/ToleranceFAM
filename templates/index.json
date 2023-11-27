@@ -190,14 +190,14 @@
         "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "JOIN OUR MAILING LIST",
             "heading_size": "h1"
           }
         },
         "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "text": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
           }
         },
         "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-email_form-1": {

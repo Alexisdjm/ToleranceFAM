@@ -47,13 +47,11 @@
                   </label>
                   <button
                     type="submit"
-                    class="newsletter-form__button field__button"
+                    class="new-email--submit-btn"
                     name="commit"
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
-                  >
-                    {% render 'icon-arrow' %}
-                  </button>
+                  >Shop now</button>
                 </div>
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">

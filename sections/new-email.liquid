@@ -5,10 +5,8 @@
                 {% for block in section.blocks %}
                     {% case block.type %}
                     {% when 'heading' %}
-                        <h1 style="color: {{ section.settings.font_color }}">{{ block.settings.heading }}</h1>
+                        <h1>{{ block.settings.heading }}</h1>
                     {% when 'paragraph' %}   
-                        <p style="color: {{ section.settings.font_color }}">
-                        </p> 
                         {{ block.settings.paragraph }}
                     {% endcase %}
                 {% endfor %}
@@ -105,7 +103,7 @@
                 "limit": 3,
                 "settings": [
                     {
-                        "type": "inline_richtext",
+                        "type": "richtext",
                         "id": "paragraph",
                         "label": "Paragraph"
                     }
@@ -119,10 +117,20 @@
                 "label": "Background image"
             },
             {
-                "type": "color",
+                "type": "select",
                 "id": "font_color",
-                "label": "Font color",
-                "default": "#000000"
+                "options": [
+                    {
+                        "label": "white",
+                        "value": "font-white"
+                    },
+                    {
+                        "label": "black",
+                        "value": "font-black"
+                    }
+                ],
+                "default": "font-white",
+                "label": "Font color"
             },
             {
                 "type": "select",

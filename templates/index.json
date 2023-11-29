@@ -234,8 +234,9 @@
         "61d3fd52-f39e-47d1-8c1b-7da5af8fee86"
       ],
       "settings": {
+        "img_bg": "shopify:\/\/shop_images\/banner_291dfb2a-c5ae-4367-ac00-bb6e6439a31a.png",
         "font_color": "#fff",
-        "layout": "normal"
+        "layout": "flex"
       }
     }
   },

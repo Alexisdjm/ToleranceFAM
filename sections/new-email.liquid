@@ -1,7 +1,7 @@
 <div class="new-email--father" style="background-image: url('{{ section.settings.img_bg | img_url: "master" }}');">
     <div class="new-email--flex-box">
         <div class="new-email--first-flex">
-            <div class="new-email--flex-container">
+            <div class="new-email--flex-container {{ section.settings.font_color }}">
                 {% for block in section.blocks %}
                     {% case block.type %}
                     {% when 'heading' %}

@@ -199,23 +199,43 @@
           "settings": {
             "text": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
           }
-        },
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-email_form-1": {
-          "type": "email_form",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1",
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1",
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-email_form-1"
+        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "841f9ef5-96ce-452f-a01c-41b4da03c8dd": {
+      "type": "new-email",
+      "blocks": {
+        "60eedb4b-253d-4aad-9960-af392396f2bd": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN OUR MAILING LIST"
+          }
+        },
+        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "60eedb4b-253d-4aad-9960-af392396f2bd",
+        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86"
+      ],
+      "settings": {
+        "font_color": "#fff",
+        "layout": "normal"
       }
     }
   },
@@ -226,6 +246,7 @@
     "727f0c05-c732-4a1a-bf29-635a1b0f6300",
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
     "8409f8ee-206c-4d21-9a59-586783a5ef39",
-    "cfb1e7b1-80e7-471a-ac25-fc394da51c63"
+    "cfb1e7b1-80e7-471a-ac25-fc394da51c63",
+    "841f9ef5-96ce-452f-a01c-41b4da03c8dd"
   ]
 }

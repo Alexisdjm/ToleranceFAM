@@ -1,6 +1,6 @@
 <div class="new-email--father" style="background-image: url('{{ section.settings.img_bg | img_url: "master" }}');">
     <div class="new-email--flex-box">
-        <div class="{{ section.settings.layout }} ddddd">
+        <div class="{{ section.settings.layout }}">
             <div class="new-email--flex-container {{ section.settings.font_color }}">
                 {% for block in section.blocks %}
                     {% case block.type %}
@@ -140,7 +140,7 @@
                         "value": "new-email--first-flex-column"
                     },
                     {
-                        "label": "flex",
+                        "label": "new-email--first-flex",
                         "value": "new-email--first-flex"
                     }
                 ],

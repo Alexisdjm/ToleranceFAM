@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
     font-family: "Monument Extended";
     src: url("https://db.onlinewebfonts.com/t/440b48c0e71d1803a24ba06df2ae32bf.eot");
     src: url("https://db.onlinewebfonts.com/t/440b48c0e71d1803a24ba06df2ae32bf.eot?#iefix")format("embedded-opentype"),
@@ -15,7 +15,7 @@
     url("https://db.onlinewebfonts.com/t/6d4c9315edad6d3ac4004ba4ae456a21.woff")format("woff"),
     url("https://db.onlinewebfonts.com/t/6d4c9315edad6d3ac4004ba4ae456a21.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/6d4c9315edad6d3ac4004ba4ae456a21.svg#Plus Jakarta Sans")format("svg");
-  } */
+  }
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Monument Extended', sans-serif !important;
 }

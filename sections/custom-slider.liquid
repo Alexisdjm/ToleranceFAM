@@ -1,3 +1,5 @@
+{% assign selected_collection = collections[section.settings.product_slides] %}
+
 <div class="custom-slider--father">
     <div class="custom-slider--main-container">
         <div class="custom-slider--top-content">
@@ -14,7 +16,7 @@
         <div class="custom-slider--first-slider-container">
             <div class="custom-slider--slider">
                 {% if section.settings.content == "products" %}
-                    {% for product in section.settings.product_slides %}
+                    {% for product in selected_collection.products %}
                         <div class="custom-product--cart">
                             <img 
                             src="{{ product.media[1] | img_url: 'master' }}" 

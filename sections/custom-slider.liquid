@@ -1,0 +1,145 @@
+<div class="custom-slider--father">
+    <div class="custom-slider--main-container">
+        <div class="custom-slider--top-content">
+            <h1>{{ section.settings.heading }}</h1>
+            <div class="custom-slider--arrows">
+                <button class="custom-slider--arrows" id="prev-btn">
+                    <span>{% render 'reviews-left-arrow' %}</span>
+                </button>
+                <button class="custom-slider--arrows" id="next-btn">
+                    <span>{% render 'reviews-right-arrow' %}</span>
+                </button>
+            </div>
+        </div>
+        <div class="custom-slider--first-slider-container" style="display: none;">
+            <div class="custom-slider--slider">
+                {% if section.settings.content == "products" %}
+                    {% for product in section.settings.product_slides %}
+                        <div class="custom-product--cart">
+                            <img 
+                            src="{{ product.media[1] | img_url: 'master' }}" 
+                            alt="product pic" 
+                            class="product-pic" 
+                            loading="lazy">
+                            <div class="custom-product--cart--text">
+                                <h1>{{ product.title }}</h1>
+                            </div>
+                            <p>{{ product.price |  money_without_trailing_zeros }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'review' %}
+                                <div class="reviews-block--container">
+                                    <div class="reviews-block--flex-column">
+                                        <img 
+                                        src="{{ block.settings.stars | img_url: 'master' }}" 
+                                        alt="stars" 
+                                        class="stars" 
+                                        loading="lazy">
+                                        <h1>{{ block.settings.heading }}</h1>
+                                        {{ block.settings.text }}
+                                        <div class="reviews-block--profile">
+                                            <img 
+                                            src="{{ block.settings.profile_pic | img_url: 'master' }}" 
+                                            alt="profile pic" 
+                                            loading="lazy" 
+                                            class="profile-pic">
+                                            {{ block.settings.profile_info }}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        {% endcase %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "custom slider",
+        "class": "custom-slider--new",
+        "blocks": [
+            {
+                "name": "review",
+                "type": "review",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "stars",
+                        "label": "Review's stars"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Heading"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "<p>Text</p>"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "profile_pic",
+                        "label": "Profile pic"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "profile_info",
+                        "label": "<p>Profile info</p>"
+                    }
+                ]
+            }
+        ],
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Main heading"
+            },
+            {
+               "type": "select",
+               "id": "content",
+               "label": "Choose content type",
+               "options": [
+                    {
+                        "value": "products",
+                        "label": "products"
+                    },
+                    {
+                        "label": "reviews",
+                        "value": "reviews"
+                    }
+               ]
+            },
+            {
+                "type": "collection",
+                "id": "product_slides",
+                "label": "Collection"
+            },
+            {
+                "type": "collection_list",
+                "id": "collections",
+                "label": "Colllection list"
+            },
+            {
+                "type": "checkbox",
+                "id": "dots",
+                "default": true,
+                "label": "Progress bars"
+            },
+            {
+                "type": "checkbox",
+                "id": "align",
+                "default": true,
+                "label": "Align to the left"
+            }
+        ]
+    }
+{% endschema %}

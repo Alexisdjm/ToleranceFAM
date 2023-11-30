@@ -238,6 +238,23 @@
         "font_color": "font-white",
         "layout": "new-email--first-flex-column"
       }
+    },
+    "6796f422-54a1-4b49-b481-32eed23ec006": {
+      "type": "custom-slider",
+      "settings": {
+        "heading": "our happy customers",
+        "content": "products",
+        "product_slides": "consectetur",
+        "collections": [
+          "mens",
+          "womens",
+          "consectetur",
+          "frontpage",
+          "lorem-ipsum"
+        ],
+        "dots": false,
+        "align": false
+      }
     }
   },
   "order": [
@@ -248,6 +265,7 @@
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
     "8409f8ee-206c-4d21-9a59-586783a5ef39",
     "cfb1e7b1-80e7-471a-ac25-fc394da51c63",
-    "841f9ef5-96ce-452f-a01c-41b4da03c8dd"
+    "841f9ef5-96ce-452f-a01c-41b4da03c8dd",
+    "6796f422-54a1-4b49-b481-32eed23ec006"
   ]
 }

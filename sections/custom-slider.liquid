@@ -15,6 +15,7 @@
         </div>
         <div class="custom-slider--first-slider-container">
             <div class="custom-slider--slider">
+              <div class="custom-slider--inner-box">             
                 {% if section.settings.content == "products" %}
                     {% for product in selected_collection.products %}
                         <div class="custom-product--cart">
@@ -56,6 +57,7 @@
                         {% endcase %}
                     {% endfor %}
                 {% endif %}
+              </div>
             </div>
         </div>
     </div>

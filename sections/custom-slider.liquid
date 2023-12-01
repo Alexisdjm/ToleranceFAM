@@ -79,15 +79,17 @@
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
 
-    function actualizarVariable(layoutt, l1, l2) {
+    function actualizarVariable(layoutt, l1, l2, l3) {
       if (layoutt == "products") {
         slides = l1;
       } else if (layoutt == "reviews") {
         slides = l2;
+      } else if (layoutt == "collections") {
+        slides = l3;
       }
     }
     
-    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"));
+    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"));
 
     // console.log(document.querySelectorAll(".product--{{ section.id }}").length, slides.length)
     

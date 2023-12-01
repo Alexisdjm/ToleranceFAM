@@ -99,12 +99,12 @@
     
     nextButton.addEventListener("click", (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - viewBreaker);
-        CupdateSlider();
+        updateSlider();
         e.preventDefault();
     });
     
     prevButton.addEventListener("click", (e) => {
-        CcurrentIndex = (CcurrentIndex - 1 + Cslides.length) % Cslides.length;
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         // currentIndex = currentIndex - 1;
         // if (currentIndex < 0) {
         //   currentIndex = slides.length - viewBreaker - 1

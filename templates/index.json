@@ -134,6 +134,24 @@
         "padding_bottom": 95
       }
     },
+    "e97eba54-f762-4bf7-9cba-0b9130c3e233": {
+      "type": "custom-slider",
+      "settings": {
+        "heading": "Featured Collections",
+        "content": "collections",
+        "product_slides": "",
+        "collections": [
+          "consectetur",
+          "lorem-ipsum",
+          "lorem-collection",
+          "lorem-collection-1",
+          "mens",
+          "womens"
+        ],
+        "dots": true,
+        "align": "centeer"
+      }
+    },
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7": {
       "type": "custom-flex-section",
       "settings": {
@@ -358,6 +376,7 @@
     "c9af4edb-2653-4518-8aa6-215df3d5984e",
     "5b835158-4eff-43c9-ad91-b61ae799150d",
     "727f0c05-c732-4a1a-bf29-635a1b0f6300",
+    "e97eba54-f762-4bf7-9cba-0b9130c3e233",
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
     "6796f422-54a1-4b49-b481-32eed23ec006",
     "cfb1e7b1-80e7-471a-ac25-fc394da51c63",

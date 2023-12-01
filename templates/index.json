@@ -253,7 +253,7 @@
           "lorem-ipsum"
         ],
         "dots": false,
-        "align": false
+        "align": "right"
       }
     }
   },

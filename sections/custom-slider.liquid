@@ -39,6 +39,12 @@
                             <h1>{{ collection.title }}</h1>
                         </a>
                     {% endfor %}
+                    {% elsif section.settings.content == "videos" %}
+                        {% for collection in section.settings.collections %}
+                            <video width="230" height="400" controls>
+                                <source src="{{ block.settings.video }}" type="video/mp4">
+                            </video>
+                        {% endfor %}
                 {% elsif section.settings.content == "reviews" %}
                     {% for block in section.blocks %}
                         {% case block.type %}
@@ -174,6 +180,17 @@
                         "label": "<p>Profile info</p>"
                     }
                 ]
+            }, 
+            {
+                "name": "video",
+                "type": "video",
+                "settings": [
+                    {
+                        "type": "video_url",
+                        "id": "video",
+                        "label": "Video"
+                    }
+                ]
             }
         ],
         "settings": [
@@ -195,9 +212,13 @@
                         "label": "reviews",
                         "value": "reviews"
                     },
-                 {
+                    {
                         "label": "collections",
                         "value": "collections"
+                    },
+                    {
+                        "label": "videos",
+                        "value": "videos"
                     }
                ]
             },

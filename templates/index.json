@@ -136,109 +136,6 @@
         "btn_text": "learn more"
       }
     },
-    "8409f8ee-206c-4d21-9a59-586783a5ef39": {
-      "type": "info",
-      "blocks": {
-        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-heading-1": {
-          "type": "heading",
-          "settings": {
-            "title": "Need help deciding?"
-          }
-        },
-        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-Item-1": {
-          "type": "Item",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/Icon_1.svg",
-            "info_title": "Chat with Us",
-            "info_sub": "Speak to our friendly team.",
-            "info_data": "sales@tolerenceclothing.com"
-          }
-        },
-        "0069c811-e16c-426b-9705-7c47c5cc43cc": {
-          "type": "Item",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/marker-pin-02.svg",
-            "info_title": "Visit Us",
-            "info_sub": "Mon-Fri 9am to 5pm.",
-            "info_data": "50 Flinders Street  <br> Melbourne VIC 3000 AU"
-          }
-        },
-        "a256a0f0-009d-425f-9634-61f598242e4f": {
-          "type": "Item",
-          "settings": {
-            "icon": "shopify:\/\/shop_images\/Icon.svg",
-            "info_title": "Call Us",
-            "info_sub": "Mon-Fri 9am to 5pm.",
-            "info_data": "100 Smith Street  <br>Collingwood VIC 3066 AU"
-          }
-        }
-      },
-      "block_order": [
-        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-heading-1",
-        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-Item-1",
-        "0069c811-e16c-426b-9705-7c47c5cc43cc",
-        "a256a0f0-009d-425f-9634-61f598242e4f"
-      ],
-      "settings": {
-        "padding_top": 120,
-        "padding_bottom": 120
-      }
-    },
-    "cfb1e7b1-80e7-471a-ac25-fc394da51c63": {
-      "type": "newsletter",
-      "blocks": {
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "JOIN OUR MAILING LIST",
-            "heading_size": "h1"
-          }
-        },
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1",
-        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "841f9ef5-96ce-452f-a01c-41b4da03c8dd": {
-      "type": "new-email",
-      "blocks": {
-        "60eedb4b-253d-4aad-9960-af392396f2bd": {
-          "type": "heading",
-          "settings": {
-            "heading": "JOIN OUR MAILING LIST"
-          }
-        },
-        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "60eedb4b-253d-4aad-9960-af392396f2bd",
-        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86"
-      ],
-      "settings": {
-        "img_bg": "shopify:\/\/shop_images\/banner_291dfb2a-c5ae-4367-ac00-bb6e6439a31a.png",
-        "font_color": "font-white",
-        "layout": "new-email--first-flex-column"
-      }
-    },
     "6796f422-54a1-4b49-b481-32eed23ec006": {
       "type": "custom-slider",
       "blocks": {
@@ -337,6 +234,109 @@
         "dots": false,
         "align": "right"
       }
+    },
+    "cfb1e7b1-80e7-471a-ac25-fc394da51c63": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN OUR MAILING LIST",
+            "heading_size": "h1"
+          }
+        },
+        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-heading-1",
+        "template--21570283831570__cfb1e7b1-80e7-471a-ac25-fc394da51c63-paragraph-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "841f9ef5-96ce-452f-a01c-41b4da03c8dd": {
+      "type": "new-email",
+      "blocks": {
+        "60eedb4b-253d-4aad-9960-af392396f2bd": {
+          "type": "heading",
+          "settings": {
+            "heading": "JOIN OUR MAILING LIST"
+          }
+        },
+        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Sign up to our newsletter to receive information regarding exclusive collection previews, special events, and seasonal sale offers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "60eedb4b-253d-4aad-9960-af392396f2bd",
+        "61d3fd52-f39e-47d1-8c1b-7da5af8fee86"
+      ],
+      "settings": {
+        "img_bg": "shopify:\/\/shop_images\/banner_291dfb2a-c5ae-4367-ac00-bb6e6439a31a.png",
+        "font_color": "font-white",
+        "layout": "new-email--first-flex-column"
+      }
+    },
+    "8409f8ee-206c-4d21-9a59-586783a5ef39": {
+      "type": "info",
+      "blocks": {
+        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Need help deciding?"
+          }
+        },
+        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-Item-1": {
+          "type": "Item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Icon_1.svg",
+            "info_title": "Chat with Us",
+            "info_sub": "Speak to our friendly team.",
+            "info_data": "sales@tolerenceclothing.com"
+          }
+        },
+        "0069c811-e16c-426b-9705-7c47c5cc43cc": {
+          "type": "Item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/marker-pin-02.svg",
+            "info_title": "Visit Us",
+            "info_sub": "Mon-Fri 9am to 5pm.",
+            "info_data": "50 Flinders Street  <br> Melbourne VIC 3000 AU"
+          }
+        },
+        "a256a0f0-009d-425f-9634-61f598242e4f": {
+          "type": "Item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Icon.svg",
+            "info_title": "Call Us",
+            "info_sub": "Mon-Fri 9am to 5pm.",
+            "info_data": "100 Smith Street  <br>Collingwood VIC 3066 AU"
+          }
+        }
+      },
+      "block_order": [
+        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-heading-1",
+        "template--21559637311762__8409f8ee-206c-4d21-9a59-586783a5ef39-Item-1",
+        "0069c811-e16c-426b-9705-7c47c5cc43cc",
+        "a256a0f0-009d-425f-9634-61f598242e4f"
+      ],
+      "settings": {
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
     }
   },
   "order": [
@@ -345,9 +345,9 @@
     "c9af4edb-2653-4518-8aa6-215df3d5984e",
     "727f0c05-c732-4a1a-bf29-635a1b0f6300",
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
-    "8409f8ee-206c-4d21-9a59-586783a5ef39",
+    "6796f422-54a1-4b49-b481-32eed23ec006",
     "cfb1e7b1-80e7-471a-ac25-fc394da51c63",
     "841f9ef5-96ce-452f-a01c-41b4da03c8dd",
-    "6796f422-54a1-4b49-b481-32eed23ec006"
+    "8409f8ee-206c-4d21-9a59-586783a5ef39"
   ]
 }

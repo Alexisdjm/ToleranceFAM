@@ -82,6 +82,8 @@
     
     actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"));
 
+    console.log(slides.length)
+    
     const prevButton = document.getElementById("prev--"+id);
     const nextButton = document.getElementById("next--"+id);
     const slideWidth = slides[0].offsetWidth;

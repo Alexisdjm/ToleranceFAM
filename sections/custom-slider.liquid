@@ -70,18 +70,11 @@
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
     
-    const updateV = (iid) => {
-      let newV = ''
-      if (layout === "products") {
-          newV = document.querySelectorAll(".review-slide--"+iid);
-          slides = newV
-      } else if (layout === "reviews") {
-          newV = document.querySelectorAll(".product--"+iid);
-          slides = newV
-      }   
+    const updateV = (newV, vari) => {
+      vari = newV
     }
 
-    updateV(id)
+    updateV("qlllllll", slides)
 
     console.log(slides)
 

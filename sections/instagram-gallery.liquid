@@ -49,7 +49,6 @@
     let slideWidth = slides[0].clientWidth;
     let currentIndex = 0;
     let displayed = 5
-      console.log(slides.length - displayed)
 
     if (window.innerWidth <= 1023 && window.innerWidth >= 464 ) {
       displayed = 3
@@ -59,7 +58,6 @@
 
     nextButton.addEventListener('click', (e) => {
       currentIndex = (currentIndex + 1) % (slides.length - displayed);
-      console.log(currentIndex)
         updateSlider();
         e.preventDefault()
     });
@@ -73,7 +71,6 @@
     });
 
     function updateSlider() {
-      console.log(slideWidth)
         const translateX = -currentIndex * slideWidth;
         slider.style.transform = `translateX(${translateX}px)`;
     }

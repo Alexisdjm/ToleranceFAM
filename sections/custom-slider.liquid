@@ -125,6 +125,7 @@
     });
     
     function updateSlider() {
+      console.log(currentIndex)
         const offset = -currentIndex * (slideWidth + 50);
         slider.style.transform = `translateX(${offset}px)`;
     }

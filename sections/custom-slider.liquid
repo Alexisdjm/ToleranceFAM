@@ -39,14 +39,7 @@
                             <h1>{{ collection.title }}</h1>
                         </a>
                     {% endfor %}
-                    {% elsif section.settings.content == "videos" %}
-                        {% for collection in section.settings.collections %}
-                          <p>qlq</p>
-                            <video width="230" height="400" controls>
-                                <source src="{{ block.settings.video }}" type="video/mp4">
-                            </video>
-                        {% endfor %}
-                {% elsif section.settings.content == "reviews" %}
+                {% elsif section.settings.content == "reviews" or section.settings.content == "videos" %}
                     {% for block in section.blocks %}
                         {% case block.type %}
                             {% when 'review' %}
@@ -71,7 +64,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                             {% when 'videos' %} 
+                                <p>qlq</p>
+                                <video width="230" height="400" controls>
+                                    <source src="{{ block.settings.video }}" type="video/mp4">
+                                </video>
                         {% endcase %}
                     {% endfor %}
                 {% endif %}

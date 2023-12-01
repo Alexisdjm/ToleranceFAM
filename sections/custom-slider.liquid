@@ -70,7 +70,8 @@
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
     
-    const updateV = (newV, iid) => {
+    const updateV = (iid) => {
+      let newV = ''
       if (layout === "products") {
           newV = document.querySelectorAll(".review-slide--"+iid);
           slides = newV
@@ -79,6 +80,8 @@
           slides = newV
       }   
     }
+
+    updateV(id)
 
     console.log(slides)
 

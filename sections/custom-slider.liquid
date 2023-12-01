@@ -68,15 +68,18 @@
 <script>
   function BuildSlider(id, layout) {
     const slider = document.querySelector(".slider--"+id);
-    let slides = ''
-    
-    const updateV = (newV, vari) => {
-      vari = newV
-    }
+    let miVariable = 0;
 
-    updateV("qlllllll", slides)
+// Función que actualiza la variable dependiendo del parámetro
+function actualizarVariable(nuevoValor) {
+  miVariable = nuevoValor;
+}
 
-    console.log(slides)
+// Llamada a la función con un nuevo valor
+actualizarVariable(42);
+
+// Ahora, la variable ha sido actualizada
+console.log(miVariable); // Output: 42
 
     // const prevButton = document.getElementById("prev--"+id);
     // const nextButton = document.getElementById("next--"+id);

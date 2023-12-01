@@ -241,6 +241,21 @@
     },
     "6796f422-54a1-4b49-b481-32eed23ec006": {
       "type": "custom-slider",
+      "blocks": {
+        "c1281c07-bd35-4789-bfd7-f64d9e34811f": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1281c07-bd35-4789-bfd7-f64d9e34811f"
+      ],
       "settings": {
         "heading": "our happy customers",
         "content": "products",

@@ -30,7 +30,8 @@
                             <p>{{ product.price |  money_without_trailing_zeros }}</p>
                         </div>
                     {% endfor %}
-                {% else %}
+                {% elsif section.settings.content == "collections" %}
+                {% elsif section.settings.content == "reviews" %}
                     {% for block in section.blocks %}
                         {% case block.type %}
                             {% when 'review' %}
@@ -182,6 +183,10 @@
                     {
                         "label": "reviews",
                         "value": "reviews"
+                    },
+                 {
+                        "label": "collections",
+                        "value": "collections"
                     }
                ]
             },

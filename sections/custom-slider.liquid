@@ -70,17 +70,17 @@
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
 
-    function actualizarVariable(nuevoValor, num) {
-      if (num > 1) {
-        slides = nuevoValor;
-      } else {
-        slides = 5;
+    function actualizarVariable(l1, l2) {
+      if (layout == "product") {
+        slides = l1;
+      } else if (layout == "reviews") {
+        slides = l2;
       }
     }
     
     actualizarVariable(42, 2);
     
-    console.log(slides);
+    console.log(slides.length);
 
     // const prevButton = document.getElementById("prev--"+id);
     // const nextButton = document.getElementById("next--"+id);

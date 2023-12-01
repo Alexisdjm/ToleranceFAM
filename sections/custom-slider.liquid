@@ -89,13 +89,13 @@
     let currentIndex = 0;
     let viewBreaker = 0
   
-    // if (screenWidth >= 1280) {
-    //     layout == "normal-card" ? viewBreaker = 2 : viewBreaker = 1;
-    // } else if (screenWidth > 900 && screenWidth < 1280) {
-    //     layout == "normal-card" ? viewBreaker = 1 : viewBreaker = 0;
-    // } else {
-    //     viewBreaker = 0;
-    // }
+    if (screenWidth >= 1280) {
+        layout == "normal-card" ? viewBreaker = 2 : viewBreaker = 1;
+    } else if (screenWidth > 900 && screenWidth < 1280) {
+        layout == "normal-card" ? viewBreaker = 1 : viewBreaker = 0;
+    } else {
+        viewBreaker = 0;
+    }
     
     nextButton.addEventListener("click", (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - viewBreaker);
@@ -104,11 +104,11 @@
     });
     
     prevButton.addEventListener("click", (e) => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        // currentIndex = currentIndex - 1;
-        // if (currentIndex < 0) {
-        //   currentIndex = slides.length - viewBreaker - 1
-        // }
+        // currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        currentIndex = currentIndex - 1;
+        if (currentIndex < 0) {
+          currentIndex = slides.length - viewBreaker - 1
+        }
         updateSlider();  
         e.preventDefault();
     });

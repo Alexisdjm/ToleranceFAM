@@ -69,13 +69,15 @@
   function BuildSlider(id, layout) {
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
-
-    if (layout === "products") {
-        slides = document.querySelectorAll(".review-slide--"+id);
-        return slides
-    } else if (layout === "reviews") {
-        slides = document.querySelectorAll(".product--"+id);
-        return slides
+    
+    const updateV = (newV, iid) => {
+      if (layout === "products") {
+          newV = document.querySelectorAll(".review-slide--"+iid);
+          slides = newV
+      } else if (layout === "reviews") {
+          newV = document.querySelectorAll(".product--"+iid);
+          slides = newV
+      }   
     }
 
     console.log(slides)

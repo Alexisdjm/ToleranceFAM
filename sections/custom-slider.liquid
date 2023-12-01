@@ -70,8 +70,12 @@
     const slider = document.querySelector(".slider--"+id);
     let slides = ''
 
-    function actualizarVariable(nuevoValor) {
-      slides = nuevoValor;
+    function actualizarVariable(nuevoValor, num) {
+      if (num > 1) {
+        slides = nuevoValor;
+      } else {
+        slides = 5;
+      }
     }
     
     actualizarVariable(42);

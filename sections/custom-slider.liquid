@@ -73,10 +73,11 @@
     function actualizarVariable(layoutt, l1, l2) {
       if (layout == "product") {
         slides = l1;
+        console.log(slides)
       } else if (layout == "reviews") {
         slides = l2;
-      }
         console.log(slides)
+      }
     }
     
     actualizarVariable("{{ section.settings.content }}", 1, 2);

@@ -251,10 +251,76 @@
             "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
             "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
           }
+        },
+        "8d595320-a116-4c0d-9970-82a3a4014e22": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        },
+        "bc34ad48-c266-4d12-a89d-f7afbef5edc5": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        },
+        "4540850c-24c5-44da-bb54-a54135419cea": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        },
+        "951e80c9-a194-4c42-a4b6-09f4c5f54fb8": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        },
+        "e601c15a-647e-46b9-ad25-eb86e71a7f04": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
+        },
+        "dd7792c5-11b1-49ff-aafe-8f93a7c13bf7": {
+          "type": "review",
+          "settings": {
+            "stars": "shopify:\/\/shop_images\/Frame_70.png",
+            "heading": "“Class aptent taciti sociosqu ad litora...”",
+            "text": "<p>consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<\/p>",
+            "profile_pic": "shopify:\/\/shop_images\/Ellipse_6.png",
+            "profile_info": "<h3>Davy Jones Doe<\/h3><p>California<\/p>"
+          }
         }
       },
       "block_order": [
-        "c1281c07-bd35-4789-bfd7-f64d9e34811f"
+        "c1281c07-bd35-4789-bfd7-f64d9e34811f",
+        "8d595320-a116-4c0d-9970-82a3a4014e22",
+        "bc34ad48-c266-4d12-a89d-f7afbef5edc5",
+        "4540850c-24c5-44da-bb54-a54135419cea",
+        "951e80c9-a194-4c42-a4b6-09f4c5f54fb8",
+        "e601c15a-647e-46b9-ad25-eb86e71a7f04",
+        "dd7792c5-11b1-49ff-aafe-8f93a7c13bf7"
       ],
       "settings": {
         "heading": "our happy customers",

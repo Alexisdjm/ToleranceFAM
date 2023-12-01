@@ -73,16 +73,14 @@
     function actualizarVariable(layoutt, l1, l2) {
       if (layoutt == "product") {
         slides = l1;
-        console.log(layoutt)
       } else if (layoutt == "reviews") {
         slides = l2;
-        console.log(layoutt)
       }
     }
     
-    actualizarVariable("{{ section.settings.content }}", 1, 2);
+    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"));
     
-    console.log(slides);
+    console.log(slides.length);
 
     // const prevButton = document.getElementById("prev--"+id);
     // const nextButton = document.getElementById("next--"+id);

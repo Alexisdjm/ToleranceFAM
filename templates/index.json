@@ -327,11 +327,12 @@
         "content": "collections",
         "product_slides": "consectetur",
         "collections": [
-          "mens",
-          "womens",
           "consectetur",
-          "frontpage",
-          "lorem-ipsum"
+          "lorem-ipsum",
+          "lorem-collection",
+          "lorem-collection-1",
+          "mens",
+          "womens"
         ],
         "dots": false,
         "align": "right"

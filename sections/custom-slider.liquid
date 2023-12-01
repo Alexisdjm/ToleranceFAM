@@ -5,20 +5,20 @@
         <div class="custom-slider--top-content">
             <h1>{{ section.settings.heading }}</h1>
             <div class="custom-slider--arrows-box">
-                <button class="custom-slider--arrows" id="prev-btn">
+                <button class="custom-slider--arrows" id="prev--{{ section.id }}">
                     <span>{% render 'reviews-left-arrow' %}</span>
                 </button>
-                <button class="custom-slider--arrows" id="next-btn">
+                <button class="custom-slider--arrows" id="next--{{ section.id }}">
                     <span>{% render 'reviews-right-arrow' %}</span>
                 </button>
             </div>
         </div>
         <div class="custom-slider--first-slider-container {{ section.settings.align }}">
             <div class="custom-slider--slider">
-              <div class="custom-slider--inner-box">             
+              <div class="custom-slider--inner-box .slider--{{ section.id }}">             
                 {% if section.settings.content == "products" %}
                     {% for product in selected_collection.products %}
-                        <div class="custom-product--cart">
+                        <div class="custom-product--cart product--{{ section.id }}">
                             <img 
                             src="{{ product.featured_media | img_url: 'master' }}" 
                             alt="product pic" 
@@ -34,7 +34,7 @@
                     {% for block in section.blocks %}
                         {% case block.type %}
                             {% when 'review' %}
-                                <div class="reviews-block--container">
+                                <div class="reviews-block--container review-slide--{{ section.id }}">
                                     <div class="reviews-block--flex-column">
                                         <img 
                                         src="{{ block.settings.stars | img_url: 'master' }}" 
@@ -43,15 +43,13 @@
                                         loading="lazy">
                                         <h1>{{ block.settings.heading }}</h1>
                                         {{ block.settings.text }}
-                                        <div class="reviews-block--profile flex gap-10">
+                                        <div class="reviews-block--profile">
                                             <img 
                                             src="{{ block.settings.profile_pic | img_url: 'master' }}" 
                                             alt="profile pic" 
                                             loading="lazy" 
                                             class="profile-pic">
-                                            <div class="flex-column gap-5">
-                                              {{ block.settings.profile_info }}
-                                            </div>
+                                            {{ block.settings.profile_info }}
                                         </div>
                                     </div>
                                 </div>
@@ -64,6 +62,61 @@
         </div>
     </div>
 </div>
+
+<script>
+  function BuildSlider(id, layout) {
+    const slider = document.querySelector(".slider--"+id);
+    let slides = ''
+
+    if (layout === "products") {
+        slides = document.querySelectorAll(".review-slide--"+id);
+    } else if (layout === "reviews") {
+        slides = document.querySelectorAll(".product--"+id);
+    }
+
+    const prevButton = document.getElementById("prev--"+id);
+    const nextButton = document.getElementById("next--"+id);
+    const slideWidth = slides[0].offsetWidth;
+    let screenWidth = window.innerWidth;
+    let currentIndex = 0;
+    let viewBreaker = 0
+  
+    // if (screenWidth >= 1280) {
+    //     layout == "normal-card" ? viewBreaker = 2 : viewBreaker = 1;
+    // } else if (screenWidth > 900 && screenWidth < 1280) {
+    //     layout == "normal-card" ? viewBreaker = 1 : viewBreaker = 0;
+    // } else {
+    //     viewBreaker = 0;
+    // }
+    
+    nextButton.addEventListener("click", (e) => {
+        currentIndex = (currentIndex + 1) % (slides.length - viewBreaker);
+        CupdateSlider();
+        e.preventDefault();
+    });
+    
+    prevButton.addEventListener("click", (e) => {
+        CcurrentIndex = (CcurrentIndex - 1 + Cslides.length) % Cslides.length;
+        // currentIndex = currentIndex - 1;
+        // if (currentIndex < 0) {
+        //   currentIndex = slides.length - viewBreaker - 1
+        // }
+        updateSlider();  
+        e.preventDefault();
+    });
+    
+    function updateSlider() {
+        const offset = -currentIndex * (slideWidth);
+        slider.style.transform = `translateX(${offset}px)`;
+    }
+    
+    CupdateSlider();
+  }
+
+  var slider = new BuildSlider("{{ section.id }}, {{ section.settings.content }}")
+    
+
+</script>
 
 {% schema %}
     {
@@ -88,8 +141,7 @@
                     {
                         "type": "richtext",
                         "id": "text",
-                        "label": "content",
-                        "default": "<p>Text</p>"
+                        "label": "<p>Text</p>"
                     },
                     {
                         "type": "image_picker",
@@ -99,8 +151,7 @@
                     {
                         "type": "richtext",
                         "id": "profile_info",
-                        "label": "Profile content",
-                        "default": "<p>Profile info</p>"
+                        "label": "<p>Profile info</p>"
                     }
                 ]
             }

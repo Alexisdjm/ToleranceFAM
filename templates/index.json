@@ -371,6 +371,17 @@
     },
     "071a6ed1-70ed-4b48-9595-808caaa849b8": {
       "type": "custom-slider",
+      "blocks": {
+        "dcd0dc12-11ed-49ed-a60c-12e6c4c1cbcf": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "dcd0dc12-11ed-49ed-a60c-12e6c4c1cbcf"
+      ],
       "settings": {
         "heading": "Our story is your story",
         "content": "products",

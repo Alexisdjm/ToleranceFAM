@@ -87,6 +87,19 @@
         "padding_bottom": 36
       }
     },
+    "5b835158-4eff-43c9-ad91-b61ae799150d": {
+      "type": "custom-slider",
+      "settings": {
+        "heading": "featured Clothing",
+        "content": "products",
+        "product_slides": "consectetur",
+        "collections": [
+
+        ],
+        "dots": true,
+        "align": "right"
+      }
+    },
     "727f0c05-c732-4a1a-bf29-635a1b0f6300": {
       "type": "image-hero-banner",
       "blocks": {
@@ -343,6 +356,7 @@
     "image_banner",
     "b9674fab-dd8d-4300-8c15-df92fc6f866e",
     "c9af4edb-2653-4518-8aa6-215df3d5984e",
+    "5b835158-4eff-43c9-ad91-b61ae799150d",
     "727f0c05-c732-4a1a-bf29-635a1b0f6300",
     "2ac01b90-63b9-4a1d-9e95-c28fb75fadc7",
     "6796f422-54a1-4b49-b481-32eed23ec006",

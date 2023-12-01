@@ -72,8 +72,10 @@
 
     if (layout === "products") {
         slides = document.querySelectorAll(".review-slide--"+id);
+        return slides
     } else if (layout === "reviews") {
         slides = document.querySelectorAll(".product--"+id);
+        return slides
     }
 
     console.log(slides)

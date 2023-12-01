@@ -13,7 +13,7 @@
                 </button>
             </div>
         </div>
-        <div class="custom-slider--first-slider-container">
+        <div class="custom-slider--first-slider-container {{ section.settings.align }}">
             <div class="custom-slider--slider">
               <div class="custom-slider--inner-box">             
                 {% if section.settings.content == "products" %}
@@ -139,10 +139,19 @@
                 "label": "Progress bars"
             },
             {
-                "type": "checkbox",
-                "id": "align",
-                "default": true,
-                "label": "Align to the left"
+               "type": "select",
+               "id": "align",
+               "label": "align the slider",
+               "options": [
+                    {
+                        "value": "center",
+                        "label": "centeer"
+                    },
+                    {
+                        "label": "right",
+                        "value": "right"
+                    }
+               ]
             }
         ],
         "presets": [

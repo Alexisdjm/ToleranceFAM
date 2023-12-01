@@ -31,8 +31,13 @@
                         </div>
                     {% endfor %}
                 {% elsif section.settings.content == "collections" %}
-                  {% for collection in section.settings.collections %}
-                        
+                    {% for collection in section.settings.collections %}
+                        <a 
+                        href="{{ collection.url }}" 
+                        class="custom-collection--card collection--{{ section.id }}" 
+                        style="background-image: url('{{ collection.image | img_url: 'master' }}');">
+                            <h1>{{ collection.title }}</h1>
+                        </a>
                     {% endfor %}
                 {% elsif section.settings.content == "reviews" %}
                     {% for block in section.blocks %}

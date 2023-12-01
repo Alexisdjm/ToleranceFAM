@@ -43,13 +43,15 @@
                                         loading="lazy">
                                         <h1>{{ block.settings.heading }}</h1>
                                         {{ block.settings.text }}
-                                        <div class="reviews-block--profile">
+                                        <div class="reviews-block--profile flex gap-15">
                                             <img 
                                             src="{{ block.settings.profile_pic | img_url: 'master' }}" 
                                             alt="profile pic" 
                                             loading="lazy" 
                                             class="profile-pic">
-                                            {{ block.settings.profile_info }}
+                                            <div class="flex-column gap-5">
+                                                {{ block.settings.profile_info }}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

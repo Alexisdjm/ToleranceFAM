@@ -89,10 +89,12 @@
         slides = l2;
       } else if (layoutt == "collections") {
         slides = l3;
+      } else {
+        slides = l4;
       }
     }
     
-    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"));
+    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"), document.querySelectorAll(".video--{{ section.id }}"));
 
     // console.log(document.querySelectorAll(".collection--{{ section.id }}").length, slides.length)
     

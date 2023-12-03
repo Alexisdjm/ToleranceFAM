@@ -318,7 +318,7 @@
       "settings": {
         "img_bg": "shopify:\/\/shop_images\/banner_291dfb2a-c5ae-4367-ac00-bb6e6439a31a.png",
         "font_color": "font-white",
-        "layout": "new-email--first-flex-column"
+        "layout": "new-email--first-flex"
       }
     },
     "8409f8ee-206c-4d21-9a59-586783a5ef39": {

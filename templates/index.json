@@ -377,10 +377,45 @@
           "settings": {
             "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
           }
+        },
+        "ba4cd6d9-c211-497f-9171-6bc16e0cc95a": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
+        },
+        "0d8deb73-d189-4176-b634-2fa0f734b929": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
+        },
+        "4772b0be-3660-4492-ac5c-53a3442b0a25": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
+        },
+        "6b171fe8-b2e8-4e56-8ac1-a64011d220fd": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
+        },
+        "3b0014fb-6600-43d2-9d5c-f762b1762143": {
+          "type": "video",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/0d2d77651825c2ee557de2d44dd1d71c.mp4"
+          }
         }
       },
       "block_order": [
-        "dcd0dc12-11ed-49ed-a60c-12e6c4c1cbcf"
+        "dcd0dc12-11ed-49ed-a60c-12e6c4c1cbcf",
+        "ba4cd6d9-c211-497f-9171-6bc16e0cc95a",
+        "0d8deb73-d189-4176-b634-2fa0f734b929",
+        "4772b0be-3660-4492-ac5c-53a3442b0a25",
+        "6b171fe8-b2e8-4e56-8ac1-a64011d220fd",
+        "3b0014fb-6600-43d2-9d5c-f762b1762143"
       ],
       "settings": {
         "heading": "Our story is your story",

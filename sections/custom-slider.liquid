@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                            {% when 'video' %} 
-                              <video width="230" height="400" controls>
+                              <video class="video--{{ section.id }}" width="230" height="400" controls>
                                   <source src="{{ block.settings.video | video_tag }}
                               </video>
                         {% endcase %}

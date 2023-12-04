@@ -127,7 +127,7 @@
     }
     
     nextButton.addEventListener("click", (e) => {
-        currentIndex = (currentIndex + 1) % (slides.length - viewBreaker);
+        currentIndex = (currentIndex + 1) % (slides.length - displayedElements + 1);
         updateSlider();
         e.preventDefault();
     });

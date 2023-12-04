@@ -110,7 +110,7 @@
         </aside>
       {%- endif -%}
 
-      {%- if collection.products.size == 0 -%}
+      {%- if collection.products.size > 0 -%}
         <h1 class="collection-hero__title">
         {{- collection.title | escape -}}
       </h1>

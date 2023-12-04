@@ -74,8 +74,10 @@
               </div>
             </div>
         </div>
-        <div class="dots-box dots-container--{{ section.id }}">
-        </div>
+        {% if section.settings.dots == true %}
+          <div class="dots-box dots-container--{{ section.id }}">
+          </div>
+        {% endif %}
     </div>
 </div>
 

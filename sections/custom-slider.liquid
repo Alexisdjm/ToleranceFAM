@@ -151,13 +151,11 @@
       slider.style.transform = `translateX(${offset}px)`;
       if (currentIndex > 0) {
         document.querySelector(`.bar--${currentIndex - 1}-${layout}`).classList.remove("active")
-      } else {
+      } else if (currentIndex === 0) {
         document.querySelector(`.bar--${0}-${layout}`).classList.add("active")
+        document.querySelector(`.bar--${(slides.length - displayedElements)}-${layout}`).classList.remove("active")
       }
       let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
-      if (currentIndex > (slides.length - displayedElements)) {
-        console.log("hhola")
-      }
       bar.classList.add("active")
     }
     

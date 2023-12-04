@@ -132,10 +132,14 @@
             </div>
           </div>
         {%- else -%}
-
-           <h1 class="collection-hero__title new-collection--title">
-            {{- collection.title | escape -}}
-          </h1>
+          <div>
+             <h1 class="collection-hero__title new-collection--title">
+              {{- collection.title | escape -}}
+            </h1>
+            {% if collection.description != blank %}
+              <p>{{ collection.description }}</p>
+            {% endif %}
+          </div>
           
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>

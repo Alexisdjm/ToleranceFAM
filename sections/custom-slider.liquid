@@ -144,14 +144,14 @@
         e.preventDefault();
     });
 
-    let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
-    bar.classList.add("active")
+   document.querySelector(`.bar--${currentIndex}-${layout}`).classList.add("active")
     
     function updateSlider() {
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
-      document.querySelector(`.bar--${currentIndex - 1}-${layout}`)
-       bar.classList.add("active")
+      document.querySelector(`.bar--${currentIndex - 1}-${layout}`).classList.remove("active")
+      let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
+      bar.classList.add("active")
     }
     
     updateSlider();

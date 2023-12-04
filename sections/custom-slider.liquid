@@ -149,6 +149,7 @@
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
       console.log(document.querySelector(`.bar--${currentIndex}-${layout}`))
+      document.querySelector(`.bar--${currentIndex - 1}-${layout}`).classList.remove("active")
       let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
       bar.classList.add("active")
     }

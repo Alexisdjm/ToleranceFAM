@@ -262,7 +262,7 @@
           "mens",
           "womens"
         ],
-        "dots": false,
+        "dots": true,
         "align": "right"
       }
     },

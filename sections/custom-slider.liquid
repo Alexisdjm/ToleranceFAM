@@ -144,9 +144,10 @@
     
     function updateSlider() {
       // console.log(currentIndex)
-        document.querySelector("bar--"+currentIndex).style.backgroundColor = "#000000";
-        const offset = -currentIndex * (slideWidth + 50);
-        slider.style.transform = `translateX(${offset}px)`;
+      let bar =document.querySelector("bar--"+currentIndex);
+      console.log(bar)
+      const offset = -currentIndex * (slideWidth + 50);
+      slider.style.transform = `translateX(${offset}px)`;
     }
     
     updateSlider();

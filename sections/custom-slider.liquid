@@ -150,6 +150,8 @@
     function updateSlider() {
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
+      document.querySelector(`.bar--${currentIndex - 1}-${layout}`)
+       bar.classList.add("active")
     }
     
     updateSlider();

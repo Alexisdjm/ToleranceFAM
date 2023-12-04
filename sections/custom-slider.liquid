@@ -123,7 +123,7 @@
     }
 
     for (let i = 0; i < (slides.length - displayedElements + 1); i++) {
-      dotsContainer.innerHTML += `<span class="bar--${i}"></span>`
+      dotsContainer.innerHTML += `<span class="bar--${i}-${layout}"></span>`
     }
 
     console.log(slides.length - displayedElements + 1, layout, slides.length, displayedElements)

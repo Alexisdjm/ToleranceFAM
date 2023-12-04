@@ -96,7 +96,7 @@
         "collections": [
 
         ],
-        "dots": false,
+        "dots": true,
         "align": "right"
       }
     },

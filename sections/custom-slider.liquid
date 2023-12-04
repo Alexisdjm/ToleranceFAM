@@ -122,7 +122,7 @@
         viewBreaker = 0;
     }
 
-    for (let i = 0; i < (displayedElements + (slides.length - displayedElements)); i++) {
+    for (let i = 0; i < (slides.length - displayedElements + 1); i++) {
       dotsContainer.innerHTML += `<span class="bar--${i}"></span>`
     }
 

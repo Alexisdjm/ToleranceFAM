@@ -155,8 +155,7 @@
         document.querySelector(`.bar--${0}-${layout}`).classList.add("active")
       }
       let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
-      console.log(currentIndex, (slides.length - displayedElements))
-      currentIndex == (slides.length - displayedElements) ? document.querySelector(`.bar--${(slides.length - displayedElements)}-${layout}`).classList.remove("active") : ''
+      console.log(currentIndex === (slides.length - displayedElements))
       bar.classList.add("active")
     }
     

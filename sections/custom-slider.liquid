@@ -105,7 +105,7 @@
     actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"), document.querySelectorAll(".video--{{ section.id }}"));
 
     // console.log(document.querySelectorAll(".video--{{ section.id }}").length, slides.length)
-    console.log(displayedElements)
+    // console.log(displayedElements)
     
     const prevButton = document.getElementById("prev--"+id);
     const nextButton = document.getElementById("next--"+id);
@@ -126,7 +126,7 @@
       dotsContainer.innerHTML += `<span class="bar--${i}"></span>`
     }
 
-    console.log(displayedElements + (slides.length - displayedElements), layout)
+    console.log(displayedElements + (slides.length - displayedElements), layoutm slides.length, displayedElements)
     
     nextButton.addEventListener("click", (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - displayedElements + 1);

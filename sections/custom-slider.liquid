@@ -144,8 +144,6 @@
     
     function updateSlider() {
       // console.log(currentIndex)
-      let bar =document.querySelector("bar--"+currentIndex);
-      console.log(bar)
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
     }

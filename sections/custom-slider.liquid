@@ -123,7 +123,7 @@
     }
 
     for (let i = 0; i < (slides.length - (slides.length - displayedElements)); i++) {
-      dotsContainer.innerHTML += `<span class="bar--${i}"></span>`
+      dotsContainer.innerHTML += `<span class="bar--${i}-{{ section.id }}"></span>`
     }
     
     nextButton.addEventListener("click", (e) => {
@@ -147,7 +147,7 @@
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
       for (let i = 0; i <= currentIndex; i++) {
-        console.log(document.querySelector(".bar--"+i))
+        console.log(document.querySelector(".bar--"+i+"--{{ section.id }}"))
       }
     }
     

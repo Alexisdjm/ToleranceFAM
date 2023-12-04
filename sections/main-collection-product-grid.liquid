@@ -146,7 +146,7 @@
                           | t: terms: collection.terms, count: collection.results_count
                         }}
                       {%- elsif collection.products_count == collection.all_products_count -%}
-                        Showing
+                        <strong>Showing</strong>
                         {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
                       {%- else -%}
                         {{

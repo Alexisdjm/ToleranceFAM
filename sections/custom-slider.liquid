@@ -126,7 +126,7 @@
       dotsContainer.innerHTML += `<span class="bar--${i}"></span>`
     }
 
-    console.log(slides.lengtt - (displayedElements + 1), layout, slides.length, displayedElements)
+    console.log(slides.length - (displayedElements + 1), layout, slides.length, displayedElements)
     
     nextButton.addEventListener("click", (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - displayedElements + 1);

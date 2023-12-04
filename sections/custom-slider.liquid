@@ -107,9 +107,7 @@
     let screenWidth = window.innerWidth;
     let currentIndex = 0;
     let viewBreaker = 0
-    let displayedElements = 0;
-    dotsContainer.innerHTML = "<p>qlq</p>";
-    console.log(slides.length)
+    let displayedElements = 0; 
   
     if (screenWidth >= 1280) {
         viewBreaker = 2
@@ -117,6 +115,10 @@
         viewBreaker = 1
     } else {
         viewBreaker = 0;
+    }
+
+    for (let i = 0, i <= slides.length, i++) {
+      dotsContainer.innerHTML = "<span class=bar--"+i+"</span>"
     }
     
     nextButton.addEventListener("click", (e) => {

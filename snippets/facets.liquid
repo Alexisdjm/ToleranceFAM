@@ -91,18 +91,19 @@
                   {% endif %}
                 {%- endfor -%}
                 <div class="active-facets-vertical-filter">
-                  {%- unless results.filters == empty -%}
+                  {% comment %} {%- unless results.filters == empty -%}
                     <h2
                       class="facets__heading facets__heading--vertical caption-large text-body"
                       id="verticalTitle"
                       tabindex="-1"
                     >
                       {{ 'products.facets.filter_by_label' | t }}
-                    </h2>
+                    </h2> {% endcomment %}
                   {%- endunless -%}
                   <facet-remove class="active-facets__button-wrapper">
                     <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
-                      <span>{{ 'products.facets.clear_all' | t }}</span>
+                      {% comment %} <span>{{ 'products.facets.clear_all' | t }}</span> {% endcomment %}
+                      <span>clear all filters</span>
                     </a>
                   </facet-remove>
                 </div>

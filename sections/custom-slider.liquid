@@ -146,19 +146,19 @@
         e.preventDefault();
     });
 
-   document.querySelector(`.bar--${currentIndex}-${layout}`).classList.add("active")
+   document.querySelector(`.bar--${currentIndex}-${layout}`).classList.add("activee")
     
     function updateSlider() {
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
       if (currentIndex > 0) {
-        document.querySelector(`.bar--${currentIndex - 1}-${layout}`).classList.remove("active")
+        document.querySelector(`.bar--${currentIndex - 1}-${layout}`).classList.remove("activee")
       } else if (currentIndex === 0) {
         document.querySelector(`.bar--${0}-${layout}`).classList.add("active")
-        document.querySelector(`.bar--${(slides.length - displayedElements)}-${layout}`).classList.remove("active")
+        document.querySelector(`.bar--${(slides.length - displayedElements)}-${layout}`).classList.remove("activee")
       }
       let bar = document.querySelector(`.bar--${currentIndex}-${layout}`)
-      bar.classList.add("active")
+      bar.classList.add("activee")
     }
     updateSlider();
   }

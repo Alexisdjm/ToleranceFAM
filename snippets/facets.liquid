@@ -177,7 +177,7 @@
                       <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical{% endif %}">
                         <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                         <ul
-                          class="{{ visual_layout_class }} list-unstyled no-js-hidden"
+                          class="{{ visual_layout_class }}{% if filter_type == 'vertical' and filter.label == 'Color' %} new-collection--Color-filter{% endif %} list-unstyled no-js-hidden"
                           role="list"
                         >
                           {%- liquid

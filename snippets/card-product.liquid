@@ -149,6 +149,7 @@
               contiene
             {% else %}
               {% assign uniqueColors = uniqueColors | push: variant.option2 %}
+              {{ uniqueColors }}
             {% endif %}
           {% endfor %}
           <h3

@@ -148,11 +148,9 @@
               <!-- {{ uniqueColors }} -->
             {% else %}
               {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
-              {{ uniqueColors }}
-              <!-- <input type="radio" name="color" value="{{ variant.option2 }}" id="color_{{ variant.option2 }}">
-              <label for="color_{{ variant.option2 }}">{{ variant.option2 }}</label> -->
             {% endif %}
           {% endfor %}
+          {{ uniqueColors }}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}

@@ -142,11 +142,7 @@
       <div class="card__content">
         <div class="card__information">
           {% for variant in card_product.variants %}
-            {{ variant.options }}
-            {% if variant.title == 'Color' %}
-              <input type="radio" name="color" value="{{ variant.id }}" id="color_{{ variant.id }}">
-              <label for="color_{{ variant.id }}" style="background-color: {{ variant.option2 }};"></label>
-            {% endif %}
+            {{ variant.option2 }}
           {% endfor %}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"

@@ -377,8 +377,8 @@
     {% for variant in card_product.variants %}
        arrr.push("{{ variant.option2}}")
       console.log(arrr)
-      if (!arrr.includes("{{ variant.option2 }}")) {
-        console.log("se repite")
+      if (arrr.includes("Brown")) {
+        console.log("Brown")
       }
     {% endfor %}
   }

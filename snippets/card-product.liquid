@@ -387,6 +387,20 @@
        arrr.push("{{ variant.option2}}")
       }
     {% endfor %}
+
+    {% assign default_size = product.variants.first %}
+
+      {% for color_option in product.options_with_values[0].values %}
+        {% assign variant_with_color = product.variants | where: "option1", color_option %}
+        
+        {% if variant_with_color.size > 0 %}
+          {% assign selected_variant = variant_with_color.first %}
+        {% else %}
+          {% assign selected_variant = default_size %}
+        {% endif %}
+        console.log("{{ selected_variant.id }}")
+      {% endfor %}
+    
     console.log(arrr)
     arrr.forEach(element => {
       container.innerHTML += element+" "

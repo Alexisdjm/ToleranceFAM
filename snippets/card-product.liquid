@@ -377,9 +377,7 @@
     {% for variant in card_product.variants %}
        arrr.push("{{ variant.option2}}")
       console.log(arrr)
-      if (arrr.includes("Brown")) {
-        console.log("Brown")
-      }
+     console.log(arrr.includes('{{ variant.option2 }}'))
     {% endfor %}
   }
 

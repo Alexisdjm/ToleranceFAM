@@ -144,7 +144,7 @@
           {% assign uniqueColors = "" | split: "|" %}
 
           {% for variant in card_product.variants %}
-            {% if uniqueColors contains variant.option2 == false %}
+            {% if uniqueColors contains variant.option2 %}
               {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
               
               {{ variant.option2 }}

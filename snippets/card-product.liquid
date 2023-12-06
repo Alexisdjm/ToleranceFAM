@@ -145,11 +145,12 @@
 
           {% for variant in card_product.variants %}
             {% if uniqueColors contains variant.option2 %}
-              {{ variant.option2 }}
+              {{ uniqueColors }} qlq
             {% else %}
               {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
-              <input type="radio" name="color" value="{{ variant.option2 }}" id="color_{{ variant.option2 }}">
-              <label for="color_{{ variant.option2 }}">{{ variant.option2 }}</label>
+              {{ uniqueColors }}
+              <!-- <input type="radio" name="color" value="{{ variant.option2 }}" id="color_{{ variant.option2 }}">
+              <label for="color_{{ variant.option2 }}">{{ variant.option2 }}</label> -->
             {% endif %}
           {% endfor %}
           <h3

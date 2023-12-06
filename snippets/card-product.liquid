@@ -144,13 +144,13 @@
           {% assign uniqueColors = "" | split: "|" %}
 
           {% for variant in card_product.variants %}
+            {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
             {% if uniqueColors contains variant.option2 %}
-              
+              contiene
             {% else %}
-              {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
+              no contiene
             {% endif %}
           {% endfor %}
-            {{ uniqueColors contains card_product.variants.first.option2 }}
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}

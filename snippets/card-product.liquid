@@ -375,7 +375,6 @@
     let number = {{ card_product.variants.size }}
     let arrr = []
     {% for variant in card_product.variants %}
-      console.log("{{ variant.option2 }}")
       if (!arrr.includes('{{ variant.option2 }}')) {
        arrr.push("{{ variant.option2}}")
       }

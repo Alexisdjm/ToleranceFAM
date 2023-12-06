@@ -374,7 +374,7 @@
   function build(id) {
     let number = {{ card_product.variants.size }}
     let arrr = []
-    array = {{ card_product.variants }}
+    array = {{ card_product.variants.first.title }}
     console.log(array)
     // array.forEach(element => {
     //   console.log(element.option2)

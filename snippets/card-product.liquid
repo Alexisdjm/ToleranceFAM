@@ -142,7 +142,7 @@
       <div class="card__content">
         <div class="card__information">
           <div class="flex-between upper-belt">
-            <div id="color-radios--container" class="flex gap-5">
+            <div id="color-radios--container--{{ card_product.id }}" class="flex gap-5">
 
             </div>
             <div>
@@ -380,7 +380,7 @@
 <script>
   function build(id) {
     let number = {{ card_product.variants.size }}
-    const container = document.getElementById("color-radios--container")
+    const container = document.getElementById("color-radios--container--"+id)
     let arrr = []
     {% for variant in card_product.variants %}
       if (!arrr.includes('{{ variant.option2 }}')) {
@@ -393,5 +393,5 @@
     });
   }
 
-  var elements = build("{{ section.id }}")
+  var elements = build("{{ card_product.id }}")
 </script>

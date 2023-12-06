@@ -103,7 +103,7 @@
         {%- endif -%}
         <div class="card__content">
           <div class="card__information">
-  {% for variant in product.variants %}
+          {% for variant in product.variants %}
             <p>{{ variant.title }}</p>
           {% endfor %}
             <h3

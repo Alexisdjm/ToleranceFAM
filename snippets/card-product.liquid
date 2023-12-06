@@ -398,7 +398,7 @@
         {% else %}
           {% assign selected_variant = default_size %}
         {% endif %}
-        console.log("{{ selected_variant.id }}")
+        console.log("{{ selected_variant.id }}", "{{ color_option }}")
       {% endfor %}
     
     console.log(arrr)

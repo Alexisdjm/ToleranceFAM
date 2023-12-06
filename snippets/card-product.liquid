@@ -373,9 +373,9 @@
   console.log("{{ card_product.variants[1].option2 }}")
   function build(id) {
     let number = {{ card_product.variants.size }}
-    let arrr = ''
+    let arrr = []
     {% for variant in card_product.variants %}
-      arr = "{{ variant.option2 }}, {{ forloop.index0 }}"
+       arr.push({{ variant.option2}})
       console.log(arr)
     {% endfor %}
   }

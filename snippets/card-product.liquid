@@ -373,9 +373,9 @@
   function build(id) {
     let arrr = []
     for (let i = 0; i < {{ card_product.variants.size }}; i++) {
-      arrr.push({{ card_product.variants[i].option2 }})
+      console.log({{ card_product.variants[i].option2 }})
     }
-    console.log(arrr) 
+    // console.log(arrr) 
   }
 
   var elements = build("{{ section.id }}")

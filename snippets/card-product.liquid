@@ -370,9 +370,13 @@
 {%- endif -%}
 
 <script>
-  let arrr = []
-  for (let i = 0; i < {{ card_product.variants.size }}; i++) {
-    arrr.push({{ variant.option2 }})
+  function build(id) {
+    let arrr = []
+    for (let i = 0; i < {{ card_product.variants.size }}; i++) {
+      arrr.push({{ card_product.variants[i].option2 }})
+    }
+    console.log(arrr) 
   }
-  console.log(arrr)
+
+  var elements = build({{ section.id }})
 </script>

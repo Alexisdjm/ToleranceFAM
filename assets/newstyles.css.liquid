@@ -921,15 +921,21 @@ div.checkmark:empty {
   font-size: 16px;
 }
 
-.price-item.price-item--regular {
+.price-item.price-item--regular, .price-item.price-item--sale.price-item--last {
   font-family: var(--page-font-family);
-  font-weight: var(--font-500);
   color: var(--color-black);
   letter-spacing: 0em;
   line-height: 26px;
   text-align: left;
   font-size: 16px;
+}
 
+.price-item.price-item--regular {
+  font-weight: var(--font-500);
+}
+
+.price-item.price-item--sale.price-item--last {
+  font-weight: var(--font-600);
 }
 
 /* --------------------------------------------------- new email form -------------------------------------------------------- */

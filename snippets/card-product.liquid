@@ -376,7 +376,7 @@
     let arrr = []
     {% for variant in card_product.variants %}
        arrr.push({{ variant.option2}})
-      console.log(arrr)
+      console.log(String(arrr))
     {% endfor %}
   }
 

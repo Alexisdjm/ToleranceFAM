@@ -388,10 +388,10 @@
       }
     {% endfor %}
 
-    {% assign default_size = product.variants.first %}
+    {% assign default_size = card_product.variants.first %}
 
-      {% for color_option in product.options_with_values[0].values %}
-        {% assign variant_with_color = product.variants | where: "option1", color_option %}
+      {% for color_option in card_product.options_with_values[0].values %}
+        {% assign variant_with_color = card_product.variants | where: "option2", color_option %}
         
         {% if variant_with_color.size > 0 %}
           {% assign selected_variant = variant_with_color.first %}

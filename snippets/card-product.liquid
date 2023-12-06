@@ -148,6 +148,8 @@
               {{ variant.option2 }}
             {% else %}
               {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
+              <input type="radio" name="color" value="{{ variant.option2 }}" id="color_{{ variant.option2 }}">
+              <label for="color_{{ variant.option2 }}">{{ variant.option2 }}</label>
             {% endif %}
           {% endfor %}
           <h3

@@ -375,7 +375,7 @@
     let number = {{ card_product.variants.size }}
     let arrr = ''
     {% for variant in card_product.variants %}
-      arr = {{ variant.option2 }}
+      arr = "{{ variant.option2 }}"
       console.log(arr)
     {% endfor %}
   }

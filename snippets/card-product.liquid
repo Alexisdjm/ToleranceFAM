@@ -373,11 +373,11 @@
   console.log("{{ card_product.variants[1].option2 }}")
   function build(id) {
     let number = {{ card_product.variants.size }}
-    let arrr = []
-    for (let i = 0; i < number; i++) {
-      console.log("{{ card_product.variants["+i+"].option2 }}")
-    }
-    // console.log(arrr)
+    let arrr = ''
+    {% for variant in card_product.variants %}
+      arr = {{ variant.option2 }}
+      console.log(arr)
+    {% endfor %}
   }
 
   var elements = build("{{ section.id }}")

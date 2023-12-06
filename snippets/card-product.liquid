@@ -145,7 +145,7 @@
 
           {% for variant in card_product.variants %}
             {% if uniqueColors contains variant.option2 %}
-              {{ uniqueColors }} qlq
+              {{ uniqueColors }}
             {% else %}
               {% assign uniqueColors = uniqueColors | join: "|" | append: variant.option2 | split: "|" %}
               {{ uniqueColors }}

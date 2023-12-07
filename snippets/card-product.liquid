@@ -427,7 +427,7 @@
     for (let i = 0; i < radiobuttons.length; i++) {
       radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = this.value;
-        console.log(document.getElementById('chosen-variant--{{ card_product.id }}').value)
+        console.log(radiobuttons[i].value)
     });
     }
   }

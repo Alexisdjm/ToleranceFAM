@@ -405,18 +405,18 @@
       
     arrr.forEach((element, index) => {
       console.log(index)
-      // var radio = document.createElement("input");
-      // radio.type = "radio";
-      // radio.name = "color";
-      // radio.value = ids[index];
+      var radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "color";
+      radio.value = ids[index];
 
-      // // Crea una etiqueta label para la opción
-      // var label = document.createElement("label");
-      // label.innerHTML = opcion;
+      // Crea una etiqueta label para la opción
+      var label = document.createElement("label");
+      label.innerHTML = opcion;
 
-      // // Agrega el radio button y la etiqueta al div
-      // divRadios.appendChild(radio);
-      // divRadios.appendChild(label);
+      // Agrega el radio button y la etiqueta al div
+      divRadios.appendChild(radio);
+      divRadios.appendChild(label);
     });
   }
 

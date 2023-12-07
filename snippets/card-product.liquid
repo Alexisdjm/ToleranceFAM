@@ -420,9 +420,8 @@
       }
     });
 
-    document.querySelectorAll(".custom-radio--{{ card_product.id }}").foreach(() => {
-      console.log("qlq")
-    })
+    let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
+    console.log(radiobuttons.length)
   }
 
   var elements = build("{{ card_product.id }}")

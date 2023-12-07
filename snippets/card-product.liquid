@@ -418,13 +418,8 @@
 
       }
     });
-    document.querySelectorAll('.custom-radio').forEach(function(label) {
-    label.addEventListener('click', function() {
-        // Encuentra el input asociado al label
-        let input = document.getElementById(label.getAttribute('for'));
-
-       console.log(input)
-    });
+    let qlq = document.querySelectorAll('.custom-radio')
+    console.log(qlq)
   }
 
   var elements = build("{{ card_product.id }}")

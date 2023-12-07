@@ -403,12 +403,16 @@
       
     arrr.forEach((element, index) => {
       if (index <= 5 && element !== "") {
-        let radio = document.createElement("input");
-        radio.type = "radio";
-        radio.name = "color";
-        radio.value = ids[index];
+        // let radio = document.createElement("input");
+        // radio.type = "radio";
+        // radio.name = "color";
+        // radio.value = ids[index];
   
-        container.appendChild(radio);
+        // container.appendChild(radio);
+
+        container.innerHTML = `
+        <input type="radio" name="color" value="${ids[index]}">
+        `
       }
     });
   }

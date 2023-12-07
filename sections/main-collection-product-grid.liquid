@@ -27,7 +27,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
-<div class="radio-input">
+<!-- <div class="radio-input">
     <input checked="" value="color-1" name="color" id="color-1" type="radio">
     <label for="color-1">
       <span>
@@ -49,7 +49,7 @@
       </span>
     </label>
 
-</div>
+</div> -->
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}

@@ -423,11 +423,12 @@
     });
 
     let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
-    console.log(radiobuttons.length)
+    let inputs = document.querySelectorAll(".custom-hidden--{{ card_product.id }}")
+    
     for (let i = 0; i < radiobuttons.length; i++) {
       radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = this.value;
-        console.log(radiobuttons[i].value)
+        console.log(inputs[i].value)
     });
     }
   }

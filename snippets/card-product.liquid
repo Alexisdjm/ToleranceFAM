@@ -422,6 +422,9 @@
 
     let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
     console.log(radiobuttons.length)
+    for (let i = 0; i < radiobuttons.length; i++) {
+      console.log(radiobuttons[i])
+    }
   }
 
   var elements = build("{{ card_product.id }}")

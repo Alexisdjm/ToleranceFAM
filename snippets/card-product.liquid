@@ -416,9 +416,10 @@
         // container.appendChild(radio);
 
         container.innerHTML += `
-        <input type="radio" name="color" value="${ids[index]}" style="display: none;">
+        <input type="radio" name="color" form="form-add-product--{{ card_product.id }}" value="${ids[index]}" class="custom-hidden--input">
         <label class="custom-radio" for="option${index}" style="background-color: ${element}"></label>
-        `
+        `;
+        
       }
     });
   }

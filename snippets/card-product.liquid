@@ -417,7 +417,9 @@
 
         container.innerHTML += `
         <input type="radio" name="color" form="form-add-product--{{ card_product.id }}" value="${ids[index]}" class="custom-hidden--input">
-        <label class="custom-radio" for="option${index}" style="background-color: ${element}"></label>
+        <label class="custom-radio" for="option${index}" style="background-color: ${element}">
+          <span class="custom-radio--circle"></span>
+        </label>
         `;
         
       }

@@ -415,6 +415,15 @@
           <span class="custom-radio--circle custom--{{ card_product.id }}"  style="background-color: ${element}"></span>
         </label>
         `;
+
+        document.querySelectorAll('.custom-radio').forEach(function(label) {
+        label.addEventListener('click', function() {
+            // Encuentra el input asociado al label
+            let input = document.getElementById(label.getAttribute('for'));
+
+            // Cambia el estado del input
+            input.checked = !input.checked;
+        });
       }
     });
   }

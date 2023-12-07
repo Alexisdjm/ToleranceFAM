@@ -428,7 +428,10 @@
     for (let i = 0; i < radiobuttons.length; i++) {
       radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
-        console.log(inputs[i].value, document.getElementById('chosen-variant--{{ card_product.id }}').value)
+        // console.log(inputs[i].value, document.getElementById('chosen-variant--{{ card_product.id }}').value)
+        if (inputs[i].checked) {
+          console.log("checked")
+        }
     });
     }
   }

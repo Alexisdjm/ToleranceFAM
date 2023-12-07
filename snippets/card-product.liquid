@@ -425,7 +425,7 @@
     let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
     console.log(radiobuttons.length)
     for (let i = 0; i < radiobuttons.length; i++) {
-      radioButtons[i].addEventListener('click', function() {
+      radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = this.value;
         console.log(document.getElementById('chosen-variant--{{ card_product.id }}').value)
     });

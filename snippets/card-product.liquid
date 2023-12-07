@@ -148,7 +148,7 @@
               accept-charset="UTF-8" 
               class="add-to-cart--custom" 
               enctype="multipart/form-data">
-                <input type="hidden" name="id" value="{{ cart_product.variants.first.id }}" id="chosen-variant--{{ card_product.id }}">
+                <input type="hidden" name="id" id="chosen-variant--{{ card_product.id }}">
                 <input type="hidden" name="product-id" value="{{ card_product.id }}">
                 <button type="submit" class="quick-add">
                   {% render 'icon-cart' %}

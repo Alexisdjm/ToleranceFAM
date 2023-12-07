@@ -418,8 +418,12 @@
 
       }
     });
-    document.querySelectorAll('.custom-radio').forEach(function() {
-      console.log(qlq)
+    document.querySelectorAll('.custom-radio').forEach(function(label) {
+    label.addEventListener('click', function() {
+        // Encuentra el input asociado al label
+        let input = document.getElementById(label.getAttribute('for'));
+
+       console.log(input)
     });
   }
 

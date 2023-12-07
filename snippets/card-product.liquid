@@ -402,12 +402,12 @@
         // console.log("{{ selected_variant.id }}", "{{ color_option }}")
         ids.push("{{ selected_variant.id }}")
       {% endfor %}
-      console.log(ids)
+      console.log(arrr[1], ids[1])
     
-    // console.log(arrr)
-    // arrr.forEach(element => {
-    //   container.innerHTML += element+" "
-    // });
+      
+    arrr.forEach(element => {
+      container.innerHTML += element+" "
+    });
   }
 
   var elements = build("{{ card_product.id }}")

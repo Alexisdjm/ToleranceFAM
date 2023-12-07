@@ -416,11 +416,13 @@
         // container.appendChild(radio);
 
         container.innerHTML += `
-        <input type="radio" name="color" form="form-add-product--{{ card_product.id }}" value="${ids[index]}" class="custom-hidden--input">
-        <label class="custom-radio" for="option${index}">
-          <span class="custom-radio--circle"  style="background-color: ${element}"></span>
+        <input type="radio" name="color" id="product--${index}--{{ card_product.id }}" form="form-add-product--{{ card_product.id }}" value="${ids[index]}" class="custom-hidden--input">
+        <label class="custom-radio" for="product--${index}--{{ card_product.id }}">
+          <span class="custom-radio--circle custom--{{ card_product.id }}"  style="background-color: ${element}"></span>
         </label>
         `;
+
+        
         
       }
     });

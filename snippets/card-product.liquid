@@ -150,7 +150,7 @@
               enctype="multipart/form-data">
                 <input type="hidden" name="id" id="chosen-variant--{{ card_product.id }}">
                 <input type="hidden" name="product-id" value="{{ card_product.id }}">
-                <button type="submit" class="quick-add">
+                <button id="add--{{ card_product.id }}" type="submit" class="quick-add" disabled>
                   {% render 'icon-cart' %}
                 </button>
             </form>
@@ -424,14 +424,13 @@
 
     let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
     let inputs = document.querySelectorAll(".custom-hidden--{{ card_product.id }}")
+    let addBtn = document.getElementById("add--{{ card_product.id }}")
     
     for (let i = 0; i < radiobuttons.length; i++) {
       radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
+      addBtn.removeAttribute("disabled");
         // console.log(inputs[i].value, document.getElementById('chosen-variant--{{ card_product.id }}').value)
-        if (inputs[i].checked) {
-          console.log("checked")
-        }
     });
     }
   }

@@ -420,7 +420,11 @@
       }
     });
 
-    console.log(document.querySelectorAll(".custom-radio--{{ card_product.id }}").length)
+    document.querySelectorAll(".custom-radio--{{ card_product.id }}").foreach(function() {
+      console.log("qlq")
+    })
+      
+    }
   }
 
   var elements = build("{{ card_product.id }}")

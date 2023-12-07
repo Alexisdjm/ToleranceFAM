@@ -402,7 +402,7 @@
       {% endfor %}
       
     arrr.forEach((element, index) => {
-      if (index <= 5) {
+      if (index <= 5 && element !== "") {
         console.log(element)
         let radio = document.createElement("input");
         radio.type = "radio";

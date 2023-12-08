@@ -390,6 +390,7 @@
     const container = document.getElementById("color-radios--container--"+id)
     let arrr = []
     let ids = []
+    let availables = []
     {% for variant in card_product.variants %}
       if (!arrr.includes('{{ variant.option2 }}')) {
        arrr.push("{{ variant.option2 }}")
@@ -408,8 +409,9 @@
         {% else %}
           {% assign selected_variant = default_size %}
         {% endif %}
-        console.log("{{ selected_variant.option1 }}", "{{ color_option }}", "{{ selected_variant.inventory_quantity }}")
+        // console.log("{{ selected_variant.option1 }}", "{{ color_option }}", "{{ selected_variant.inventory_quantity }}")
         ids.push("{{ selected_variant.id }}")
+        availables.push("{{ selected_variant.inventory_quantity }}")
       {% endfor %}
       
     arrr.forEach((element, index) => {

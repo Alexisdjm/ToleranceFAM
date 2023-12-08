@@ -431,7 +431,7 @@
     let addBtn = document.getElementById("add--{{ card_product.id }}")
     
     for (let i = 0; i < radiobuttons.length; i++) {
-      console.log(availables[i].value)
+      console.log(availables[i])
       radiobuttons[i].addEventListener('click', function() {
       document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
       if (availables[i].value > 0 ) {

@@ -980,15 +980,20 @@ input[type="radio"]:checked + label span.custom-radio--circle {
 }
 
 .quick-add {
+  border: none;
+  cursor: pointer;
   width: fit-content;
   height: fit-content;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .quick-add:hover ~ svg {
   transform: scale(1.1);
+}
+
+.quick-add:disabled {
+  opacity: 0.75;
 }
 
 /* ---- */

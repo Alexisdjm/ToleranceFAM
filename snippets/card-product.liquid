@@ -397,6 +397,7 @@
     {% endfor %}
 
     {% assign default_size = card_product.variants.first %}
+    {% assign target_size = "Medium" %}
 
       {% for color_option in card_product.options_with_values[1].values %}
         {% assign variant_with_color = card_product.variants | where: "option2", color_option %}

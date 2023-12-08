@@ -436,6 +436,8 @@
       document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
       if (availables[i] > 0 ) {
         addBtn.removeAttribute("disabled");
+      } else {
+        addBtn.setAttribute("disabled");
       }
         // console.log(inputs[i].value, document.getElementById('chosen-variant--{{ card_product.id }}').value)
     });

@@ -402,7 +402,8 @@
         {% assign variant_with_color = card_product.variants | where: "option2", color_option %}
         
         {% if variant_with_color.size > 0 %}
-          {% assign selected_variant = variant_with_color.first %}
+          {% comment %}{% assign selected_variant = variant_with_color.first %} {% endcomment %}
+            {% assign selected_variant = variant_with_color | where: "option1", target_size | first %}
         {% else %}
           {% assign selected_variant = default_size %}
         {% endif %}

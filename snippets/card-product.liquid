@@ -431,8 +431,8 @@
     let addBtn = document.getElementById("add--{{ card_product.id }}")
     
     for (let i = 0; i < radiobuttons.length; i++) {
-      console.log(availables[i])
       radiobuttons[i].addEventListener('click', function() {
+      console.log(availables[i])
       document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
       if (availables[i] > 0 ) {
         addBtn.removeAttribute("disabled");

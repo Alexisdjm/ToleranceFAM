@@ -92,7 +92,7 @@
       "settings": {
         "heading": "featured Clothing",
         "content": "products",
-        "product_slides": "consectetur",
+        "product_slides": "loren-collection",
         "collections": [
 
         ],
@@ -141,12 +141,12 @@
         "content": "collections",
         "product_slides": "",
         "collections": [
-          "consectetur",
           "lorem-ipsum",
           "lorem-collection",
           "lorem-collection-1",
           "mens",
-          "womens"
+          "womens",
+          "loren-collection"
         ],
         "dots": true,
         "align": "right"
@@ -345,7 +345,7 @@
             "icon": "shopify:\/\/shop_images\/marker-pin-02.svg",
             "info_title": "Visit Us",
             "info_sub": "Mon-Fri 9am to 5pm.",
-            "info_data": "50 Flinders Street  <br> Melbourne VIC 3000 AU"
+            "info_data": "50 Flinders Street  <br>\u2028Melbourne VIC 3000 AU"
           }
         },
         "a256a0f0-009d-425f-9634-61f598242e4f": {
@@ -354,7 +354,7 @@
             "icon": "shopify:\/\/shop_images\/Icon.svg",
             "info_title": "Call Us",
             "info_sub": "Mon-Fri 9am to 5pm.",
-            "info_data": "100 Smith Street  <br>Collingwood VIC 3066 AU"
+            "info_data": "100 Smith Street\u2028 <br>Collingwood VIC 3066 AU"
           }
         }
       },

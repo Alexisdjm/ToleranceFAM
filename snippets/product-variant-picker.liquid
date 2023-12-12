@@ -41,7 +41,7 @@
           {{ product.variants | json }}
         </script>
       </variant-selects>
-    {% elsif value.name == "Color" %}
+    {% elsif product.options_with_values[1].name == "Color" %}
       <variant-radios
         id="variant-radios-{{ section.id }}"
         class="no-js-hidden"
@@ -54,8 +54,8 @@
       >
         {%- for option in product.options_with_values -%}
           <fieldset class="js product-form__input">
-            <legend class="form__label">{{ value.name }}</legend>
-            {% render 'product-variant-options', product: product, option: value, block: block %}
+            <legend class="form__label">{{ product.options_with_values[1].name }}</legend>
+            {% render 'product-variant-options', product: product, option: product.options_with_values[1], block: block %}
           </fieldset>
           <script type="application/json">
             {{ product.variants | json }}

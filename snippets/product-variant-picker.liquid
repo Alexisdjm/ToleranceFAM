@@ -10,11 +10,6 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
-  {% if product.options_with_values.first.name == "Size" %}
-    <h1>{{ product.options_with_values.first.name }}</h1>
-    {% elsif product.options_with_values[1].name == "Color" %}
-    <h1>El color</h1>
-    {% endif %}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"

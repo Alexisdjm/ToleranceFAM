@@ -45,6 +45,10 @@
     endfor
   -%}
 
+  {% if product.options_with_values.first.name == "Size" %}
+    <h1>{{ product.options_with_values.first.name }}</h1>
+  {% endif %}
+
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"

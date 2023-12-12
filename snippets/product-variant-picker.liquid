@@ -10,60 +10,62 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
-    {% if product.options_with_values.first.name == "Size" %}
-       <variant-selects
-        id="variant-selects-{{ section.id }}"
-        class="no-js-hidden"
-        data-section="{{ section.id }}"
-        data-url="{{ product.url }}"
-        {% if update_url == false %}
-          data-update-url="false"
-        {% endif %}
-        {{ block.shopify_attributes }}
-      >
+  {%- if block.settings.picker_type == 'button' -%}
+    <variant-radios
+      id="variant-radios-{{ section.id }}"
+      class="no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {% if update_url == false %}
+        data-update-url="false"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        <fieldset class="js product-form__input">
+          <legend class="form__label">{{ option.name }}</legend>
+          {% render 'product-variant-options', product: product, option: option, block: block %}
+        </fieldset>
+      {%- endfor -%}
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-radios>
+  {%- else -%}
+    <variant-selects
+      id="variant-selects-{{ section.id }}"
+      class="no-js-hidden"
+      data-section="{{ section.id }}"
+      data-url="{{ product.url }}"
+      {% if update_url == false %}
+        data-update-url="false"
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
         <div class="product-form__input product-form__input--dropdown">
           <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-            {{ product.options_with_values.first.name.name }}
+            {{ option.name }}
           </label>
           <div class="select">
             <select
               id="Option-{{ section.id }}-{{ forloop.index0 }}"
               class="select__select"
-              name="options[{{ product.options_with_values.first.name | escape }}]"
+              name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options', product: product, option: product.options_with_values.first, block: block %}
+              {% render 'product-variant-options', product: product, option: option, block: block %}
             </select>
             {% render 'icon-caret' %}
           </div>
-        </div> 
-        <script type="application/json">
-          {{ product.variants | json }}
-        </script>
-      </variant-selects>
-    {% elsif product.options_with_values[1].name == "Color" %}
-      <variant-radios
-        id="variant-radios-{{ section.id }}"
-        class="no-js-hidden"
-        data-section="{{ section.id }}"
-        data-url="{{ product.url }}"
-        {% if update_url == false %}
-          data-update-url="false"
-        {% endif %}
-        {{ block.shopify_attributes }}
-      >
-        {%- for option in product.options_with_values -%}
-          <fieldset class="js product-form__input">
-            <legend class="form__label">{{ product.options_with_values[1].name }}</legend>
-            {% render 'product-variant-options', product: product, option: product.options_with_values[1], block: block %}
-          </fieldset>
-          <script type="application/json">
-            {{ product.variants | json }}
-          </script>
-        {% endfor %}
-      </variant-radios>
-    {% endif %}
-  
+        </div>
+      {%- endfor -%}
+
+      <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+    </variant-selects>
+  {%- endif -%}
 {%- endunless -%}
 
 <noscript class="product-form__noscript-wrapper-{{ section.id }}">
@@ -118,10 +120,3 @@
     </div>
   </div>
 </noscript>
-
-<script>
-  let values = ["Small", "Medium", "Large", "Extra large"]
-  {%  for variant in product.variants %}  
-    console.log("{{ product.options_with_values.first.name }}", "{{ variant.option1 }}")
-  {% endfor %}
-</script>

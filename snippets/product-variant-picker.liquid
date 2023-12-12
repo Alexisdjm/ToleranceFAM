@@ -13,8 +13,8 @@
   {% for option in product.options_with_values %}
     {% if option.name == "Size" %}
       <select>
-        {% for option in product.options_with_values %}
-          <option>{{ option.name }}</option>
+        {% for op in product.options_with_values %}
+          <option>{{ op.name }}</option>
         {% endfor %}
       </select>
     {% elsif option.name == "Color" %}

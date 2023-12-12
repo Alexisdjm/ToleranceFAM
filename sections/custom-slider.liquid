@@ -18,7 +18,7 @@
               <div class="align-gap--{{ section.settings.content }} custom-slider--inner-box slider--{{ section.id }}">             
                 {% if section.settings.content == "products" %}
                   {% if section.settings.allow_portrait == true %}
-                    <div class="portrait-container">
+                    <div class="portrait-container product--{{ section.id }}">
                       <img 
                       src="{{ section.settings.portrait | img_url: 'master' }}" 
                       alt="portrait pic" 

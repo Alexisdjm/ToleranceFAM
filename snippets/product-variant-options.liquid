@@ -46,6 +46,7 @@
   -%}
 
   {%- if product.options_with_values.first.name == "Size" -%}
+    {{ product.options_with_values.first.name }}
     <input
       type="radio"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"

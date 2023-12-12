@@ -75,17 +75,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <button
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            
-          >
-            <span>
-                {{ 'products.product.add_to_cart' | t }}
-            </span>
-            {%- render 'loading-spinner' -%}
-          </button>
+          <button type="submit">hola</button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}

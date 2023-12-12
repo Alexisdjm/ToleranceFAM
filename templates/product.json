@@ -86,6 +86,8 @@
 
         ],
         "dots": true,
+        "portrait": "shopify:\/\/shop_images\/Frame_101.png",
+        "allow_portrait": true,
         "align": "centeer"
       }
     },

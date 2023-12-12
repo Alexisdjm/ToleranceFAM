@@ -11,7 +11,6 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
     {% for value in product.options_with_values %}
-      <!-- <h1>{{ value.name }}</h1> -->
       {% if value.name == "Size" %}
          <variant-selects
         id="variant-selects-{{ section.id }}"
@@ -38,8 +37,7 @@
             </select>
             {% render 'icon-caret' %}
           </div>
-        </div>
-  
+        </div> 
         <script type="application/json">
           {{ product.variants | json }}
         </script>

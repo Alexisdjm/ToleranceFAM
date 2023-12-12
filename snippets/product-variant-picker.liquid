@@ -13,9 +13,6 @@
   {% if product.options_with_values.first.name == "Size" %}
     <h1>{{ product.options_with_values.first.name }}</h1>
     {% elsif product.options_with_values[1].name == "Color" %}
-    <h1>El color</h1>
-    {% endif %}
-  {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
@@ -36,6 +33,9 @@
         {{ product.variants | json }}
       </script>
     </variant-radios>
+    {% endif %}
+  {%- if block.settings.picker_type == 'button' -%}
+    
   {%- else -%}
     <variant-selects
       id="variant-selects-{{ section.id }}"

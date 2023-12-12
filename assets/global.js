@@ -1141,6 +1141,8 @@ class VariantSelects extends HTMLElement {
         //   window.variantStrings.soldOut
         // );
 
+        console.log("hola")
+
         publish(PUB_SUB_EVENTS.variantChange, {
           data: {
             sectionId,

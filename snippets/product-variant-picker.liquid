@@ -54,7 +54,7 @@
           {{ block.shopify_attributes }}
         >
           <fieldset class="js product-form__input">
-            <legend class="form__label">{{ option.name }}</legend>
+            <legend class="form__label">{{ value.name }}</legend>
             {% render 'product-variant-options', product: product, option: value, block: block %}
           </fieldset>
           <script type="application/json">

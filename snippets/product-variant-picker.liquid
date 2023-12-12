@@ -28,9 +28,9 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
-      <script type="application/json">
+      <!-- <script type="application/json">
         {{ product.variants | json }}
-      </script>
+      </script> -->
     </variant-radios>
   {%- else -%}
     <variant-selects
@@ -62,9 +62,9 @@
         </div>
       {%- endfor -%}
 
-      <script type="application/json">
+      <!-- <script type="application/json">
         {{ product.variants | json }}
-      </script>
+      </script> -->
     </variant-selects>
   {%- endif -%}
 {%- endunless -%}

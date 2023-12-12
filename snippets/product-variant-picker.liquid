@@ -122,13 +122,8 @@
 </noscript>
 
 <script>
-<<<<<<< HEAD
   let values = ["Small", "Medium", "Large", "Extra large"]
   {%  for variant in product.variants %}  
     console.log("{{ product.options_with_values[0].name }}", "{{ product.variants.option1 }}")
-=======
-  {% for variant in product.variants %}
-    console.log("{{ variant.option1 }}", "{{ variant.option2 }}")
->>>>>>> 1ecf4c5bb603f14324f1af5282b8f57d4a0bbd8e
   {% endfor %}
 </script>

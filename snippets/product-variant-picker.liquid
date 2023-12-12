@@ -122,5 +122,8 @@
 </noscript>
 
 <script>
-  console.log("{{ product.variants.option1 }}", "{{ product.variants.option1 }}")
+  let values = ["Small", "Medium", "Large", "Extra large"]
+  {%  for variant in product.variants %}  
+    console.log("{{ product.options_with_values[0].name }}", "{{ product.variants.option1 }}")
+  {% endfor %}
 </script>

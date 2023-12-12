@@ -13,10 +13,9 @@
   {% for option in product.options_with_values %}
     {% if option.name == "Size" %}
       <select>
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
-        <option>Extra large</option>
+        {% for option in product.options_with_values %}
+          <option>{{ option.name }}</option>
+        {% endfor %}
       </select>
     {% elsif option.name == "Color" %}
     {% endif %}

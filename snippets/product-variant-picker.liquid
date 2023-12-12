@@ -12,6 +12,12 @@
 {%- unless product.has_only_default_variant -%}
   {% for option in product.options_with_values %}
     {% if option.name == "Size" %}
+      <select>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+        <option>Extra large</option>
+      </select>
     {% elsif option.name == "Color" %}
     {% endif %}
   {% endfor %}

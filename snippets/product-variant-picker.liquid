@@ -12,7 +12,7 @@
 {%- unless product.has_only_default_variant -%}
   <script>
     {% for value in product.options_with_values %}
-      console.log(value.name)
+      console.log("{{ value.name }}")
     {% endfor %}
   </script>
   {%- if block.settings.picker_type == 'button' -%}

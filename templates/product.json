@@ -76,6 +76,19 @@
         "padding_bottom": 12
       }
     },
+    "bf00795e-e116-4a97-8d7f-3d8d4304d648": {
+      "type": "custom-slider",
+      "settings": {
+        "heading": "",
+        "content": "products",
+        "product_slides": "loren-collection",
+        "collections": [
+
+        ],
+        "dots": true,
+        "align": "centeer"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -97,6 +110,7 @@
   },
   "order": [
     "main",
+    "bf00795e-e116-4a97-8d7f-3d8d4304d648",
     "related-products"
   ]
 }

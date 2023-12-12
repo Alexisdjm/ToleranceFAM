@@ -12,7 +12,7 @@
 {%- unless product.has_only_default_variant -%}
   {% if product.options_with_values.first.name == "Size" %}
     <h1>{{ product.options_with_values.first.name }}</h1>
-    {% elsif product.options_with_values.[1].name =="Color" %}
+    {% elsif product.options_with_values[1].name == "Color" %}
     <h1>El color</h1>
     {% endif %}
   {%- if block.settings.picker_type == 'button' -%}

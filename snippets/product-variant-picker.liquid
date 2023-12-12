@@ -10,11 +10,9 @@
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
-  <script>
     {% for value in product.options_with_values %}
       <h1>{{ value.name }}</h1>
     {% endfor %}
-  </script>
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"

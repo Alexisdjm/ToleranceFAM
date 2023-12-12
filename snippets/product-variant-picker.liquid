@@ -11,7 +11,6 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
-      {{ product.options_with_values.first.name }}
     <variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
@@ -28,9 +27,9 @@
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
-      <!-- <script type="application/json">
+      <script type="application/json">
         {{ product.variants | json }}
-      </script> -->
+      </script>
     </variant-radios>
   {%- else -%}
     <variant-selects

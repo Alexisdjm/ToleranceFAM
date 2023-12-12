@@ -176,6 +176,69 @@
 
 </script>
 
+{% if section.settings.allow_variants == true %}
+  <script>
+    function build(id) {
+      let number = {{ card_product.variants.size }}
+      const container = document.getElementById("color-radios--container--"+id)
+      let arrr = []
+      let ids = []
+      let availables = []
+      {% for variant in card_product.variants %}
+        if (!arrr.includes('{{ variant.option2 }}')) {
+         arrr.push("{{ variant.option2 }}")
+        }
+      {% endfor %}
+  
+      {% assign default_size = card_product.variants.first %}
+      {% assign target_size = "Medium" %}
+  
+        {% for color_option in card_product.options_with_values[1].values %}
+          {% assign variant_with_color = card_product.variants | where: "option2", color_option %}
+          
+          {% if variant_with_color.size > 0 %}
+            {% comment %}{% assign selected_variant = variant_with_color.first %} {% endcomment %}
+              {% assign selected_variant = variant_with_color | where: "option1", target_size | first %}
+          {% else %}
+            {% assign selected_variant = default_size %}
+          {% endif %}
+          // console.log("{{ selected_variant.option1 }}", "{{ color_option }}", "{{ selected_variant.inventory_quantity }}")
+          ids.push("{{ selected_variant.id }}")
+          availables.push("{{ selected_variant.inventory_quantity }}")
+        {% endfor %}
+        
+      arrr.forEach((element, index) => {
+        if (index < 5 && element !== "") {
+  
+          container.innerHTML += `
+          <input type="radio" name="color" id="product--${index}--{{ card_product.id }}" form="form-add-product--{{ card_product.id }}" value="${ids[index]}" class="custom-hidden custom-hidden--{{ card_product.id }}">
+          <label class="custom-radio custom-radio--{{ card_product.id }}" for="product--${index}--{{ card_product.id }}">
+            <span class="custom-radio--circle custom--{{ card_product.id }}"  style="background-color: ${element}"></span>
+          </label>
+          `;
+        }
+      });
+  
+      let radiobuttons = document.querySelectorAll(".custom-radio--{{ card_product.id }}")
+      let inputs = document.querySelectorAll(".custom-hidden--{{ card_product.id }}")
+      let addBtn = document.getElementById("add--{{ card_product.id }}")
+      
+      for (let i = 0; i < radiobuttons.length; i++) {
+        radiobuttons[i].addEventListener('click', function() {
+        document.getElementById('chosen-variant--{{ card_product.id }}').value = inputs[i].value;
+        if (availables[i] > 0 ) {
+          addBtn.removeAttribute("disabled");
+        } else {
+          addBtn.disabled = true;
+        }
+      });
+      }
+    }
+  
+    var elements = build("{{ card_product.id }}")
+  </script>
+{% endif %}
+
 {% schema %}
     {
         "name": "custom slider",
@@ -258,6 +321,12 @@
                 "type": "collection",
                 "id": "product_slides",
                 "label": "Collection"
+            },
+            {
+              "type": "checkbox",
+              "id": "allow_variants",
+              "default": false,
+              "label": "Display Variant  picker"
             },
             {
                 "type": "collection_list",

@@ -98,6 +98,7 @@
 
         ],
         "dots": true,
+        "slider_width": "fifth-width",
         "allow_portrait": false,
         "align": "right"
       }
@@ -152,6 +153,7 @@
           "loren-collection"
         ],
         "dots": true,
+        "slider_width": "fifth-width",
         "allow_portrait": false,
         "align": "right"
       }
@@ -268,6 +270,7 @@
           "womens"
         ],
         "dots": true,
+        "slider_width": "forth-width",
         "allow_portrait": false,
         "align": "right"
       }
@@ -432,6 +435,7 @@
 
         ],
         "dots": true,
+        "slider_width": "first-width",
         "allow_portrait": false,
         "align": "centeer"
       }

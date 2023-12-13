@@ -48,7 +48,7 @@
                                     {% render 'icon-cart' %}
                                   </button>
                               </form>
-                              <input type="hidden" id="p--{{ pro.id }}">{{ pro.id }}<input>
+                              <input type="hidden" id="p--{{ pro.id }}">{{ pro.variants.size }}<input>
                             </div>
                           {% endif %}
                           <div class="custom-product--cart--text">
@@ -197,7 +197,7 @@
   <script>
     function buildVariants(id) {
       console.log("{{ pro.id }}")
-      let number = {{ pro.variants.size }}
+      let number = ""
       let containerr = document.getElementById("color-radios--container--"+id)
       let arrr = []
       let ids = []

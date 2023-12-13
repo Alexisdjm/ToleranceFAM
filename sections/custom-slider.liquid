@@ -197,7 +197,7 @@
     function build(id) {
       console.log("{{ pro.id }}")
       let number = {{ pro.variants.size }}
-      const container = document.getElementById("color-radios--container--"+id)
+      let container = document.getElementById("color-radios--container--"+id)
       let arrr = []
       let ids = []
       let availables = []

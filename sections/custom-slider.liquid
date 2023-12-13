@@ -38,11 +38,6 @@
                             <h1>{{ collection.title }}</h1>
                         </a>
                     {% endfor %}
-                {% elsif section.settings.content == "recommendations" %}
-                    {{ recommendations.products_count }}
-                    {% for reco in recommendations.products %}
-                      {% render 'custom-simple-product-card', item: reco, sec: section %}
-                    {% endfor %}
                 {% elsif section.settings.content == "reviews" or section.settings.content == "videos" %}
                     {% for block in section.blocks %}
                         {% case block.type %}

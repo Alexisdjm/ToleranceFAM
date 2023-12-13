@@ -30,7 +30,9 @@
         <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.heading }}
         </h2>
-        <a href="{{ section.settings.new_btn_url }}" class="new-btn--related-p">{{ section.settings.btn_text }}</a> 
+        {% if section.settings.new_btn_url != blank %}
+          <a href="{{ section.settings.new_btn_url }}" class="new-btn--related-p">{{ section.settings.btn_text }}</a> 
+        {% endif %}
       </div>
       <ul
         class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"

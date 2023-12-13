@@ -28,7 +28,7 @@
     <div class="custom-product--cart--text">
         <h1>{{ pro.title }}</h1>
     </div>
-    <p>{{ pro.price |  money_without_trailing_zeros }}</p>
+    <p>{{ pro.price |  money_with_currency }}</p>
 </div>
 
 {% if allow_variants %}

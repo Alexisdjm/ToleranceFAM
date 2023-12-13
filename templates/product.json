@@ -82,6 +82,7 @@
         "heading": "Complete the look",
         "content": "products",
         "product_slides": "loren-collection",
+        "allow_variants": true,
         "collections": [
 
         ],

@@ -110,11 +110,28 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "a45c67d6-b528-4ab2-8abd-900e56922f9b": {
+      "type": "custom-slider",
+      "settings": {
+        "heading": "You may also like",
+        "content": "recommendations",
+        "product_slides": "",
+        "allow_variants": false,
+        "collections": [
+
+        ],
+        "dots": true,
+        "slider_width": "second-width",
+        "allow_portrait": false,
+        "align": "centeer"
+      }
     }
   },
   "order": [
     "main",
     "bf00795e-e116-4a97-8d7f-3d8d4304d648",
-    "related-products"
+    "related-products",
+    "a45c67d6-b528-4ab2-8abd-900e56922f9b"
   ]
 }

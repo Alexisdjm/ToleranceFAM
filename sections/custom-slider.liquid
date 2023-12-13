@@ -33,10 +33,9 @@
                           alt="product pic" 
                           class="product-pic" 
                           loading="lazy">
+                          {% if section.settings.allow_variants %}
                           <div class="flex-between upper-belt">
                             <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>
-                            </div>
-                          {% if section.settings.allow_variants %}
                               <form method="post" 
                                 action="/cart/add" 
                                 id="form-add-product--{{ pro.id }}" 
@@ -49,6 +48,7 @@
                                     {% render 'icon-cart' %}
                                   </button>
                               </form>
+                            </div>
                           {% endif %}
                           <div class="custom-product--cart--text">
                               <h1>{{ pro.title }}</h1>

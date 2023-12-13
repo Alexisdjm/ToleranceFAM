@@ -87,7 +87,7 @@
 
         ],
         "dots": true,
-        "slider_width": "first-width",
+        "slider_width": "second-width",
         "portrait": "shopify:\/\/shop_images\/Frame_101.png",
         "allow_portrait": true,
         "align": "centeer"

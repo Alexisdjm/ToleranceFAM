@@ -91,7 +91,11 @@
     function actualizarVariable(layoutt, width, l1, l2, l3, l4) {
       if (layoutt == "products") {
         slides = l1;
-        width == "first-width" ? displayedElements = 4 : displayedElements = 5
+        if ( width === "first-width" || width === "second-width") {
+          displayedElements = 4
+        } else {
+          displayedElements = 5
+        }
       } else if (layoutt == "reviews") {
         slides = l2;
         displayedElements = 3

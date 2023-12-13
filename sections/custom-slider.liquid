@@ -34,6 +34,9 @@
                           class="product-pic" 
                           loading="lazy">
                           <div class="flex-between upper-belt">
+                    {% if section.settings.allow_variants == true %}
+                      <p>hola</p>
+                      {% endif %}
                           <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>
                             <form method="post" 
                               action="/cart/add" 

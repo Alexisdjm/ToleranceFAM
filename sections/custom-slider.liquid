@@ -195,7 +195,7 @@
 
 {% if section.settings.allow_variants %}
   <script>
-    function build(id) {
+    function buildVariants(id) {
       console.log("{{ pro.id }}")
       let number = {{ pro.variants.size }}
       let containerr = document.getElementById("color-radios--container--"+id)
@@ -253,7 +253,7 @@
       }
     }
   
-    var elements = build("{{ pro.id }}")
+    var elements = buildVariants("{{ pro.id }}")
   </script>
 {% endif %}
 

@@ -39,6 +39,7 @@
                         </a>
                     {% endfor %}
                 {% elsif section.settings.content == "recommendations" %}
+                    {{ recommendations.products }}
                     {% for reco in recommendations.products %}
                       {% render 'custom-simple-product-card', item: reco, sec: section %}
                     {% endfor %}

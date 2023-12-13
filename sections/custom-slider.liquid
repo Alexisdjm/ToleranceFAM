@@ -104,7 +104,7 @@
       }
     }
     
-    actualizarVariable("{{ section.settings.content }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"), document.querySelectorAll(".video--{{ section.id }}"));
+    actualizarVariable("{{ section.settings.content }}", "{{ section.settings.slider_width }}", document.querySelectorAll(".product--{{ section.id }}"), document.querySelectorAll(".review-slide--{{ section.id }}"), document.querySelectorAll(".collection--{{ section.id }}"), document.querySelectorAll(".video--{{ section.id }}"));
     
     const prevButton = document.getElementById("prev--"+id);
     const nextButton = document.getElementById("next--"+id);

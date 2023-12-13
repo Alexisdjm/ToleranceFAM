@@ -34,16 +34,16 @@
                           class="product-pic" 
                           loading="lazy">
                           <div class="flex-between upper-belt">
-                          <div id="color-radios--container--{{ card_product.id }}" class="radio-colors--container"></div>
+                          <div id="color-radios--container--{{ product.id }}" class="radio-colors--container"></div>
                             <form method="post" 
                               action="/cart/add" 
-                              id="form-add-product--{{ card_product.id }}" 
+                              id="form-add-product--{{ product.id }}" 
                               accept-charset="UTF-8" 
                               class="add-to-cart--custom" 
                               enctype="multipart/form-data">
-                                <input type="hidden" name="id" id="chosen-variant--{{ card_product.id }}">
-                                <input type="hidden" name="product-id" value="{{ card_product.id }}">
-                                <button id="add--{{ card_product.id }}" type="submit" class="quick-add" disabled>
+                                <input type="hidden" name="id" id="chosen-variant--{{ product.id }}">
+                                <input type="hidden" name="product-id" value="{{ product.id }}">
+                                <button id="add--{{ product.id }}" type="submit" class="quick-add" disabled>
                                   {% render 'icon-cart' %}
                                 </button>
                             </form>

@@ -34,7 +34,6 @@
                           class="product-pic" 
                           loading="lazy">
                           {% if section.settings.allow_variants %}
-                            qlq
                           <div class="flex-between upper-belt">
                             <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>
                               <form method="post" 
@@ -253,7 +252,7 @@
       }
     }
   
-    var elements = build("{{ product.id }}")
+    var elements = build("{{ pro.id }}")
   </script>
 {% endif %}
 

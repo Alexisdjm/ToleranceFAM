@@ -197,7 +197,7 @@
     function build(id) {
       console.log("{{ pro.id }}")
       let number = {{ pro.variants.size }}
-      let container = document.getElementById("color-radios--container--"+id)
+      let containerr = document.getElementById("color-radios--container--"+id)
       let arrr = []
       let ids = []
       let availables = []
@@ -227,7 +227,7 @@
       arrr.forEach((element, index) => {
         if (index < 5 && element !== "") {
   
-          container.innerHTML += `
+          containerr.innerHTML += `
           <input type="radio" name="color" id="product--${index}--{{ pro.id }}" form="form-add-product--{{ pro.id }}" value="${ids[index]}" class="custom-hidden custom-hidden--{{ pro.id }}">
           <label class="custom-radio custom-radio--{{ pro.id }}" for="product--${index}--{{ pro.id }}">
             <span class="custom-radio--circle custom--{{ pro.id }}"  style="background-color: ${element}"></span>

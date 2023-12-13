@@ -155,7 +155,7 @@
     
     nextButton.addEventListener("click", (e) => {
         currentIndex = (currentIndex + 1) % (slides.length - displayedElements + 1);
-        updateSlider();
+        updateSlider(); 
         e.preventDefault();
     });
     
@@ -190,7 +190,7 @@
 
 </script>
 
-{% if section.settings.allow_variants == "true" %}
+{% if section.settings.allow_variants == true %}
   <script>
     function build(id) {
   console.log("{{ product.id }}")

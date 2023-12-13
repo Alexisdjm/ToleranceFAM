@@ -39,7 +39,7 @@
                         </a>
                     {% endfor %}
                 {% elsif section.settings.content == "recommendations" %}
-                    {{ recommendations.products }}
+                    {{ recommendations.products_count }}
                     {% for reco in recommendations.products %}
                       {% render 'custom-simple-product-card', item: reco, sec: section %}
                     {% endfor %}

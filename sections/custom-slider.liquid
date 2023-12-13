@@ -81,17 +81,17 @@
 </div>
 
 <script>
-  console.log("{{ section.settings.slider_width.value }}")
+  console.log("{{ section.settings.slider_width }}")
   function BuildSlider(id, layout) {
     const slider = document.querySelector(".slider--"+id);
     const dotsContainer = document.querySelector(".dots-container--"+id)
     let displayedElements = 0
     let slides = ''
 
-    function actualizarVariable(layoutt, l1, l2, l3, l4) {
+    function actualizarVariable(layoutt, width, l1, l2, l3, l4) {
       if (layoutt == "products") {
         slides = l1;
-        displayedElements = 5
+        width == "first-width" ? displayedElements = 3 : displayedElements = 5
       } else if (layoutt == "reviews") {
         slides = l2;
         displayedElements = 3

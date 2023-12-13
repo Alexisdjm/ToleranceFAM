@@ -38,6 +38,10 @@
                             <h1>{{ collection.title }}</h1>
                         </a>
                     {% endfor %}
+                {% elsif section.settings.content == "recommendations" %}
+                    {% for reco in recommendations.products %}
+                      
+                    {% endfor %}
                 {% elsif section.settings.content == "reviews" or section.settings.content == "videos" %}
                     {% for block in section.blocks %}
                         {% case block.type %}

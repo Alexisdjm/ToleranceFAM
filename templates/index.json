@@ -78,10 +78,10 @@
       "type": "featured-collections",
       "settings": {
         "collection_list": [
-          "mens",
           "womens",
-          "consectetur",
-          "lorem-ipsum"
+          "lorem-ipsum",
+          "lorem-collection",
+          "loren-collection"
         ],
         "padding_top": 36,
         "padding_bottom": 36
@@ -93,10 +93,12 @@
         "heading": "featured Clothing",
         "content": "products",
         "product_slides": "loren-collection",
+        "allow_variants": false,
         "collections": [
 
         ],
         "dots": true,
+        "allow_portrait": false,
         "align": "right"
       }
     },
@@ -140,6 +142,7 @@
         "heading": "Featured Collections",
         "content": "collections",
         "product_slides": "",
+        "allow_variants": false,
         "collections": [
           "lorem-ipsum",
           "lorem-collection",
@@ -149,6 +152,7 @@
           "loren-collection"
         ],
         "dots": true,
+        "allow_portrait": false,
         "align": "right"
       }
     },
@@ -254,6 +258,7 @@
         "heading": "our happy customers",
         "content": "reviews",
         "product_slides": "consectetur",
+        "allow_variants": false,
         "collections": [
           "consectetur",
           "lorem-ipsum",
@@ -263,6 +268,7 @@
           "womens"
         ],
         "dots": true,
+        "allow_portrait": false,
         "align": "right"
       }
     },
@@ -421,10 +427,12 @@
         "heading": "Our story is your story",
         "content": "videos",
         "product_slides": "",
+        "allow_variants": false,
         "collections": [
 
         ],
         "dots": true,
+        "allow_portrait": false,
         "align": "centeer"
       }
     }

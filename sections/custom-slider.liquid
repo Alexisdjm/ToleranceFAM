@@ -194,6 +194,7 @@
 {% if section.settings.allow_variants == true %}
   <script>
     function build(id) {
+  console.log("{{ product.id }}")
       let number = {{ product.variants.size }}
       const container = document.getElementById("color-radios--container--"+id)
       let arrr = []

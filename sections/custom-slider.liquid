@@ -26,24 +26,24 @@
                       loading="lazy">
                     </div>
                   {% endif %}
-                  {% for product in selected_collection.products %}
+                  {% for pro in selected_collection.products %}
                       <div class="custom-product--cart product--{{ section.id }}">
                           <img 
-                          src="{{ product.featured_media | img_url: 'master' }}" 
+                          src="{{ pro.featured_media | img_url: 'master' }}" 
                           alt="product pic" 
                           class="product-pic" 
                           loading="lazy">
                           <div class="flex-between upper-belt">
-                          <div id="color-radios--container--{{ product.id }}" class="radio-colors--container"></div>
+                          <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>
                             <form method="post" 
                               action="/cart/add" 
-                              id="form-add-product--{{ product.id }}" 
+                              id="form-add-product--{{ pro.id }}" 
                               accept-charset="UTF-8" 
                               class="add-to-cart--custom" 
                               enctype="multipart/form-data">
-                                <input type="hidden" name="id" id="chosen-variant--{{ product.id }}">
-                                <input type="hidden" name="product-id" value="{{ product.id }}">
-                                <button id="add--{{ product.id }}" type="submit" class="quick-add" disabled>
+                                <input type="hidden" name="id" id="chosen-variant--{{ pro.id }}">
+                                <input type="hidden" name="product-id" value="{{ pro.id }}">
+                                <button id="add--{{ pro.id }}" type="submit" class="quick-add" disabled>
                                   {% render 'icon-cart' %}
                                 </button>
                             </form>

@@ -1,0 +1,92 @@
+
+
+<div class="custom-product--cart product--{{ section.id }}">
+    <img 
+    src="{{ pro.featured_media | img_url: 'master' }}" 
+    alt="product pic" 
+    class="product-pic" 
+    loading="lazy">
+    {% if section.settings.allow_variants %}
+    <div class="flex-between upper-belt">
+      <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>
+        <form method="post" 
+          action="/cart/add" 
+          id="form-add-product--{{ pro.id }}" 
+          accept-charset="UTF-8" 
+          class="add-to-cart--custom" 
+          enctype="multipart/form-data">
+            <input type="hidden" name="id" id="chosen-variant--{{ pro.id }}">
+            <input type="hidden" name="product-id" value="{{ pro.id }}">
+            <button id="add--{{ pro.id }}" type="submit" class="quick-add" disabled>
+              {% render 'icon-cart' %}
+            </button>
+        </form>
+        <input type="hidden" id="p--{{ pro.id }}">{{ pro.variants.size }}<input>
+      </div>
+    {% endif %}
+    <div class="custom-product--cart--text">
+        <h1>{{ pro.title }}</h1>
+    </div>
+    <p>{{ pro.price |  money_without_trailing_zeros }}</p>
+</div>
+
+<script>
+  function build(id) {
+    let number = {{ pro.variants.size }}
+    const container = document.getElementById("color-radios--container--"+id)
+    let arrr = []
+    let ids = []
+    let availables = []
+    {% for variant in pro.variants %}
+      if (!arrr.includes('{{ variant.option2 }}')) {
+       arrr.push("{{ variant.option2 }}")
+      }
+    {% endfor %}
+
+    {% assign default_size = pro.variants.first %}
+    {% assign target_size = "Medium" %}
+
+      {% for color_option in pro.options_with_values[1].values %}
+        {% assign variant_with_color = pro.variants | where: "option2", color_option %}
+        
+        {% if variant_with_color.size > 0 %}
+          {% comment %}{% assign selected_variant = variant_with_color.first %} {% endcomment %}
+            {% assign selected_variant = variant_with_color | where: "option1", target_size | first %}
+        {% else %}
+          {% assign selected_variant = default_size %}
+        {% endif %}
+        // console.log("{{ selected_variant.option1 }}", "{{ color_option }}", "{{ selected_variant.inventory_quantity }}")
+        ids.push("{{ selected_variant.id }}")
+        availables.push("{{ selected_variant.inventory_quantity }}")
+      {% endfor %}
+      
+    arrr.forEach((element, index) => {
+      if (index < 5 && element !== "") {
+
+        container.innerHTML += `
+        <input type="radio" name="color" id="product--${index}--{{ pro.id }}" form="form-add-product--{{ pro.id }}" value="${ids[index]}" class="custom-hidden custom-hidden--{{ pro.id }}">
+        <label class="custom-radio custom-radio--{{ pro.id }}" for="product--${index}--{{ pro.id }}">
+          <span class="custom-radio--circle custom--{{ pro.id }}"  style="background-color: ${element}"></span>
+        </label>
+        `;
+      }
+    });
+
+    let radiobuttons = document.querySelectorAll(".custom-radio--{{ pro.id }}")
+    let inputs = document.querySelectorAll(".custom-hidden--{{ pro.id }}")
+    let addBtn = document.getElementById("add--{{ pro.id }}")
+    
+    for (let i = 0; i < radiobuttons.length; i++) {
+      radiobuttons[i].addEventListener('click', function() {
+      document.getElementById('chosen-variant--{{ pro.id }}').value = inputs[i].value;
+      if (availables[i] > 0 ) {
+        addBtn.removeAttribute("disabled");
+      } else {
+        addBtn.disabled = true;
+      }
+    });
+    }
+  }
+
+  var elements = build("{{ pro.id }}")
+</script>

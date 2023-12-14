@@ -237,6 +237,8 @@
                   </div>
                 {% endif %}
               </div>
+            {% when 'quantity-checkout' %}
+              {% render 'quantity-checkout', sec: section, element: product, block: block, cart: cart %}
             {%- when 'quantity_selector' -%}
               <div
                 id="Quantity-Form-{{ section.id }}"
@@ -769,6 +771,11 @@
           "label": "Reviews number"
         }
       ]
+    },
+    {
+    "type": "quantity-checkout",
+    "name": "quantity and checkout",
+    "limit": 1
     },
     {
       "name": "Icons information",

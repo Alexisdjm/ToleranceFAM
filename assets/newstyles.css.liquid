@@ -1039,9 +1039,8 @@ input[type="radio"]:checked + label span.custom-radio--circle {
   height: 180px !important;
 }
 
-.product-media-container.constrain-height.media-fit-contain {
-  max-height: 578px !important;
-  max-width: 552px !important;
+.product__media.media.media--transparent p {
+  object-fit: contain;
 }
 
 .thumbnail-slider.slider-mobile-gutter {
@@ -1596,4 +1595,11 @@ div.newsletter-form__field-wrapper {
     .footer-custom--blocks-container {
         padding: 100px 60px 5rem;
     }
+}
+
+@media only screen and (min-width: 1281px) {
+  .product-media-container.constrain-height.media-fit-contain {
+    max-height: 578px !important;
+    width: 552px !important;
+  }
 }

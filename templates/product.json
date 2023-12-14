@@ -56,6 +56,16 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "4d031714-2e62-46eb-9922-e5cded01e509": {
+          "type": "custom-icons-with-info",
+          "settings": {
+            "first_icon": "shopify:\/\/shop_images\/icon-delivery.png",
+            "new_information1": "<h3>Free Delivery<\/h3><p><a href=\"\/collections\" title=\"All collections\">Enter your postal code for Delivery Availability<\/a><\/p>",
+            "second_icon": "shopify:\/\/shop_images\/Icon-return.png",
+            "new_information2": "<h3>Return Delivery<\/h3><p>Free 30 Days Delivery Returns. <a href=\"\/collections\" title=\"All collections\">Details<\/a><\/p>",
+            "new_information3": ""
+          }
         }
       },
       "block_order": [
@@ -67,7 +77,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "4d031714-2e62-46eb-9922-e5cded01e509"
       ],
       "settings": {
         "enable_sticky_info": true,

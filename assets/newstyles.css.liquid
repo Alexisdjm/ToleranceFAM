@@ -2,6 +2,8 @@
   border: 1px solid red;
 } {% endcomment %}
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 /* -------------------------------------------------------- variables ------------------------------------------------------------ */
 
 :root {
@@ -16,6 +18,7 @@
     --bg-lime-green: #5FC037;
     --color-white: #ffffff;
     --color-black: #000000;
+    --font-montserrat: 'Montserrat', sans-serif;
     --page-font-family:'Plus Jakarta Sans', sans-serif;
     --big-headings-font-family: 'Monument Extended', sans-serif;
 }
@@ -1087,6 +1090,65 @@ input[type="radio"]:checked + label span.custom-radio--circle {
   margin: 0 !important;
   display: flex;
   align-items: center;
+}
+
+.custom-rating--container {
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+}
+
+.custom-rating--container p {
+  font-family: var(--page-font-family);
+  font-weight: var(--font-500);
+  letter-spacing: 0em;
+  line-height: 24px;
+  text-align: left;
+  font-size: 16px;
+  color: #494E55;
+  margin: 0;
+}
+
+.available-warning, .unavailable-warning {
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+}
+
+.available-warning p, .unavailable-warning p {
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-500);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.available-warning p {
+  color: var(--button-bg-color);
+}
+
+.unavailable-warning p {
+  color: red;
+}
+
+.available-dot, .unavailable-dot {
+  display: block;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+}
+
+.available-dot {
+  background-color: var(--button-bg-color);
+}
+
+.unavailable-dot {
+  background-color: red;
+}
+
+.custom-stars {
+  max-width: 128px;
 }
 
 /* --------------------------------------------------- new email form -------------------------------------------------------- */

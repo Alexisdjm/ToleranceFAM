@@ -206,6 +206,20 @@
                   </div>
                 </details>
               </div>
+            {% when 'custom_rating' %}
+              <div class="custom-rating--container">
+                <img 
+                src="{{ block.settings.stars | img_url: "master" }}" 
+                alt="stars" 
+                class="custom-stars" 
+                loading="lazy">
+                <p>{{ block.settings.reviews_number }}</p>
+                {% if product.available %}
+                  <div class="available-warning"><span class="available-dot"></span><p>In stock</p></div>
+                {%  elsif  %}
+                  <div class="unavailable-warning"><span class="unavailable-dot"></span><p>Out of stock</p></div>
+                {% endif %}
+              </div>
             {%- when 'quantity_selector' -%}
               <div
                 id="Quantity-Form-{{ section.id }}"
@@ -720,6 +734,24 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "custom_rating",
+      "name": "custom-rating",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "stars",
+          "label": "Rating stars"
+        },
+        {
+          "type": "text",
+          "id": "reviews_number",
+          "default": "5,012 Reviews",
+          "label": "Reviews number"
+        }
+      ]
     },
     {
       "type": "sku",

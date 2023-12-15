@@ -149,6 +149,7 @@
    document.querySelector(`.bar--${currentIndex}-${layout}`).classList.add("activee")
     
     function updateSlider() {
+      console.log(currentIndex, slides.length)
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
       if (currentIndex > 0) {

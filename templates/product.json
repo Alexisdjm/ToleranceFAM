@@ -34,6 +34,11 @@
           "settings": {
           }
         },
+        "fdf5deba-44b0-42e2-af97-e98d32e82a52": {
+          "type": "quantity-checkout",
+          "settings": {
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -54,11 +59,6 @@
             "new_information2": "<h3>Return Delivery<\/h3><p>Free 30 Days Delivery Returns. <a href=\"\/collections\" title=\"All collections\">Details<\/a><\/p>",
             "new_information3": ""
           }
-        },
-        "fdf5deba-44b0-42e2-af97-e98d32e82a52": {
-          "type": "quantity-checkout",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -67,10 +67,10 @@
         "afecc4a8-1863-4b1d-ae68-8a32ae8ba5a1",
         "variant_picker",
         "price",
+        "fdf5deba-44b0-42e2-af97-e98d32e82a52",
         "description",
         "share",
-        "4d031714-2e62-46eb-9922-e5cded01e509",
-        "fdf5deba-44b0-42e2-af97-e98d32e82a52"
+        "4d031714-2e62-46eb-9922-e5cded01e509"
       ],
       "settings": {
         "enable_sticky_info": true,

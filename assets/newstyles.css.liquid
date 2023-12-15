@@ -1248,8 +1248,13 @@ color: #646464;
   padding: 15px;
   border: 1px solid #EDEDED;
   color: var(--button-bg-color);
-  height: fit-content;
   background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  height: fit-content;
+}
+
+.wishlist-btn:hover {
+  border-color: var(--color-black);
 }
 
 .product-form__input.product-form__quantity {
@@ -1258,8 +1263,23 @@ color: #646464;
 
 .shopify-payment-button__button.shopify-payment-button__button--unbranded {
   width: calc(200px + (320 - 200) * ((100vw - 1280px) / (1440 - 1280))) !important;
+  font-family: var(--page-font-family) !important;
   background-color: var(--button-bg-color);
+  border: 3px solid var(--button-bg-color);
+  text-transform: uppercase !important;
+  transition: all 0.3s ease-in-out;
+  font-weight: var(--font-700);
+  font-size: 16px !important;
+  letter-spacing: 0.1em;
   max-width: 320px;
+  line-height: 20px;
+  text-align: left;
+
+}
+
+.shopify-payment-button__button.shopify-payment-button__button--unbranded:hover {
+  background-color: var(--button-bg-color) !important;
+  border: 3px solid var(--color-black);
 }
 
 /* --------------------------------------------------- new email form -------------------------------------------------------- */

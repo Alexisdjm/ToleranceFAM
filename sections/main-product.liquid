@@ -238,7 +238,7 @@
                 {% endif %}
               </div>
             {% when 'quantity-checkout' %}
-              {% render 'quantity-checkout', sec: section, element: product, block: block, cart: cart %}
+              {% render 'quantity-checkout', sec: section, element: product, block: block, cart: cart, form_id: product_form_id %}
             {%- when 'quantity_selector' -%}
               <div
                 id="Quantity-Form-{{ section.id }}"

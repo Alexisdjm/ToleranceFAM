@@ -142,18 +142,23 @@
       <div class="card__content">
           <div class="flex-between upper-belt">
             <div id="color-radios--container--{{ card_product.id }}" class="radio-colors--container"></div>
-            <form method="post" 
-              action="/cart/add" 
-              id="form-add-product--{{ card_product.id }}" 
-              accept-charset="UTF-8" 
-              class="add-to-cart--custom" 
-              enctype="multipart/form-data">
-                <input type="hidden" name="id" id="chosen-variant--{{ card_product.id }}">
-                <input type="hidden" name="product-id" value="{{ card_product.id }}">
-                <button id="add--{{ card_product.id }}" type="submit" class="quick-add" disabled>
-                  {% render 'icon-cart' %}
+            <div class="flex gap-5">
+              <button id="add--{{ card_product.id }}" class="quick-add">
+                  {% render 'heart_icon' %}
                 </button>
-            </form>
+                <form method="post" 
+                  action="/cart/add" 
+                  id="form-add-product--{{ card_product.id }}" 
+                  accept-charset="UTF-8" 
+                  class="add-to-cart--custom" 
+                  enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="chosen-variant--{{ card_product.id }}">
+                    <input type="hidden" name="product-id" value="{{ card_product.id }}">
+                    <button id="add--{{ card_product.id }}" type="submit" class="quick-add" disabled>
+                      {% render 'icon-cart' %}
+                    </button>
+                </form>
+            </div>
           </div>
         <div class="card__information">
           <h3

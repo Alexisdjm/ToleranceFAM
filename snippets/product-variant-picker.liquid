@@ -66,6 +66,9 @@
       </script>
     </variant-selects>
   {%- endif -%}
+  {%- for option in product.options_with_values -%}
+    <p>{{ option.name }}</p>
+  {% endfor %}
 {%- endunless -%}
 
 <noscript class="product-form__noscript-wrapper-{{ section.id }}">

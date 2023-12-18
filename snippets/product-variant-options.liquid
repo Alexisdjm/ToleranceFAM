@@ -23,6 +23,8 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
+<pre>{{ variants_option1_arr }}</pre>
+
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true

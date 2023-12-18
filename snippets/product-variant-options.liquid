@@ -45,7 +45,7 @@
     endfor
   -%}
 
-  {%- if if product.options_with_values[0].name == "Color" or product.options_with_values[1].name == "Color" -%}
+  {%- if product.options_with_values[0].name == "Color" or product.options_with_values[1].name == "Color" -%}
     <input
       type="radio"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"

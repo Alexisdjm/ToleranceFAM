@@ -67,7 +67,6 @@
     </variant-selects>
   {%- endif -%} -->
   {%- for option in product.options_with_values -%}
-    {{ product_form_id }}
     {% if option.name != "Color" %}
       <variant-selects
       id="variant-selects-{{ section.id }}"

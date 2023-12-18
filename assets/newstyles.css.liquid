@@ -1288,6 +1288,17 @@ quantity-input.quantity {
   height: 100% !important;
 }
 
+.product-form__input input[type=radio]+label {
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border: 3px solid var(--color-white);
+}
+
+.product-form__input input[type=radio]:checked+label {
+  box-shadow: 0 0 0 2px var(--color-black);
+}
+
 /* --------------------------------------------------- new email form -------------------------------------------------------- */
 
 .font-white p, .font-white h1, .font-white h2, .font-white h3 {

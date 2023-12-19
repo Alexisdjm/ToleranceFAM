@@ -707,7 +707,7 @@
   const product = {{ product | json }}
   let select = document.getElementById("select-variants-custom");
   let colorRadios = document.querySelectorAll('[name="Color"]');
-  const checkoutBtn = document.querySelector(".shopify-payment-button__button");
+  const buytBtn = document.getElementById("NewSubmitButton-{{ section.id }}")
 
   document.querySelector(".shopify-payment-button__button").setAttribute("disabled", "true")
   

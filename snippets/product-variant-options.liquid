@@ -23,6 +23,10 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
+<script>
+  console.log('{{ option.values }}')
+</script>
+
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true

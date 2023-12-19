@@ -10,9 +10,9 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                     class="custom-flex--img" 
                     loading="lazy">
                 </div>
-                <div class="custom-flex--info-container">
-                  <div class="custom-flex--headingg"  style="color: {{ section.settings.font_color }}">
-                    <h1>{{ section.settings.heading }}</h1>
+                <div class="custom-flex--info-container" style="color: {{ section.settings.font_color }}">
+                  <div class="custom-flex--headingg">
+                    <h1  style="color: {{ section.settings.font_color }}">{{ section.settings.heading }}</h1>
                     {% if section.settings.heading_img != blank %}
                         <img 
                         src="{{ section.settings.heading_img | img_url: "master" }}" 

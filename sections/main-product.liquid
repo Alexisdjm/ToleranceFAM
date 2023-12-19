@@ -720,16 +720,21 @@
       return selectedVariant.available === true ? selectedVariant.id : null;
     }
 
+  function updateSelection() {
+    var variantId = getVariantId();
+      if (variantId !== null) {
+        
+      }
+  }
+
   colorRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {
-     var variantId = getVariantId();
-      console.log(variantId)
+     updateSelection()
     });
   });
 
   select.addEventListener('change', function() {
-     var variantId = getVariantId();
-    console.log(variantId)
+    updateSelection()
     });
   
 </script>

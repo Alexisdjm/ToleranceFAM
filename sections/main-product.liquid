@@ -722,7 +722,7 @@
       return selectedVariant.available === true ? selectedVariant.id : null;
     }
 
-  function updateSellection() {
+  function updateSelection() {
     var variantId = getVariantId();
     console.log(variantId)
       if (variantId !== null) {
@@ -735,7 +735,7 @@
 
   colorRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {
-     updateSellection()
+     updateSelection()
     });
   });
 

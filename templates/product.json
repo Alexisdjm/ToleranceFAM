@@ -44,12 +44,6 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "4d031714-2e62-46eb-9922-e5cded01e509": {
           "type": "custom-icons-with-info",
           "settings": {
@@ -69,7 +63,6 @@
         "price",
         "fdf5deba-44b0-42e2-af97-e98d32e82a52",
         "description",
-        "share",
         "4d031714-2e62-46eb-9922-e5cded01e509"
       ],
       "settings": {

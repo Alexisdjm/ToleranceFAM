@@ -707,8 +707,9 @@
   const product = {{ product | json }}
   let select = document.getElementById("select-variants-custom");
   let colorRadios = document.querySelectorAll('[name="Color"]');
-  const buyBtn = document.getElementById("NewSubmitButton-{{ section.id }}")
-  const form = document.getElementById("product-form-{{ section.id }}")
+  const buyBtn = document.getElementById("NewSubmitButton-{{ section.id }}");
+  const form = document.getElementById("product-form-{{ section.id }}");
+  const hidden_input = document.getElementById("product-variant");
 
   function getVariantId() {
       let selectedSize = select.value;

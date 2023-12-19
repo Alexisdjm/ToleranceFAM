@@ -46,7 +46,7 @@
   -%}
 
   <script>
-    console.log('{{ variants_available_arr }}')
+    console.log('{{ variants_available_arr[forloop.index0] }}')
   </script>
 
   {%- if option.name == "Color" -%}

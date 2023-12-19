@@ -709,7 +709,8 @@
   let colorRadios = document.querySelectorAll('[name="Color"]');
   const buytBtn = document.getElementById("NewSubmitButton-{{ section.id }}")
 
-  document.querySelector(".shopify-payment-button__button").setAttribute("disabled", "true")
+  console.log(buyBtn)
+  buyBtn.setAttribute("disabled", "true")
   
 </script>
 

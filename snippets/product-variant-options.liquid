@@ -45,6 +45,10 @@
     endfor
   -%}
 
+  <script>
+    console.log('{{ variants_available_arr }}')
+  </script>
+
   {%- if option.name == "Color" -%}
     <!-- <p>{{ option_disabled }}</p> -->
     <input

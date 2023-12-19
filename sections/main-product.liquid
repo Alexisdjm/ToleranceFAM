@@ -717,7 +717,7 @@
         return variant.option1 === selectedSize && variant.option2 === selectedColor;
       });
       
-      return selectedVariant ? selectedVariant.id : null;
+      return selectedVariant.available === true ? selectedVariant.id : null;
     }
 
   colorRadios.forEach(function(radio) {

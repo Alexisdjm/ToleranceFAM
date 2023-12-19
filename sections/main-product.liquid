@@ -723,8 +723,14 @@
   colorRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {
      var variantId = getVariantId();
+      console.log(variantId)
     });
   });
+
+  select.addEventListener('change', function() {
+     var variantId = getVariantId();
+    console.log(variantId)
+    });
   
 </script>
 

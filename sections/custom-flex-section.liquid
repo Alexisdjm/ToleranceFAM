@@ -23,7 +23,10 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                   </div>
                     {{ section.settings.content }}
                     {% if section.settings.btn_url != blank %}
-                        <a href="{{ section.settings.btn_url }}" class="custom-flex--btn">
+                        <a href="{{ section.settings.btn_url }}" 
+                          class="custom-flex--btn 
+                      {% if section.settings.font_color == "color-black-font" %}
+                        color-black-font border-new-black{% else %}color-white-font border-new-white{% endif %}">
                             {{ section.settings.btn_text }}
                         </a> 
                     {% endif %}

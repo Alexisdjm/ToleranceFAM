@@ -95,10 +95,20 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                 "label": "Main image"
             },
             {
-                "type": "color",
+                "type": "select",
                 "id": "font_color",
                 "label": "font color",
-                "default": "#fff"
+                "options": [
+                  {
+                    "value": "color-black-font",
+                    "label": "Black"
+                  },
+                  {
+                    "value": "color-white-font",
+                    "label": "white"
+                  }
+                ],
+                "default": "color-white-font"
             },
             {
                 "type": "text",

@@ -11,7 +11,7 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                     loading="lazy">
                 </div>
                 <div class="custom-flex--info-container">
-                  <div class="custom-flex--headingg">
+                  <div class="custom-flex--headingg"  style="color: {{ section.settings.font_color }}">
                     <h1>{{ section.settings.heading }}</h1>
                     {% if section.settings.heading_img != blank %}
                         <img 

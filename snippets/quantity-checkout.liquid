@@ -230,7 +230,25 @@
                 {%- endif -%}
         
                 <div class="product-form__buttons">
-                  {{ form | payment_button }}
+                  <!-- {{ form | payment_button }} -->
+                  <button
+                    id="ProductSubmitButton-{{ section_id }}"
+                    type="submit"
+                    name="add"
+                    class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                    {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+                      disabled
+                    {% endif %}
+                  >
+                    <span>
+                      {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- else -%}
+                        Buy it now
+                      {%- endif -%}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
                 </div>
               {%- endform -%}
             </product-form>

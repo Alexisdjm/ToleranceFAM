@@ -25,9 +25,28 @@
           </div>
         </div>
     {% endif %}
-    <div class="custom-product--cart--text">
-        <h1>{{ pro.title }}</h1>
-    </div>
+    {% if allow_variants == "false" %}
+      <div class="title-cart-mix">
+        <div class="custom-product--cart--text">
+            <h1>{{ pro.title }}</h1>
+        </div>
+        <div class="flex">
+          <button class="quick-add">{% render 'heart_icon' %}</button>
+          <form method="post" 
+            action="/cart/add" 
+            id="add-product--{{ pro.id }}" 
+            accept-charset="UTF-8" 
+            class="add-to-cart--custom" 
+            enctype="multipart/form-data">
+              <input type="hidden" name="id" value="{{ pro.variants.first.id }}" id="variant--{{ pro.id }}">
+              <input type="hidden" name="product-id" value="{{ pro.id }}">
+              <button id="add--{{ pro.id }}" type="submit" class="quick-add">
+                {% render 'icon-cart' %}
+              </button>
+          </form>
+        </div>
+      </div>
+    {% endif %}
     <p>{{ pro.price |  money_without_currency }}</p>
 </div>
 

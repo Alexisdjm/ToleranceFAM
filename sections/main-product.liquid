@@ -710,6 +710,8 @@
   const buyBtn = document.getElementById("NewSubmitButton-{{ section.id }}")
   const form = document.getElementById("product-form-{{ section.id }}")
 
+  console.log(form)
+
   function getVariantId() {
       let selectedSize = select.value;
       let selectedColor = [...colorRadios].find(radio => radio.checked)?.value;

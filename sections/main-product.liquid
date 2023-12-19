@@ -726,6 +726,9 @@
     var variantId = getVariantId();
       if (variantId !== null) {
         hidden_input.value = variantId
+        buyBtn.setAttribute("disabled", "false")
+      } else {
+        buyBtn.setAttribute("disabled", "true")
       }
   }
 

@@ -976,13 +976,13 @@ class VariantSelects extends HTMLElement {
   }
 
   updateMasterId() {
-    this.currentVariant = this.getVariantData().find((variant) => {
-      return !variant.options
-        .map((option, index) => {
-          return this.options[index] === option;
-        })
-        .includes(false);
-    });
+    // this.currentVariant = this.getVariantData().find((variant) => {
+    //   return !variant.options
+    //     .map((option, index) => {
+    //       return this.options[index] === option;
+    //     })
+    //     .includes(false);
+    // });
   }
 
   updateMedia() {

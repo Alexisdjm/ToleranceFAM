@@ -28,12 +28,12 @@
       {{ block.shopify_attributes }}
     >
       <div class="product-form__input product-form__input--dropdown">
-          <label class="form__label variant-name--custom" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          <label class="form__label variant-name--custom" for="select-variants-custom">
             {{ option.name }}
           </label>
           <div class="select">
             <select
-              id="Option-{{ section.id }}-{{ forloop.index0 }}"
+              id="select-variants-custom"
               class="select__select"
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"

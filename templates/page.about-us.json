@@ -75,8 +75,8 @@
       "settings": {
         "first_image": "shopify:\/\/shop_images\/Mask_group_1.png",
         "second_image": "shopify:\/\/shop_images\/Mask_group_2.png",
-        "Third_image": "shopify:\/\/shop_images\/Mask_group_3.png",
-        "Forth_image": "shopify:\/\/shop_images\/Group_55.png"
+        "tres": "shopify:\/\/shop_images\/Mask_group_3.png",
+        "cuatro": "shopify:\/\/shop_images\/Mask_group_4.png"
       }
     }
   },

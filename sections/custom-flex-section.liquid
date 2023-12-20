@@ -33,7 +33,7 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                       </div>
                     {% endif %}
                 </div>
-                {% if section.settings.align == "left" %}
+                {% if section.settings.align == "right" %}
                     <div class="custom-flex--img-box custom-flex--image-left">
                         <img 
                         src="{{ section.settings.main_img | img_url: "master" }}" 
@@ -91,7 +91,7 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                         "value": "right"
                     }
                 ],
-                "default": "left",
+                "default": "right",
                 "label": "Image position"
             },
             {

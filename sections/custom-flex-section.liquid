@@ -25,9 +25,7 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                     {% if section.settings.btn_url != blank and section.settings.btn_text != blank %}
                       <div class="button-height relative">
                         <a href="{{ section.settings.btn_url }}" 
-                          class="custom-flex--btn absolute  
-                          {% if section.settings.font_color == "color-black-font" %}
-                            color-black-font border-new-black{% else %}color-white-font border-new-white{% endif %}">
+                          class="custom-flex--btn absolute {{ section.settings.button_style }}">
                             {{ section.settings.btn_text }}
                         </a>    
                       </div>

@@ -13,10 +13,12 @@
         {{ section.settings.small_text }}
       </div>
     </div>
-    <a href="{{ settings.social_instagram_link }}" class="custom-ig--redirect">
-      {%- render 'icon-instagram' -%}
-      <p>{{ section.settings.btn }}</p>
-    </a>
+    <div class="flex-center align-center ig-btn--new-height">
+      <a href="{{ settings.social_instagram_link }}" class="custom-ig--redirect">
+        {%- render 'icon-instagram' -%}
+        <p>{{ section.settings.btn }}</p>
+      </a>
+    </div>
   </div>
   <div class="custom-ig--father">
       <div id="arrows-container" class="custom--ig-btn-box">

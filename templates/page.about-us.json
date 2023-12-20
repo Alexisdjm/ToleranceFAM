@@ -125,7 +125,7 @@
         "main_heading": "Why are we different?",
         "main_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
         "main_image": "shopify:\/\/shop_images\/DSC_1778_1.png",
-        "blocks_layout": "flex-blocks-align",
+        "blocks_layout": "grid-blocks-align",
         "bg_color": "#F7F7F7"
       }
     }

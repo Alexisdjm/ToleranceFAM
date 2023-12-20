@@ -20,10 +20,22 @@
             "heading": "Stitching Stories: <br>Your Style, Your Way",
             "heading_size": "h2"
           }
+        },
+        "5b59362b-2698-4e82-a321-d7fdc4dce804": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "6f23a552-8d18-4381-9302-98e7e765ddba"
+        "6f23a552-8d18-4381-9302-98e7e765ddba",
+        "5b59362b-2698-4e82-a321-d7fdc4dce804"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/banner_8285ab50-be14-4382-979a-6c39fd3632bd.png",

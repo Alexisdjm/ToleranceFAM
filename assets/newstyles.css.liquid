@@ -3,6 +3,8 @@
 } {% endcomment %}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* -------------------------------------------------------- variables ------------------------------------------------------------ */
 
@@ -19,6 +21,8 @@
     --bg-lime-green: #5FC037;
     --color-white: #ffffff;
     --color-black: #000000;
+    --font-inter: 'Inter', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
     --font-montserrat: 'Montserrat', sans-serif;
     --page-font-family:'Plus Jakarta Sans', sans-serif;
     --big-headings-font-family: 'Monument Extended', sans-serif;
@@ -1626,24 +1630,24 @@ h2.custom-related--title {
 }
 
 .block-flex-container h3 {
-  font-family: Inter;
-  font-size: 20px;
+  font-family: var(--font-inter);
   font-weight: var(--font-600);
+  color: var(--color-black);
+  font-size: 20px;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
-  color: var(--color-black);
   margin: 0;
 }
 
 .block-flex-container p {
-  font-family: Roboto;
-  font-size: 18px;
+  font-family: var(--font-roboto);
+  color: var(--color-lightgray);
   font-weight: var(--font-400);
+  font-size: 18px;
   line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
-  color: var(--color-lightgray);
   margin: 0;
 }
 

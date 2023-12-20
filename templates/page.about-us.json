@@ -141,7 +141,7 @@
         "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
         "btn_url": "shopify:\/\/collections\/loren-collection",
         "btn_text": "view all products",
-        "section_margin": false
+        "section_margin": true
       }
     }
   },

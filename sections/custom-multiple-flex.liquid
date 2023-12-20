@@ -13,18 +13,20 @@
                     class="main-flex-image" 
                     loading="lazy">
                 </div>
-                <div class="{{ section.settings.blocks_layout }}">
-                    {% for block in section.blocks %}
-                        <div class="block-flex-container">
-                            <img 
-                            src="{{ block.settings.icon | img_url: "master" }}" 
-                            alt="icon-{{ forloop.index0 }}" 
-                            class="icon-flex-pic" 
-                            loading="lazy">
-                            <h3>{{ block.settings.heading }}</h3>
-                            {{ block.settings.content }}
-                        </div>
-                    {% endfor %}
+                <div class="flex-center align-center">
+                    <div class="{{ section.settings.blocks_layout }}">
+                        {% for block in section.blocks %}
+                            <div class="block-flex-container">
+                                <img 
+                                src="{{ block.settings.icon | img_url: "master" }}" 
+                                alt="icon-{{ forloop.index0 }}" 
+                                class="icon-flex-pic" 
+                                loading="lazy">
+                                <h3>{{ block.settings.heading }}</h3>
+                                {{ block.settings.content }}
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

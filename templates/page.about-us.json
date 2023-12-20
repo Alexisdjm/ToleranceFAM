@@ -89,10 +89,37 @@
             "heading": "Unique Designs",
             "content": "<p>We feature exclusive and one-of-a-kind designs that you won't find anywhere else.<\/p>"
           }
+        },
+        "d6ce8c78-88ed-4268-b720-942b988149d9": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_5_db299570-0736-4cd5-a728-f6b659d007e9.png",
+            "heading": "Quality Craftsmanship",
+            "content": "<p>We ensure that each piece meets the highest standards of quality and durability.<\/p>"
+          }
+        },
+        "3f7274c4-83b5-4efe-bf10-e5ad87e0f384": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_6.png",
+            "heading": "Tailored Just for You",
+            "content": "<p>Experience the luxury of our t-shirts, meticulously crafted to reflect your individuality.<\/p>"
+          }
+        },
+        "5d5aa5ac-0c73-416a-ba34-c03c251e8b1b": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_7.png",
+            "heading": "Personal Touch",
+            "content": "<p>We add a personal touch to your wardrobe that goes beyond fashion.<\/p>"
+          }
         }
       },
       "block_order": [
-        "efcd6489-dd5f-4049-8f3d-079f42987cfb"
+        "efcd6489-dd5f-4049-8f3d-079f42987cfb",
+        "d6ce8c78-88ed-4268-b720-942b988149d9",
+        "3f7274c4-83b5-4efe-bf10-e5ad87e0f384",
+        "5d5aa5ac-0c73-416a-ba34-c03c251e8b1b"
       ],
       "settings": {
         "main_heading": "Why are we different?",

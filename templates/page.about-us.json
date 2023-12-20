@@ -69,11 +69,21 @@
         "btn_text": "",
         "section_margin": true
       }
+    },
+    "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09": {
+      "type": "custom-simple-gallery",
+      "settings": {
+        "first_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+        "second_image": "shopify:\/\/shop_images\/Mask_group_2.png",
+        "Third_image": "shopify:\/\/shop_images\/Mask_group_3.png",
+        "Forth_image": "shopify:\/\/shop_images\/Group_55.png"
+      }
     }
   },
   "order": [
     "main",
     "75952c47-4fb2-4c7e-8940-6d1879f10a3d",
-    "15f6f601-1b63-45d5-8460-73d89f1e1289"
+    "15f6f601-1b63-45d5-8460-73d89f1e1289",
+    "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09"
   ]
 }

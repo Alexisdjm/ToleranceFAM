@@ -66,7 +66,8 @@
         "heading_img": "shopify:\/\/shop_images\/ezgif_2.png",
         "content": "<p>Tolerence Clothing is a Men's streetwear fashion brand that focus's on sleek and vibrant pieces. We focus on using the highest of quality garments. Tolerence is known for its' bold and poppy designs on upscale materials. Our main products are luxury fashion tees but have since made more custom pieces like denim jackets, hats, bags and other accessories. As our fanbase grows, so does Tolerence- So thank you for your support!<\/p>",
         "btn_url": "",
-        "btn_text": ""
+        "btn_text": "",
+        "section_margin": true
       }
     }
   },

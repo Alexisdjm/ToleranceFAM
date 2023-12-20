@@ -16,7 +16,7 @@
                 <div class="flex-center align-center">
                     <div class="{{ section.settings.blocks_layout }}">
                         {% for block in section.blocks %}
-                            <div class="block-flex-container">
+                        <div class="block-flex-container {% if section.settings.blocks_layout == "grid-blocks-align" %}complex-flex-card-width{% endif %}">
                                 <img 
                                 src="{{ block.settings.icon | img_url: "master" }}" 
                                 alt="icon-{{ forloop.index0 }}" 

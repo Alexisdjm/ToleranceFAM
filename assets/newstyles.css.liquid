@@ -1601,7 +1601,7 @@ h2.custom-related--title {
 .main-flex-image--box {
   position: relative;
   overflow: hidden;
-  width: 38vw;
+  min-width: 38vw;
   aspect-ratio: 1.04/1;
 }
 
@@ -1629,8 +1629,11 @@ h2.custom-related--title {
 .block-flex-container {
   display: flex;
   flex-direction: column;
-  max-width: 236px;
   gap: 12px;
+}
+
+.complex-flex-card-width {
+  max-width: 236px;
 }
 
 .block-flex-container h3 {

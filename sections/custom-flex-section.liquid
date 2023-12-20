@@ -116,6 +116,26 @@ style="background-image: url('{{ section.settings.bg_img | img_url: "master" }}'
                 "default": "color-white-font"
             },
             {
+              "type": "select",
+              "id": "button_style",
+              "options": [
+                {
+                  "value": "color-black-font border-new-black",
+                  "label": "Transparent black"
+                },
+                {
+                  "value": "color-white-font border-new-white",
+                  "label": "Transparent white"
+                },
+                {
+                  "value": "new-btn--related-p",
+                  "label": "Green original button"
+                }
+              ],
+              "label": "Buton style",
+              "default": "color-white-font border-new-white"
+            },
+            {
                 "type": "text",
                 "id": "heading",
                 "default": "heading",

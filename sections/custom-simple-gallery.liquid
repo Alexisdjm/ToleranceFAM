@@ -1,0 +1,61 @@
+<div class="custom-simple--gallery-father">
+    <div class="flex samples-container--gallery">
+        <div class="custom-simple--gallery-img-box">
+            <img 
+            src="{{ section.settings.first_image | img_url: "master" }}" 
+            alt="first" 
+            loading="lazy" 
+            class="product-pic">
+        </div>
+        <div class="custom-simple--gallery-img-box">
+            <img 
+            src="{{ section.settings.second_image | img_url: "master" }}" 
+            alt="second" 
+            loading="lazy" 
+            class="product-pic">
+        </div>
+        <div class="custom-simple--gallery-img-box">
+            <img 
+            src="{{ section.settings.third_image | img_url: "master" }}" 
+            alt="third" 
+            loading="lazy" 
+            class="product-pic">
+        </div>
+        <div class="custom-simple--gallery-img-box">
+            <img 
+            src="{{ section.settings.forth_image | img_url: "master" }}" 
+            alt="forth" 
+            loading="lazy" 
+            class="product-pic">
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Simple gallery",
+        "class": "custom-simple--gallery",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "first_image",
+                "label": "First image"
+            },
+            {
+                "type": "image_picker",
+                "id": "second_image",
+                "label": "Second image"
+            },
+            {
+                "type": "image_picker",
+                "id": "Third_image",
+                "label": "Third image"
+            },
+            {
+                "type": "image_picker",
+                "id": "Forth_image",
+                "label": "Forth image"
+            }
+        ]
+    }
+{% endschema %}

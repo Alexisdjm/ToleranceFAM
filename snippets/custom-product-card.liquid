@@ -1,5 +1,5 @@
 
-<div class="custom-product--cart product--{{ sec.id }}">
+<div id="custom-slider--box--{{ sec.id }}" class="custom-product--cart product--{{ sec.id }}">
     <div class="product-pic--box">
       <img 
       src="{{ pro.featured_media | img_url: 'master' }}" 
@@ -54,6 +54,18 @@
     {% endif %}
     <p>{{ pro.price |  money_with_currency }}</p>
 </div>
+
+<script>
+  function redirect(id, url) {
+    let container = document.getElementById("custom-slider--box--"+id)
+
+    container.addEventListener("click", () => {
+      window.location.href = `${url}`
+    })
+  }
+
+  var start = redirect("{{ sec.id }}", "{{ pro.url }}")
+</script>
 
 {% if allow_variants %}
   <script>

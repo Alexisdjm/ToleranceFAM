@@ -59,7 +59,7 @@
       "settings": {
         "bg_options": "color",
         "bg_color": "#ffffff",
-        "align": "left",
+        "align": "right",
         "main_img": "shopify:\/\/shop_images\/img-what-is-tolerence.png",
         "font_color": "color-black-font",
         "heading": "About",
@@ -126,7 +126,7 @@
         "main_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
         "main_image": "shopify:\/\/shop_images\/DSC_1778_1.png",
         "blocks_layout": "grid-blocks-align",
-        "bg_color": "#F7F7F7"
+        "bg_color": "#f7f7f7"
       }
     },
     "7bc008b2-9d65-4c89-9962-9b9c125327fc": {

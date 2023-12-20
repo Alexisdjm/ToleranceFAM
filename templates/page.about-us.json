@@ -78,12 +78,63 @@
         "tres": "shopify:\/\/shop_images\/Mask_group_3.png",
         "cuatro": "shopify:\/\/shop_images\/Mask_group_4.png"
       }
+    },
+    "54f0c35c-a476-451b-bef7-b4a3026bef78": {
+      "type": "custom-multiple-flex",
+      "blocks": {
+        "efcd6489-dd5f-4049-8f3d-079f42987cfb": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_4_5f540b19-5e52-4a87-8e59-5cc946115dc5.png",
+            "heading": "Unique Designs",
+            "content": "<p>We feature exclusive and one-of-a-kind designs that you won't find anywhere else.<\/p>"
+          }
+        },
+        "d6ce8c78-88ed-4268-b720-942b988149d9": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_5_db299570-0736-4cd5-a728-f6b659d007e9.png",
+            "heading": "Quality Craftsmanship",
+            "content": "<p>We ensure that each piece meets the highest standards of quality and durability.<\/p>"
+          }
+        },
+        "3f7274c4-83b5-4efe-bf10-e5ad87e0f384": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_6.png",
+            "heading": "Tailored Just for You",
+            "content": "<p>Experience the luxury of our t-shirts, meticulously crafted to reflect your individuality.<\/p>"
+          }
+        },
+        "5d5aa5ac-0c73-416a-ba34-c03c251e8b1b": {
+          "type": "element",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Mask_group_7.png",
+            "heading": "Personal Touch",
+            "content": "<p>We add a personal touch to your wardrobe that goes beyond fashion.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "efcd6489-dd5f-4049-8f3d-079f42987cfb",
+        "d6ce8c78-88ed-4268-b720-942b988149d9",
+        "3f7274c4-83b5-4efe-bf10-e5ad87e0f384",
+        "5d5aa5ac-0c73-416a-ba34-c03c251e8b1b"
+      ],
+      "settings": {
+        "main_heading": "Why are we different?",
+        "main_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>",
+        "main_image": "shopify:\/\/shop_images\/DSC_1778_1.png",
+        "blocks_layout": "grid-blocks-align",
+        "bg_color": "#F7F7F7"
+      }
     }
   },
   "order": [
     "main",
     "75952c47-4fb2-4c7e-8940-6d1879f10a3d",
     "15f6f601-1b63-45d5-8460-73d89f1e1289",
-    "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09"
+    "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09",
+    "54f0c35c-a476-451b-bef7-b4a3026bef78"
   ]
 }

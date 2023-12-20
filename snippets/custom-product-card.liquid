@@ -1,10 +1,12 @@
 
 <div class="custom-product--cart product--{{ sec.id }}">
-    <img 
-    src="{{ pro.featured_media | img_url: 'master' }}" 
-    alt="product pic" 
-    class="product-pic" 
-    loading="lazy">
+    <div class="product-pic--box">
+      <img 
+      src="{{ pro.featured_media | img_url: 'master' }}" 
+      alt="product pic" 
+      class="product-pic" 
+      loading="lazy">
+    </div>
     {% if allow_variants %}
       <div class="flex-between upper-belt">
         <div id="color-radios--container--{{ pro.id }}" class="radio-colors--container"></div>

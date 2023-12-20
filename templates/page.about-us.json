@@ -37,6 +37,9 @@
         "6f23a552-8d18-4381-9302-98e7e765ddba",
         "5b59362b-2698-4e82-a321-d7fdc4dce804"
       ],
+      "custom_css": [
+        ".banner__box.content-container.content-container--full-width-mobile.color-background-1.gradient {max-width: fit-content !important;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/banner_8285ab50-be14-4382-979a-6c39fd3632bd.png",
         "image_overlay_opacity": 0,

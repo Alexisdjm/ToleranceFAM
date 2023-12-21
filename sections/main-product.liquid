@@ -208,12 +208,14 @@
               </div>
             {% when 'custom_rating' %}
               <div class="custom-rating--container">
-                <img 
-                src="{{ block.settings.stars | img_url: "master" }}" 
-                alt="stars" 
-                class="custom-stars" 
-                loading="lazy">
-                <p>{{ block.settings.reviews_number }}</p>
+                <div class="flex gap-15">
+                  <img 
+                  src="{{ block.settings.stars | img_url: "master" }}" 
+                  alt="stars" 
+                  class="custom-stars" 
+                  loading="lazy">
+                  <p>{{ block.settings.reviews_number }}</p>  
+                </div>
                 {% if product.available %}
                   <div class="available-warning"><span class="available-dot"></span><p>In stock</p></div>
                 {%  else %}

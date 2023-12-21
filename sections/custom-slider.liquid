@@ -81,7 +81,6 @@
 </div>
 
 <script>
-  console.log("{{ section.settings.slider_width }}")
   function BuildSlider(id, layout) {
     const slider = document.querySelector(".slider--"+id);
     const dotsContainer = document.querySelector(".dots-container--"+id)
@@ -116,14 +115,6 @@
     let screenWidth = window.innerWidth; 
     let currentIndex = 0;
     let viewBreaker = 0
-  
-    if (screenWidth >= 1280) {
-        viewBreaker = 2
-    } else if (screenWidth > 900 && screenWidth < 1280) {
-        viewBreaker = 1
-    } else {
-        viewBreaker = 0;
-    }
 
     for (let i = 0; i < (slides.length - displayedElements + 1); i++) {
       dotsContainer.innerHTML += `<span class="bar--${i}-${layout}"></span>`
@@ -149,7 +140,6 @@
    document.querySelector(`.bar--${currentIndex}-${layout}`).classList.add("activee")
     
     function updateSlider() {
-      console.log(currentIndex, slides.length - 1)
       const offset = -currentIndex * (slideWidth + 50);
       slider.style.transform = `translateX(${offset}px)`;
       if (currentIndex > 0) {

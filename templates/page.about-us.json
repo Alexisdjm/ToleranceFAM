@@ -14,6 +14,13 @@
     "75952c47-4fb2-4c7e-8940-6d1879f10a3d": {
       "type": "image-banner",
       "blocks": {
+        "76900ead-b7d9-4d1c-90d7-c3a208682646": {
+          "type": "text",
+          "settings": {
+            "text": "About us",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
         "6f23a552-8d18-4381-9302-98e7e765ddba": {
           "type": "heading",
           "settings": {
@@ -34,6 +41,7 @@
         }
       },
       "block_order": [
+        "76900ead-b7d9-4d1c-90d7-c3a208682646",
         "6f23a552-8d18-4381-9302-98e7e765ddba",
         "5b59362b-2698-4e82-a321-d7fdc4dce804"
       ],

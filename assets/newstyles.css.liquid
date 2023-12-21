@@ -1907,6 +1907,35 @@ h2.custom-related--title {
   /* .shopify-payment-button__button.shopify-payment-button__button--unbranded, .new-btn--class  {
     max-width: 180px;
   } */
+
+  .quantity-checkout--container {
+    flex-direction: column;
+  }
+
+  .shopify-payment-button__button.shopify-payment-button__button--unbranded, .new-btn--class {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wishlist-btn {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wishlist-btn span {
+    font-size: 16px;
+    color: var(--color-black);
+  }
+
+  .wishlist-btn svg {
+    position: absolute;
+    right: 10px;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1120px) {
@@ -1972,37 +2001,8 @@ h2.custom-related--title {
     flex-direction: column !important;
   }
 
-  .quantity-checkout--container {
-    flex-direction: column;
-  }
-
   .new-flex--direct-elements-box {
     flex-direction: column;
-  }
-
-  .shopify-payment-button__button.shopify-payment-button__button--unbranded, .new-btn--class {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .wishlist-btn {
-    gap: 15px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .wishlist-btn span {
-    font-size: 16px;
-    color: var(--color-black);
-  }
-
-  .wishlist-btn svg {
-    position: absolute;
-    right: 10px;
   }
 }
 

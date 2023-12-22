@@ -35,11 +35,11 @@
         {% endif %}
       </div>
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        class="grid custom-grid--related product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
         role="list"
       >
         {% for recommendation in recommendations.products %}
-          <li class="grid__item">
+          <li class="grid__item custom-related--card">
             <!-- {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,

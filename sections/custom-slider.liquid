@@ -84,11 +84,24 @@
   function BuildSlider(id, layout) {
     const slider = document.querySelector(".slider--"+id);
     const dotsContainer = document.querySelector(".dots-container--"+id)
+    let screenWidth = window.innerWidth; 
     let displayedElements = 0
     let slides = ''
 
+    function fitResponsive(variable) {
+      if (screenWidth > 1280) {
+        variable = 4
+      } else if (screenWidth <= 1280 && screenWidth >= 1024) {
+        variable = 3
+      } else if (screenWidth < 1024 && screenWidth >= 768) {
+        variable = 2
+      } else {
+        variable = 1
+      }
+    }
+
     function actualizarVariable(layoutt, width, l1, l2, l3, l4) {
-      displayedElements = 4
+      fitResponsive(displayedElements)
       if (layoutt == "products") {
         slides = l1;
       } else if (layoutt == "reviews") {
@@ -106,7 +119,6 @@
     const prevButton = document.getElementById("prev--"+id);
     const nextButton = document.getElementById("next--"+id);
     const slideWidth = slides[0].offsetWidth;
-    let screenWidth = window.innerWidth; 
     let currentIndex = 0;
     let viewBreaker = 0
 

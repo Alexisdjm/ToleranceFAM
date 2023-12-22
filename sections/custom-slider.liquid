@@ -88,21 +88,21 @@
     let displayedElements = 0
     let slides = ''
 
-    function fitResponsive(variable) {
+    function fitResponsive(displayedElements) {
       if (screenWidth > 1280) {
-        variable = 4
+        displayedElements = 4
       } else if (screenWidth <= 1280 && screenWidth >= 1024) {
-        variable = 3
+        displayedElements = 3
       } else if (screenWidth < 1024 && screenWidth >= 768) {
-        variable = 2
+        displayedElements = 2
       } else {
-        variable = 1
+        displayedElements = 1
       }
     }
 
     function actualizarVariable(layoutt, width, l1, l2, l3, l4) {
       displayedElements = 4
-      fitResponsive(displayedElements)
+      fitResponsive()
       if (layoutt == "products") {
         slides = l1;
       } else if (layoutt == "reviews") {

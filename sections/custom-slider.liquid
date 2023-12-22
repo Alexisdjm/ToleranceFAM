@@ -88,11 +88,11 @@
     let displayedElements = 0
     let slides = ''
 
-    function fitResponsive() {
+    function fitResponsive(lay) {
       if (screenWidth > 1280) {
-        displayedElements = 4
+        lay === "reviews" ? displayedElements = 3 : displayedElements = 4
       } else if (screenWidth <= 1280 && screenWidth >= 1024) {
-        displayedElements = 3
+        lay === "reviews" ? displayedElements = 2 : displayedElements = 3
       } else if (screenWidth < 1024 && screenWidth >= 768) {
         displayedElements = 2
       } else {
@@ -107,7 +107,6 @@
         slides = l1;
       } else if (layoutt == "reviews") {
         slides = l2;
-        displayedElements = 3
       } else if (layoutt == "collections") {
         slides = l3;
       } else {

@@ -156,13 +156,13 @@
         "3e2b6713-a0ef-4033-b4b1-d37afede2242": {
           "type": "collection",
           "settings": {
-            "collection_selected": ""
+            "collection_selected": "lorem-collection"
           }
         },
         "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0": {
           "type": "collection",
           "settings": {
-            "collection_selected": ""
+            "collection_selected": "lorem-collection-1"
           }
         }
       },

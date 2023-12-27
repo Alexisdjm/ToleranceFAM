@@ -48,12 +48,14 @@
 </style>
 <div class="featured-collections">
     <div class="featured-collections__inner-container">
-        {% assign collections = section.settings.collection_list %}
-        {% for collection in collections %}
+        {% comment %} {% assign collections = section.settings.collection_list %} {% endcomment %}
+        {% for block in section.blocks %}
             <div class="featured-collections__col">
-             
-                <img class="featured-collections__img"src="{{ collection.featured_image | img_url: 'master' }}" alt="{{ collection.title }}">
-                <h3 class="featured-collections__title">{{ collection.title }}</h3>
+                <img class="featured-collections__img" {% if block.settings.custom_image == false %}
+                  src="{{ block.settings.collection_image | img_url: 'master' }}"{% else %}
+                  src="{{ block.settings.the_collection.featured_image | img_url: 'master' }}" 
+                {% endif %}  alt="{{ block.settings.the_collection.title }}">
+                <h3 class="featured-collections__title">{{ block.settings.the_collection.title }}</h3>
             </div>
         {% endfor %}
     </div>
@@ -65,13 +67,32 @@
   "name": "Featured Collections" ,
   "tag": "section",
   "class": "section",
-  "settings": [
+  "blocks": [
     {
-        "type": "collection_list",
-        "id": "collection_list",
-        "label": "Collections",
-        "limit": 4
-    },      
+      "name": "Collection",
+      "type": "collection",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "collection_image",
+          "label": "Collection custom image"
+        },
+        {
+          "type": "collection",
+          "id": "the_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "custom_image",
+          "default": false,
+          "label": "display the collection featured image?"
+        }
+      ]
+    }
+  ],
+  "settings": [    
     {
       "type": "range",
       "id": "padding_top",

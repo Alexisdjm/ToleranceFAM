@@ -29,7 +29,7 @@
                   {% for pro in selected_collection.products %}
                       {% render 'custom-product-card', pro: pro, allow_variants: section.settings.allow_variants, sec: section %}
                   {% endfor %}
-                {% elsif section.settings.content == "collections" %}
+                {% comment %} {% elsif section.settings.content == "collections" %}
                     {% for collection in section.settings.collections %}
                         <a 
                         href="{{ collection.url }}" 
@@ -37,32 +37,38 @@
                         style="background-image: url('{{ collection.image | img_url: 'master' }}');">
                             <h1>{{ collection.title }}</h1>
                         </a>
-                    {% endfor %}
-                {% elsif section.settings.content == "reviews" or section.settings.content == "videos" %}
+                    {% endfor %} {% endcomment %}
+                {% elsif section.settings.content == "reviews" or section.settings.content == "videos" or section.settings.content == "collections" %}
                     {% for block in section.blocks %}
                         {% case block.type %}
                             {% when 'review' %}
                                 <div class="reviews-block--container review-slide--{{ section.id }}">
-                                    <div class="reviews-block--flex-column">
-                                        <img 
-                                        src="{{ block.settings.stars | img_url: 'master' }}" 
-                                        alt="stars" 
-                                        class="stars" 
-                                        loading="lazy">
-                                        <h1>{{ block.settings.heading }}</h1>
-                                        {{ block.settings.text }}
-                                        <div class="reviews-block--profile flex gap-15">
-                                            <img 
-                                            src="{{ block.settings.profile_pic | img_url: 'master' }}" 
-                                            alt="profile pic" 
-                                            loading="lazy" 
-                                            class="profile-pic">
-                                            <div class="flex-column gap-5">
-                                                {{ block.settings.profile_info }}
-                                            </div>
-                                        </div>
+                                  <div class="reviews-block--flex-column">
+                                    <img 
+                                    src="{{ block.settings.stars | img_url: 'master' }}" 
+                                    alt="stars" 
+                                    class="stars" 
+                                    loading="lazy">
+                                    <h1>{{ block.settings.heading }}</h1>
+                                    {{ block.settings.text }}
+                                    <div class="reviews-block--profile flex gap-15">
+                                      <img 
+                                      src="{{ block.settings.profile_pic | img_url: 'master' }}" 
+                                      alt="profile pic" 
+                                      loading="lazy" 
+                                      class="profile-pic">
+                                      <div class="flex-column gap-5">
+                                        {{ block.settings.profile_info }}
+                                      </div>
                                     </div>
+                                  </div>
                                 </div>
+                            {% when 'collection' %}
+                              <a href="{{ block.settings.collection_selected.url }}" 
+                                class="custom-collection--card collection--{{ section.id }}" 
+                                style="background-image: url('{{ block.settings.collection_img | img_url: 'master' }}');">
+                                <h1>{{ collection.title }}</h1>
+                              </a>
                            {% when 'video' %} 
                               <video class="video--{{ section.id }}" width="230" height="400" controls>
                                   <source src="{{ block.settings.video | video_tag }}
@@ -203,15 +209,31 @@
                 ]
             }, 
             {
-                "name": "video",
-                "type": "video",
-                "settings": [
-                    {
-                        "type": "video",
-                        "id": "video",
-                        "label": "Video"
-                    }
-                ]
+              "name": "video",
+              "type": "video",
+              "settings": [
+                {
+                  "type": "video",
+                  "id": "video",
+                  "label": "Video"
+                }
+              ]
+            },
+            {
+              "name": "Collection",
+              "type": "collection",
+              "settings": [
+                {
+                  "type": "image_picker",
+                  "id": "Collection_img",
+                  "label": "Collection image"
+                },
+                {
+                  "type": "collection",
+                  "id": "collection_selected",
+                  "label": "Collection"
+                }
+              ]
             }
         ],
         "settings": [

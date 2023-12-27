@@ -594,10 +594,7 @@ h1.margin-d-20 {
 
 .featured-collections__col {
   position: relative;
-}
-
-.featured-collections__col:hover .featured--new-title {
-  transform: scale(1.1);
+  text-decoration: none;
 }
 
 .featured--new-title {
@@ -613,6 +610,10 @@ h1.margin-d-20 {
   font-family: var(--big-headings-font-family);
   position: absolute;
   bottom: 0;
+}
+
+.featured-collections__col:hover > .featured--new-title {
+  transform: scale(1.1);
 }
 
 /* --------------------------------------------------- custom slider --------------------------------------------------------- */

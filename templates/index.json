@@ -144,6 +144,7 @@
         "f7858c70-5f92-4dad-9629-7ac8feb3b05c": {
           "type": "collection",
           "settings": {
+            "col_image": "shopify:\/\/shop_images\/Group_92.png",
             "collection_selected": "loren-collection"
           }
         },

@@ -6,6 +6,23 @@
       alt="product pic" 
       class="product-pic" 
       loading="lazy">
+      <div class="new-cart--badge {{ settings.badge_position }}">
+        {%- if pro.available == false -%}
+          <span
+            id="NoMediaStandardBadge-{{ section_id }}-{{ pro.id }}"
+            class="new--badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
+          >
+            {{- 'products.product.sold_out' | t -}}
+          </span>
+        {%- elsif pro.compare_at_price > pro.price and pro.available -%}
+          <span
+            id="NoMediaStandardBadge-{{ section_id }}-{{ pro.id }}"
+            class="new--badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+          >
+            {{- 'products.product.on_sale' | t -}}
+          </span>
+        {%- endif -%}
+      </div>
     </div>
     {% if allow_variants %}
       <div class="flex-between upper-belt">

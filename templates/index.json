@@ -166,7 +166,7 @@
         "bg_options": "image",
         "bg_img": "shopify:\/\/shop_images\/Diseno_sin_titulo.png",
         "bg_color": "",
-        "align": "left",
+        "align": "right",
         "main_img": "shopify:\/\/shop_images\/img-what-is-tolerence.png",
         "font_color": "color-white-font",
         "button_style": "custom-flex--btn color-white-font border-new-white",

@@ -151,6 +151,7 @@
         "945cffe6-af38-48d8-b9df-224b66fbee3b": {
           "type": "collection",
           "settings": {
+            "col_image": "shopify:\/\/shop_images\/Group_94.png",
             "collection_selected": "lorem-ipsum"
           }
         },

@@ -76,13 +76,47 @@
     },
     "c9af4edb-2653-4518-8aa6-215df3d5984e": {
       "type": "featured-collections",
+      "blocks": {
+        "dd62007b-deb9-498e-98ce-708ea1f986c0": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/DSC_2051_1_3.png",
+            "the_collection": "mens",
+            "custom_image": false
+          }
+        },
+        "1d78793a-917d-4cb7-803c-3fafa363fd80": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/DSC_2051_1_2.png",
+            "the_collection": "womens",
+            "custom_image": false
+          }
+        },
+        "a09b4591-8692-4fed-b46f-682ae2d40ef0": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/DSC_2051_1_4.png",
+            "the_collection": "loren-collection",
+            "custom_image": false
+          }
+        },
+        "0e5507f4-718b-459a-a54b-e8f851e9793c": {
+          "type": "collection",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/DSC_2051_1_5.png",
+            "the_collection": "lorem-ipsum",
+            "custom_image": false
+          }
+        }
+      },
+      "block_order": [
+        "dd62007b-deb9-498e-98ce-708ea1f986c0",
+        "1d78793a-917d-4cb7-803c-3fafa363fd80",
+        "a09b4591-8692-4fed-b46f-682ae2d40ef0",
+        "0e5507f4-718b-459a-a54b-e8f851e9793c"
+      ],
       "settings": {
-        "collection_list": [
-          "womens",
-          "mens",
-          "loren-collection",
-          "lorem-ipsum"
-        ],
         "padding_top": 36,
         "padding_bottom": 36
       }

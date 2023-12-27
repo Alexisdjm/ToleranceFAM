@@ -50,13 +50,13 @@
     <div class="featured-collections__inner-container">
         {% comment %} {% assign collections = section.settings.collection_list %} {% endcomment %}
         {% for block in section.blocks %}
-            <div class="featured-collections__col">
+            <a href="{{ block.settings.the_collection.url }}" class="featured-collections__col">
                 <img class="featured-collections__img" {% if block.settings.custom_image == false %}
                   src="{{ block.settings.collection_image | img_url: 'master' }}"{% else %}
                   src="{{ block.settings.the_collection.featured_image | img_url: 'master' }}" 
                 {% endif %}  alt="{{ block.settings.the_collection.title }}">
                 <h3 class="featured-collections__title">{{ block.settings.the_collection.title }}</h3>
-            </div>
+            </a>
         {% endfor %}
     </div>
 

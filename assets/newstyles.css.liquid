@@ -590,14 +590,29 @@ h1.margin-d-20 {
   margin: 40px 0 0;
 }
 
-/* --------------------------------------------------- individual fixes ------------------------------------------------------ */
+/* --------------------------------------------------- collection grid ------------------------------------------------------- */
 
-.featured-collections__title {
-  transition: all 0.3s ease-in-out;
+.featured-collections__col {
+  position: relative;
 }
 
-.featured-collections__title:hover {
+.featured-collections__col:hover .featured--new-title {
   transform: scale(1.1);
+}
+
+.featured--new-title {
+  font-size: 32px;
+  margin-left: 50px;
+  font-style: normal;
+  line-height: normal;
+  padding-bottom: 50px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--font-500);
+  transition: all 0.3s ease-in-out;
+  font-family: var(--big-headings-font-family);
+  position: absolute;
+  bottom: 0;
 }
 
 /* --------------------------------------------------- custom slider --------------------------------------------------------- */

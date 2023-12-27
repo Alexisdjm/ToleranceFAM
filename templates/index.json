@@ -134,8 +134,8 @@
       ],
       "settings": {
         "image_with_text_image": "shopify:\/\/shop_images\/banner_d03fe506-2cf0-403a-b558-56b39e805a8c.png",
-        "padding_top": 95,
-        "padding_bottom": 95
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "e97eba54-f762-4bf7-9cba-0b9130c3e233": {

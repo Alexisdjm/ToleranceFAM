@@ -67,7 +67,7 @@
                               <a href="{{ block.settings.collection_selected.url }}" 
                                 class="custom-collection--card collection--{{ section.id }}" 
                                 style="background-image: url('{{ block.settings.collection_img | img_url: 'master' }}');">
-                                <h1>{{ collection.title }}</h1>
+                                <h1>{{ block.settings.collection_selected.title }}</h1>
                               </a>
                            {% when 'video' %} 
                               <video class="video--{{ section.id }}" width="230" height="400" controls>

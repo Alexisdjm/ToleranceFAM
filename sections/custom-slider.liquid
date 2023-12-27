@@ -1,7 +1,7 @@
 {% assign selected_collection = collections[section.settings.product_slides] %}
 
 <div class="custom-slider--father">
-    <div class="custom-slider--main-container">
+    <div class="custom-slider--main-container" style="background-color: {{ section.settings.bg_color }}">
         <div class="custom-slider--top-content">
             <h1>{{ section.settings.heading }}</h1>
             <div class="custom-slider--arrows-box">
@@ -242,6 +242,12 @@
                         "value": "videos"
                     }
                ]
+            },
+            {
+              "type": "color",
+              "id": "bg_color",
+              "label": "Background-color",
+              "default": "#FFF"
             },
             {
                 "type": "collection",

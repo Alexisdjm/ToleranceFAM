@@ -86,7 +86,6 @@
       "settings": {
         "heading": "Complete the look",
         "content": "products",
-        "bg_color": "#fafafa",
         "product_slides": "loren-collection",
         "allow_variants": true,
         "collections": [

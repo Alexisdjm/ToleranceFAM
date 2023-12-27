@@ -66,7 +66,7 @@
                             {% when 'collection' %}
                               <a href="{{ block.settings.collection_selected.url }}" 
                                 class="custom-collection--card collection--{{ section.id }}" 
-                                style="background-image: url('{{ block.settings.collection_img | img_url: 'master' }}');">
+                                style="background-image: url('{{ block.settings.col_image | img_url: 'master' }}');">
                                 <h1>{{ block.settings.collection_selected.title }}</h1>
                               </a>
                            {% when 'video' %} 
@@ -225,7 +225,7 @@
               "settings": [
                 {
                   "type": "image_picker",
-                  "id": "collection_img",
+                  "id": "col_image",
                   "label": "Collection image"
                 },
                 {

@@ -92,6 +92,7 @@
       "settings": {
         "heading": "featured Clothing",
         "content": "products",
+        "bg_color": "#ffffff",
         "product_slides": "loren-collection",
         "allow_variants": false,
         "collections": [
@@ -142,6 +143,7 @@
       "settings": {
         "heading": "Featured Collections",
         "content": "collections",
+        "bg_color": "#FFF",
         "product_slides": "",
         "allow_variants": false,
         "collections": [
@@ -262,6 +264,7 @@
       "settings": {
         "heading": "our happy customers",
         "content": "reviews",
+        "bg_color": "#FFF",
         "product_slides": "consectetur",
         "allow_variants": false,
         "collections": [
@@ -432,6 +435,7 @@
       "settings": {
         "heading": "Our story is your story",
         "content": "videos",
+        "bg_color": "#FFF",
         "product_slides": "",
         "allow_variants": false,
         "collections": [

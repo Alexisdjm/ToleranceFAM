@@ -158,12 +158,14 @@
         "3e2b6713-a0ef-4033-b4b1-d37afede2242": {
           "type": "collection",
           "settings": {
+            "col_image": "shopify:\/\/shop_images\/Group_95.png",
             "collection_selected": "lorem-collection"
           }
         },
         "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0": {
           "type": "collection",
           "settings": {
+            "col_image": "shopify:\/\/shop_images\/Group_93.png",
             "collection_selected": "lorem-collection-1"
           }
         },

@@ -140,10 +140,42 @@
     },
     "e97eba54-f762-4bf7-9cba-0b9130c3e233": {
       "type": "custom-slider",
+      "blocks": {
+        "f7858c70-5f92-4dad-9629-7ac8feb3b05c": {
+          "type": "collection",
+          "settings": {
+            "collection_selected": ""
+          }
+        },
+        "945cffe6-af38-48d8-b9df-224b66fbee3b": {
+          "type": "collection",
+          "settings": {
+            "collection_selected": ""
+          }
+        },
+        "3e2b6713-a0ef-4033-b4b1-d37afede2242": {
+          "type": "collection",
+          "settings": {
+            "collection_selected": ""
+          }
+        },
+        "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0": {
+          "type": "collection",
+          "settings": {
+            "collection_selected": ""
+          }
+        }
+      },
+      "block_order": [
+        "f7858c70-5f92-4dad-9629-7ac8feb3b05c",
+        "945cffe6-af38-48d8-b9df-224b66fbee3b",
+        "3e2b6713-a0ef-4033-b4b1-d37afede2242",
+        "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0"
+      ],
       "settings": {
         "heading": "Featured Collections",
         "content": "collections",
-        "bg_color": "#FFF",
+        "bg_color": "#ffffff",
         "product_slides": "",
         "allow_variants": false,
         "collections": [
@@ -264,7 +296,7 @@
       "settings": {
         "heading": "our happy customers",
         "content": "reviews",
-        "bg_color": "#FFF",
+        "bg_color": "#ffffff",
         "product_slides": "consectetur",
         "allow_variants": false,
         "collections": [
@@ -435,7 +467,7 @@
       "settings": {
         "heading": "Our story is your story",
         "content": "videos",
-        "bg_color": "#FFF",
+        "bg_color": "#ffffff",
         "product_slides": "",
         "allow_variants": false,
         "collections": [

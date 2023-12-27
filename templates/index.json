@@ -164,13 +164,29 @@
           "settings": {
             "collection_selected": "lorem-collection-1"
           }
+        },
+        "8f89429d-5391-4355-9b8a-fd27b8da87cd": {
+          "type": "collection",
+          "settings": {
+            "col_image": "shopify:\/\/shop_images\/DSC_2051_1_3.png",
+            "collection_selected": "mens"
+          }
+        },
+        "dc730dd1-1c7d-49ab-9d3f-7be361c28045": {
+          "type": "collection",
+          "settings": {
+            "col_image": "shopify:\/\/shop_images\/DSC_2051_1_2.png",
+            "collection_selected": "womens"
+          }
         }
       },
       "block_order": [
         "f7858c70-5f92-4dad-9629-7ac8feb3b05c",
         "945cffe6-af38-48d8-b9df-224b66fbee3b",
         "3e2b6713-a0ef-4033-b4b1-d37afede2242",
-        "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0"
+        "6ea0f0e5-dcc2-45c0-9cac-c977c9bbccc0",
+        "8f89429d-5391-4355-9b8a-fd27b8da87cd",
+        "dc730dd1-1c7d-49ab-9d3f-7be361c28045"
       ],
       "settings": {
         "heading": "Featured Collections",

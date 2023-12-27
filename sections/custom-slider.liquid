@@ -64,7 +64,6 @@
                                   </div>
                                 </div>
                             {% when 'collection' %}
-                          <script>console.log({{ block.settings.col_image }}, "hola")</script>
                               <a href="{{ block.settings.collection_selected.url }}" 
                                 class="custom-collection--card collection--{{ section.id }}" 
                                 style="background-image: url('{{ block.settings.col_image | img_url: "master" }}');">

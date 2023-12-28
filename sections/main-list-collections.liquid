@@ -1,7 +1,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
+<div class="custom-page--width">
   <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ section.settings.title }}
   </h1>
@@ -24,14 +24,14 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
-    <div>
+    <div class="custom-collection--list">
       <ul
         class="collection-list new-layout--collection-{{ section.settings.columns_desktop }} grid  new-layout--collection-mobile-{{ section.settings.columns_mobile }}"
         role="list"
       >
         {%- for collection in collections -%}
           <li
-            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="new-layout--grit-item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"

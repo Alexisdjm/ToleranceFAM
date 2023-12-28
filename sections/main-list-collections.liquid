@@ -24,26 +24,28 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
-    <ul
-      class="collection-list new-layout--collection grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-      role="list"
-    >
-      {%- for collection in collections -%}
-        <li
-          class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {% render 'card-collection',
-            card_collection: collection,
-            media_aspect_ratio: section.settings.image_ratio,
-            columns: 3
-          %}
-        </li>
-      {%- endfor -%}
-    </ul>
+    <div>
+      <ul
+        class="collection-list new-layout--collection-{{ section.settings.columns_desktop }} grid  new-layout--collection-mobile-{{ section.settings.columns_mobile }}"
+        role="list"
+      >
+        {%- for collection in collections -%}
+          <li
+            class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {% render 'card-collection',
+              card_collection: collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: 3
+            %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
     {% render 'pagination', paginate: paginate %}
   {%- endpaginate -%}
 </div>

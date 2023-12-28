@@ -31,16 +31,22 @@
           <label class="form__label variant-name--custom" for="select-variants-custom">
             {{ option.name }}
           </label>
-          <div class="select">
-            <select
-              id="select-variants-custom"
-              class="select__select"
-              name="options[{{ option.name | escape }}]"
-              form="{{ product_form_id }}"
-            >
-              {% render 'product-variant-options', product: product, option: option, block: block %}
-            </select>
-            {% render 'icon-caret' %}
+          <div class="flex-select--align">
+            <div class="select">
+              <select
+                id="select-variants-custom"
+                class="select__select"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+              >
+                {% render 'product-variant-options', product: product, option: option, block: block %}
+              </select>
+              {% render 'icon-caret' %}
+            </div>
+            <div class="flex-between gap-5 sizing-announcement">
+              {% render 'sizing-bar' %}
+              <p>Sizing Guide</p>
+            </div>
           </div>
         </div>
       </variant-selects>

@@ -24,7 +24,7 @@
     endif
   -%}
   {%- paginate collections by paginate_by -%}
-    <div class="custom-collection--list">
+    <div class="{% if section.settings.columns_desktop <= 2 %}custom-collection--list{% else %} custom-collection--center{% endif %}">
       <ul
         class="collection-list new-layout--collection-{{ section.settings.columns_desktop }} grid  new-layout--collection-mobile-{{ section.settings.columns_mobile }}"
         role="list"

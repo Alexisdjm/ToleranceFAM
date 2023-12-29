@@ -216,12 +216,13 @@
                   loading="lazy">
                   <p>{{ block.settings.reviews_number }}</p>  
                 </div>
-                <div id="availability" 
-                class="{% if product.available %}available-warning{% else %}unavailable-warning">
-                  <span></span><p id="available-text">{% if product.available %}In stock{% else %}Out of stock</p></div>
-               
+                {% if product.available %}
+                  <div class="available-warning"><span class="available-dot"></span><p>In stock</p></div>
+                {%  else %}
+                  <div class="unavailable-warning"><span class="unavailable-dot"></span><p>Out of stock</p></div>
+                {% endif %}
               </div>
-            {% when 'custom-icons-with-info' %}
+            <!-- {% when 'custom-icons-with-info' %}
               <div class="custom-icons-info-container">
                 <div class="row-container">
                   <img src="{{ block.settings.first_icon |  img_url: 'master' }}" alt="first" loading="lazy" class="custom-icon--shape">
@@ -237,7 +238,7 @@
                     <div class="content-box-new">{{ block.settings.new_information3 }}</div>
                   </div>
                 {% endif %}
-              </div>
+              </div> -->
             {% when 'quantity-checkout' %}
               {% render 'quantity-checkout', sec: section, element: product, block: block, cart: cart, form_id: product_form_id %}
             {%- when 'quantity_selector' -%}
@@ -711,8 +712,6 @@
   const buyBtn = document.getElementById("NewSubmitButton-{{ section.id }}");
   const form = document.getElementById("product-form-{{ section.id }}");
   const hidden_input = document.getElementById("product-variant");
-  let available_status = document.getElementById("availability");
-  let available_text = document.getElementById("available-text");
 
   function getVariantId() {
       let selectedSize = select.value;
@@ -727,18 +726,12 @@
 
   function updateSelection() {
     var variantId = getVariantId();
-    if (variantId !== null) {
-      hidden_input.value = variantId
-      buyBtn.removeAttribute("disabled")
-      available_status.classlist.add("available-warning")
-      available_status.classlist.remove("unavailable-warning")
-      available_text.textContent = "In stock";
-    } else {
-      buyBtn.setAttribute("disabled", "true")
-      available_status.classlist.remove("available-warning")
-      available_status.classlist.add("unavailable-warning")
-      available_text.textContent = "Out of stock";
-    }
+      if (variantId !== null) {
+        hidden_input.value = variantId
+        buyBtn.removeAttribute("disabled")
+      } else {
+        buyBtn.setAttribute("disabled", "true")
+      }
   }
 
   colorRadios.forEach(function(radio) {

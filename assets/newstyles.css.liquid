@@ -1991,6 +1991,20 @@ h2.custom-related--title {
     row-gap: 0;
   }
 
+  .featured-collections__inner-container.desktop-tablet--layout {
+    display: none;
+  }
+
+  .featured-collection--mobile-layout {
+    display: block;
+  }
+
+  .featured-mobile-new--box {
+    width: 90vw;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+  }
+
 }
 
 @media only screen and (min-width: 464px) and (max-width: 767px) {
@@ -2041,6 +2055,12 @@ h2.custom-related--title {
 
   .new-layout--collection-mobile-2 .new-layout--grit-item {
     width: clamp(220px,20vw,350px) !important;
+  }
+
+  .custom-responsive-font:nth-child(3), .custom-responsive-font:nth-child(4) {
+    left: 10px;
+    bottom: 10px;
+    font-size: clamp(16px, 3.5vw, 20px);
   }
   
 }
@@ -2105,6 +2125,12 @@ h2.custom-related--title {
     gap: 50px;
   }
 
+}
+
+@media only screen and (min-width: 768px) {
+  .featured-collection--mobile-layout {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

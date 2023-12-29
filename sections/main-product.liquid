@@ -733,13 +733,13 @@
     if (variantId !== null) {
       hidden_input.value = variantId
       buyBtn.removeAttribute("disabled")
-      available_status.classlist.add("available-warning")
-      available_status.classlist.remove("unavailable-warning")
+      available_status.classList.add("available-warning")
+      available_status.classList.remove("unavailable-warning")
       available_text.textContent = "In stock";
     } else {
       buyBtn.setAttribute("disabled", "true")
-      available_status.classlist.remove("available-warning")
-      available_status.classlist.add("unavailable-warning")
+      available_status.classList.remove("available-warning")
+      available_status.classList.add("unavailable-warning")
       available_text.textContent = "Out of stock";
     }
   }

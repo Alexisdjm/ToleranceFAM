@@ -1230,7 +1230,7 @@ input[type="radio"]:checked + label span.custom-radio--circle {
   text-align: left;
 }
 
-label.facets__label.facet-checkbox > svg {
+label.facets__label.facet-checkbox:first-child {
   width: 2.6rem;
   height: 2.6rem;
   border: 1px solid var(--color-black);
@@ -1254,7 +1254,6 @@ label.facets__label.facet-checkbox > input:checked + svg {
 
 label.facets__label.facet-checkbox > input:checked + svg + svg {
   background-color: var(--button-bg-color);
-  border: 1px solid var(--button-bg-color) !important;
   color: var(--color-white);
 }
 

@@ -711,6 +711,8 @@
   const buyBtn = document.getElementById("NewSubmitButton-{{ section.id }}");
   const form = document.getElementById("product-form-{{ section.id }}");
   const hidden_input = document.getElementById("product-variant");
+  let available_status = document.getElementById("availability");
+  let available_text = document.getElementById("available-text");
 
   function getVariantId() {
       let selectedSize = select.value;
@@ -733,7 +735,7 @@
       available_text.textContent = "In stock";
     } else {
       buyBtn.setAttribute("disabled", "true")
-      // available_status.classList.remove("available-warning")
+      available_status.classList.remove("available-warning")
       available_status.classList.add("unavailable-warning")
       available_text.textContent = "Out of stock";
     }

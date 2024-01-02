@@ -406,8 +406,10 @@
 
     buttons.forEach(button => {
       let bool = false
-      button.addEventListener("click", () => { bool = !bool }) 
-      console.log(bool)
+      button.addEventListener("click", () => { 
+        bool = !bool 
+        console.log(bool)
+      }) 
         // if (bool) {
         //   button.classList.add("active")
         //   console.log("added")

@@ -143,7 +143,13 @@
           <div class="flex-between upper-belt">
             <div id="color-radios--container--{{ card_product.id }}" class="radio-colors--container"></div>
             <div class="flex">
-              <button id="add--{{ card_product.id }}" class="quick-add">
+              <button id="add--{{ card_product.id }}"
+                class="swym-button swym-add-to-wishlist wishlist-btn quick-add"
+                data-with-epi="true"
+                data-swaction="addToWishlist"
+                data-product-id="{{ card_product.id }}"
+                data-variant-id="{{ card_product.variants[0].id }}"
+                data-product-url="{{ shop.url }}{{ card_product.url }}">
                   {% render 'heart_icon' %}
                 </button>
                 <form method="post" 

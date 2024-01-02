@@ -53,7 +53,13 @@
             <a href="{{ pro.url }}">{{ pro.title }}</a>
         </div>
         <div class="flex">
-          <button class="quick-add">{% render 'heart_icon' %}</button>
+          <button
+          class="swym-button swym-add-to-wishlist wishlist-btn quick-add"
+          data-with-epi="true"
+          data-swaction="addToWishlist"
+          data-product-id="{{ pro.id }}"
+          data-variant-id="{{ pro.variants[0].id }}"
+          data-product-url="{{ shop.url }}{{ pro.url }}">{% render 'heart_icon' %}</button>
           <form method="post" 
             action="/cart/add" 
             id="add-product--{{ pro.id }}" 

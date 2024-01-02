@@ -143,8 +143,8 @@
           <div class="flex-between upper-belt">
             <div id="color-radios--container--{{ card_product.id }}" class="radio-colors--container"></div>
             <div class="flex gap-5">
-              <button id="add--{{ card_product.id }}"
-                class="swym-button swym-add-to-wishlist quick-add"
+              <button id="wishlist--{{ card_product.id }}"
+                class="swym-button swym-add-to-wishlist quick-add wishlist-custom--button"
                 data-with-epi="true"
                 data-swaction="addToWishlist"
                 data-product-id="{{ card_product.id }}"
@@ -399,9 +399,18 @@
   function build(id) {
     let number = {{ card_product.variants.size }}
     const container = document.getElementById("color-radios--container--"+id)
+    let buttons = document.querySelectorAll(".wishlist-custom--button");
+    let availables = []
     let arrr = []
     let ids = []
-    let availables = []
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.add("active")
+        console.log("added")
+      })
+    })
+
     {% for variant in card_product.variants %}
       if (!arrr.includes('{{ variant.option2 }}')) {
        arrr.push("{{ variant.option2 }}")

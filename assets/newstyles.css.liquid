@@ -1196,6 +1196,18 @@ input[type="radio"]:checked + label span.custom-radio--circle {
   display: flex;
 }
 
+button.quick-add.disabled {
+  opacity: 1;
+}
+
+.quick-add.active svg {
+  fill: var(--button-bg-color) !important;
+}
+
+.quick-add.active path {
+  stroke: var(--button-bg-color) !important;
+}
+
 .quick-add:hover ~ svg {
   transform: scale(1.1) !important;
 }

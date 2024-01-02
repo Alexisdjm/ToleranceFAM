@@ -404,12 +404,12 @@
     let arrr = []
     let ids = []
 
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        button.classList.add("active")
-        console.log("added")
-      })
-    })
+    // buttons.forEach(button => {
+    //   button.addEventListener("click", () => {
+    //     button.classList.add("active")
+    //     console.log("added")
+    //   })
+    // })
 
     {% for variant in card_product.variants %}
       if (!arrr.includes('{{ variant.option2 }}')) {

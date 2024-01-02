@@ -283,7 +283,7 @@
   const saveData = (item, bool) => {
     const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     bool === 1 ? wishlist[item] = 0 : wishlist[item] = 1;
-    localStorage.setItem('wishlist', JSON.stringfy(wishlist))
+    localStorage.setItem('wishlist', JSON.stringify(wishlist))
     console.log(wishlist)
   }
 

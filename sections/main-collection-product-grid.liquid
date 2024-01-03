@@ -288,6 +288,7 @@
 
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => {
+      console.log(wishlist[i])
       if (wishlist[i] === 1) {
         wishlist[i] = 1;
         buttons[i].classList.add("active")

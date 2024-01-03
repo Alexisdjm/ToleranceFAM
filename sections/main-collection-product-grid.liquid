@@ -283,7 +283,7 @@
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist)
+    console.log(wishlist, "qlq")
   }
 
   setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 2000)

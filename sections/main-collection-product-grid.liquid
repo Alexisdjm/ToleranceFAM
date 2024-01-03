@@ -302,11 +302,11 @@
   }
 
   async function main() {
-    console.log("Esperando a que aparezcan los elementos...");
-  
     try {
       const miElemento = await esperarElemento();
-      // document.getElementById("notepad-anchor-title").addEventListener("click", () => {console.log("wishlist")})
+      ocument.getElementById("notepad-anchor-title").addEventListener("click", () => {
+        console.log(document.querySelectorAll("swym-delete-btn").length)
+      })
     } catch (error) {
       console.error("Error al esperar el elemento:", error);
     }

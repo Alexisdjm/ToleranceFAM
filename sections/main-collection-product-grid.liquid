@@ -295,7 +295,6 @@
         if (elemento) {
           clearInterval(intervalo); 
           permission = 1;
-          console.log(permission)
           resolve(elemento);
         }
       }, 1000);
@@ -307,7 +306,7 @@
   
     try {
       const miElemento = await esperarElemento();
-      console.log("Elemento encontrado:", miElemento);
+      document.getElementById("notepad-anchor-title").console.log("wishlist")
     } catch (error) {
       console.error("Error al esperar el elemento:", error);
     }

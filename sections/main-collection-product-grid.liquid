@@ -286,8 +286,7 @@
     console.log(wishlist)
   }
 
-  console.log(document.getElementById("swym-anchor"))
-
+  document.getElementById("swym-anchor").addEventListener("click", () => {console.log("click")})
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
     buttons[i].addEventListener("click", () => {

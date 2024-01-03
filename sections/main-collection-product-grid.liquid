@@ -291,7 +291,7 @@
 
   setTimeout(() => {permision = 1}, 1000)
 
-  document.getElementById("notepad-anchor-title").addEventListener("click", () => {console.log("hola")})
+  permission === 1 ? document.getElementById("notepad-anchor-title").addEventListener("click", () => {console.log("hola")}) : ''
 
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")

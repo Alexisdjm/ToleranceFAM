@@ -279,7 +279,6 @@
 <script>
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-  // let arr = []
 
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
@@ -288,13 +287,18 @@
   }
 
   for (let i = 0; i < buttons.length; i++) {
-    // arr.push(0)
     buttons[i].addEventListener("click", () => {
-      // arr[i] == 0 ? arr[i] = 1 : arr[i] = 0
-      wishlist[i] === 1 ? wishlist[i] = 0 : wishlist[i] = 1;
+      if (wishlist[i] === 1) {
+        wishlist[i] = 0;
+        buttons[i].classList.add("active")
+      } else {
+        wishlist[i] = 1
+        buttons[i].classList.remove("active")
+      }
       saveData(i, wishlist[i])
-      wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
       console.log(JSON.parse(localStorage.getItem('wishlist')))
+      // wishlist[i] === 1 ? wishlist[i] = 0 : wishlist[i] = 1;
+      // wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
       })
   }
   console.log(JSON.parse(localStorage.getItem('wishlist')))

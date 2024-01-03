@@ -303,7 +303,7 @@
     try {
       const miElemento = await esperarElemento();
       document.getElementById("notepad-anchor-title").addEventListener("click", () => {
-        setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 500)
+        setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 100)
       })
     } catch (error) {
       console.error("Error al esperar el elemento:", error);

@@ -279,6 +279,7 @@
 <script>
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  let permission = 0
 
   console.log("hola")
 
@@ -288,7 +289,7 @@
     console.log(wishlist)
   }
 
-  setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 2000)
+  setTimeout(() => {permision = 1}, 2000)
 
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")

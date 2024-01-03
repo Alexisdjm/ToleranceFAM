@@ -280,10 +280,12 @@
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
+  console.log("hola")
+
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist, "qlq")
+    console.log(wishlist)
   }
 
   setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 2000)

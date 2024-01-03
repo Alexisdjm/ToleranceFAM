@@ -281,10 +281,10 @@
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
   let presence = JSON.parse(localStorage.getItem('prensence')) || [];
   
-  const saveData = (item, bool) => {
+  const saveData = (item, bool, elements) => {
     if (bool === 1) {
       wishlist[item] = 1
-      presence.push(item)
+      presence.push((elements - 1) - item)
     } else {
       wishlist[item] = 0;
       presence = presence.filter(element => element !== item)
@@ -334,14 +334,14 @@
     buttons[i].addEventListener("click", () => {
       if (wishlist[i] != 1) {
         wishlist[i] = 1;
-        presence.push(i)
+        presence.push((buttons.length - 1) - i)
         buttons[i].classList.add("active")
       } else {
         wishlist[i] = 0
         presence = presence.filter(element => element !== item)
         buttons[i].classList.remove("active")
       }
-      saveData(i, wishlist[i])
+      saveData(i, wishlist[i], buttons.length)
       console.log(JSON.parse(localStorage.getItem('wishlist')))
       })
   }

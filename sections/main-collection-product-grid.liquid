@@ -280,6 +280,8 @@
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
+  wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
+
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
@@ -298,8 +300,6 @@
       console.log(wishlist[i])
       saveData(i, wishlist[i])
       console.log(JSON.parse(localStorage.getItem('wishlist')))
-      // wishlist[i] === 1 ? wishlist[i] = 0 : wishlist[i] = 1;
-      // wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
       })
   }
   console.log(JSON.parse(localStorage.getItem('wishlist')))

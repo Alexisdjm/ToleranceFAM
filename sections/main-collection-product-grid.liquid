@@ -279,7 +279,6 @@
 <script>
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-  let permission = 0
 
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
@@ -294,7 +293,6 @@
   
         if (elemento) {
           clearInterval(intervalo); 
-          permission = 1;
           resolve(elemento);
         }
       }, 1000);

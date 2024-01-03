@@ -286,7 +286,7 @@
     console.log(wishlist)
   }
 
-  setTimeout(() => {console.log(document.getElementById("swym-anchor"))}, 2000)
+  setTimeout(() => {console.log(document.querySelectorAll(".swym-delete-btn").length)}, 2000)
 
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")

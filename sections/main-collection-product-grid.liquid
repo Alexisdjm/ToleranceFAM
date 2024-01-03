@@ -281,8 +281,6 @@
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
   let permission = 0
 
-  console.log("hola")
-
   const saveData = (item, bool) => {
     bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
     localStorage.setItem('wishlist', JSON.stringify(wishlist))

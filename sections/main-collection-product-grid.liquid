@@ -286,6 +286,8 @@
     console.log(wishlist)
   }
 
+  console.log(document.querySelector(".swym-notepad-white"))
+
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
     buttons[i].addEventListener("click", () => {

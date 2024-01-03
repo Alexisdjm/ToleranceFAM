@@ -334,11 +334,11 @@
     buttons[i].addEventListener("click", () => {
       if (wishlist[i] != 1) {
         wishlist[i] = 1;
-        presence.push((buttons.length - 1) - i)
+        // presence.push((buttons.length - 1) - i)
         buttons[i].classList.add("active")
       } else {
         wishlist[i] = 0
-        presence = presence.filter(element => element !== ((buttons.length - 1) - i))
+        // presence = presence.filter(element => element !== ((buttons.length - 1) - i))
         buttons[i].classList.remove("active")
       }
       saveData(i, wishlist[i], buttons.length)

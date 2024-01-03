@@ -279,11 +279,19 @@
 <script>
   const buttons = document.querySelectorAll(".wishlist-custom--button");
   let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-
+  let presence = JSON.parse(localStorage.getItem('prensence')) || [];
+  
   const saveData = (item, bool) => {
-    bool === 1 ? wishlist[item] = 1 : wishlist[item] = 0;
+    if (bool === 1) {
+      wishlist[item] = 1
+      presence.push(item)
+    } else {
+      wishlist[item] = 0;
+      prensence = prensence.filter(element => element !== item)
+    }
+    localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist)
+    console.log(wishlist, presence)
   }
 
   async function esperarElemento() {

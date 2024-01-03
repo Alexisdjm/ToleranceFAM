@@ -290,17 +290,17 @@
   async function esperarElemento() {
     return new Promise(resolve => {
       const intervalo = setInterval(() => {
-        const elemento = document.getElementById("notepad-anchor-title"); // Reemplaza "#tuSelector" con tu selector real
+        const elemento = document.getElementById("notepad-anchor-title");
   
         if (elemento) {
           clearInterval(intervalo); 
-          console.log("qlq")
+          permission = 1;
+          console.log(permission)
           resolve(elemento);
         }
       }, 1000);
     });
   }
-
   const res = esperarElemento()
 
   for (let i = 0; i < buttons.length; i++) {

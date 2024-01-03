@@ -305,7 +305,9 @@
       document.getElementById("notepad-anchor-title").addEventListener("click", () => {
         setTimeout(() => {
           const deletes = document.querySelectorAll(".swym-delete-btn");
-          
+          for (let i = 0; i < deletes.length; i++) {
+            
+          }
         }, 250)
       })
     } catch (error) {

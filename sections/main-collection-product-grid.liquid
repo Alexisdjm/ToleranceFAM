@@ -301,7 +301,19 @@
       }, 1000);
     });
   }
-  const res = esperarElemento()
+
+  async function main() {
+    console.log("Esperando a que aparezcan los elementos...");
+  
+    try {
+      const miElemento = await esperarElemento();
+      console.log("Elemento encontrado:", miElemento);
+    } catch (error) {
+      console.error("Error al esperar el elemento:", error);
+    }
+  }
+
+  main();
 
   for (let i = 0; i < buttons.length; i++) {
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")

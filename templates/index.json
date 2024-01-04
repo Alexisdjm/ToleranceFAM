@@ -54,6 +54,8 @@
       ],
       "settings": {
         "count_bg": "#073d17",
+        "countdown__heading": "WATCH OUT FOR THE NEXT DROP",
+        "paragraph": "Nunc vulputate libero et velit interdum ac aliquet odio.",
         "padding_top": 54,
         "padding_bottom": 54
       }

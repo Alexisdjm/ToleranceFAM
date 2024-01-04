@@ -83,17 +83,17 @@
 <div class="countdown section-{{ section.settings.id }}" >
     <div class="countdown__container page-width">
         <div class="countdown__inner-container">
-            <div class="countdown__col countdown--heading">
-              <h3 class="countdown__heading">
-                {{ section.settings.countdown__heading }}
-              </h3>
-              <p class="countdown__desc"> {{ section.settings.paragraph }}</p>
-              <div>
-                {%- for block in section.blocks -%}
-                    {% render block %}
-                {%- endfor -%}
-              </div>
-            </div>
+          <div class="countdown__col countdown--heading">
+            <h3 class="countdown__heading">
+              {{ section.settings.countdown__heading }}
+            </h3>
+            <p class="countdown__desc"> {{ section.settings.paragraph }}</p>
+          </div>
+          <div>
+            {%- for block in section.blocks -%}
+                {% render block %}
+            {%- endfor -%}
+          </div>
         </div>  
     </div>
 </div>

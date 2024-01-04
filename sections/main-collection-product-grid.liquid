@@ -321,7 +321,7 @@
         setTimeout(() => {
           const deletes = document.querySelectorAll(".swym-delete-btn");
           console.log(deletes.length)
-          if (deletes != null) {
+          if (deletes.length > 0) {
             for (let r = 0; r < deletes.length; r++) {
               deletes[r].addEventListener("click", () => {
                 // wishlist[presence[r]] = 0;

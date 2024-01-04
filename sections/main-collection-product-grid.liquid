@@ -285,6 +285,7 @@
     if (bool === 1) {
       wishlist[item] = 1
       presence.unshift(item)
+      console.log(presence)
     } else {
       wishlist[item] = 0;
       console.log(item, presence.filter(element => element !== item))
@@ -292,7 +293,7 @@
     }
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist, presence)
+    // console.log(wishlist, presence)
   }
 
   async function esperarElemento() {

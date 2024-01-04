@@ -287,14 +287,14 @@
     if (bool === 1) {
       wishlist[item] = 1
       // console.log(JSON.parse(localStorage.getItem('presence')))
-      presence.unshift(item)
+      // presence.unshift(item)
       console.log(presence)
     } else {
       wishlist[item] = 0;
       console.log(JSON.parse(localStorage.getItem('presence')))
       // console.log(item, presence.filter(element => element !== item))
-      presence = presence.filter(element => element !== item)
-      console.log(presence)
+      // presence = presence.filter(element => element !== item)
+      // console.log(presence)
     }
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
@@ -322,7 +322,7 @@
           if (deletes != null) {
             for (let r = 0; r < deletes.length; r++) {
               deletes[r].addEventListener("click", () => {
-                wishlist[presence[r]] = 0;
+                // wishlist[presence[r]] = 0;
               })
             } 
           }

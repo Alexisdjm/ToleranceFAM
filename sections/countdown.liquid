@@ -93,6 +93,8 @@
                   
                     {%- when 'paragraph' -%}
                     <p class="countdown__desc"> {{ block.settings.paragraph }}</p>
+                    {%- when '@app' -%}
+                      {% render block %}
                 {%- endcase -%}
               {%- endfor -%}
             </div>

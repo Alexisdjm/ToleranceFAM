@@ -282,7 +282,7 @@
   let presence = JSON.parse(localStorage.getItem('presence')) || [];
   
   const saveData = (item, bool) => {
-    // presence = []
+    presence = []
     if (bool === 1) {
       wishlist[item] = 1
       // console.log(JSON.parse(localStorage.getItem('presence')))
@@ -335,7 +335,7 @@
   main();
 
   for (let i = 0; i < buttons.length; i++) {
-    // wishlist[i] =  0;
+    wishlist[i] =  0;
     
     wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
     buttons[i].addEventListener("click", () => {

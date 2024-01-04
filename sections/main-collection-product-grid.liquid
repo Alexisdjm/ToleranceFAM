@@ -282,6 +282,7 @@
   let presence = JSON.parse(localStorage.getItem('presence')) || [];
   
   const saveData = (item, bool) => {
+    presence = []
     if (bool === 1) {
       wishlist[item] = 1
       // console.log(JSON.parse(localStorage.getItem('presence')))

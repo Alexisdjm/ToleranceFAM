@@ -94,6 +94,12 @@
                 {% render block %}
             {%- endfor -%}
           </div>
+          {% if section.settings.button_text != blank and section.settings.button_url != blank %}
+            <a 
+            href="{{ section.settings.button_url }}" 
+            class="countdown-text--custom">
+            {{ section.settings.button_text }}</a>  
+          {% endif %}
         </div>  
     </div>
 </div>
@@ -120,6 +126,16 @@
       "type": "textarea",
       "id": "paragraph",
       "label": "Sub heading"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button url"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
     },
     {
       "type": "range",

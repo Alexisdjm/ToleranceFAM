@@ -344,11 +344,9 @@
     buttons[i].addEventListener("click", () => {
       if (wishlist[i] != 1) {
         wishlist[i] = 1;
-        // presence.unshift(i)
         buttons[i].classList.add("active")
       } else {
         wishlist[i] = 0
-        // presence = presence.filter(element => element !== i)
         // console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
         buttons[i].classList.remove("active")
       }

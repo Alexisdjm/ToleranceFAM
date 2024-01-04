@@ -287,7 +287,7 @@
       presence.unshift(item)
     } else {
       wishlist[item] = 0;
-      console.log(item)
+      console.log(item, presence.filter(element => element !== item))
       // presence = presence.filter(element => element !== item)
     }
     localStorage.setItem('presence', JSON.stringify(presence))

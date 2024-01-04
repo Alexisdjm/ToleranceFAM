@@ -284,15 +284,15 @@
   const saveData = (item, bool) => {
     if (bool === 1) {
       wishlist[item] = 1
-      console.log(JSON.parse(localStorage.getItem('presence')))
+      // console.log(JSON.parse(localStorage.getItem('presence')))
       presence.unshift(item)
-      console.log(presence)
+      // console.log(presence)
     } else {
       wishlist[item] = 0;
       console.log(JSON.parse(localStorage.getItem('presence')))
       // console.log(item, presence.filter(element => element !== item))
-      // presence = presence.filter(element => element !== item)
-      console.log(presence)
+      presence = presence.filter(element => element !== item)
+      // console.log(presence)
     }
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))

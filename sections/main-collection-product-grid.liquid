@@ -324,9 +324,7 @@
           if (deletes.length > 0) {
             for (let r = 0; r < deletes.length; r++) {
               deletes[r].addEventListener("click", () => {
-                console.log(wishlist[presence[r]])
                 wishlist[presence[r]] = 0;
-                console.log(wishlist[presence[r]])
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))

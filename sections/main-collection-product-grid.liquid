@@ -323,7 +323,7 @@
           console.log(deletes.length)
           if (deletes.length > 0) {
             deletes.forEach((deletee, index) => {
-              deletee.addEventListener("click", () {
+              deletee.addEventListener("click", () => {
                 wishlist[presence[index - 1]] = 0;
                 presence = presence.filter(element => element !== index - 1)
                 localStorage.setItem('presence', JSON.stringify(presence))
@@ -332,6 +332,7 @@
               })
             })
             
+          }
         }, 250)
       })
     } catch (error) {

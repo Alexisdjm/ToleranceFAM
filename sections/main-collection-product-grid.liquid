@@ -278,25 +278,90 @@
 
 <script>
   const buttons = document.querySelectorAll(".wishlist-custom--button");
-  let arr = []
-
+  let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  let presence = JSON.parse(localStorage.getItem('presence')) || [];
+  
   const saveData = (item, bool) => {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    bool === 0 ? wishlist[item] = 0 : wishlist[item] = 1;
+    
+    if (bool === 1) {
+      wishlist[item] = 1
+      // console.log(JSON.parse(localStorage.getItem('presence')))
+      presence.unshift(item)
+      console.log(presence)
+    } else {
+      wishlist[item] = 0;
+      console.log(JSON.parse(localStorage.getItem('presence')))
+      // console.log(item, presence.filter(element => element !== item))
+      presence = presence.filter(element => element !== item)
+      // console.log(presence)
+    }
+    // wishlist[item] =  0;
+    // presence = []
+    localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist)
+    // console.log(wishlist, presence)
   }
+
+  async function esperarElemento() {
+    return new Promise(resolve => {
+      const intervalo = setInterval(() => {
+        const elemento = document.getElementById("notepad-anchor-title");
+        if (elemento) {
+          clearInterval(intervalo); 
+          resolve(elemento);
+        }
+      }, 1000);
+    });
+  }
+
+  async function main() {
+    try {
+      const miElemento = await esperarElemento();
+      document.getElementById("notepad-anchor-title").addEventListener("click", () => {
+        setTimeout(() => {
+          const deletes = document.querySelectorAll(".swym-delete-btn");
+          let count = deletes.length
+          console.log(count)
+          if (count > 0) {
+            for (let r = 0; r < count; r++) {
+              deletes[r].addEventListener("click", () => {
+                wishlist[presence[r]] = 0;
+                console.log(document.querySelectorAll(".swym-delete-btn").length)
+                presence = presence.filter(element => element !== r)
+                localStorage.setItem('presence', JSON.stringify(presence))
+                localStorage.setItem('wishlist', JSON.stringify(wishlist))
+                console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)
+              })
+            } 
+          }
+        }, 400)
+      })
+    } catch (error) {
+      console.error("Error al esperar el elemento:", error);
+    }
+  }
+
+  main();
 
   for (let i = 0; i < buttons.length; i++) {
-    arr.push(0)
+    
+    wishlist[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
     buttons[i].addEventListener("click", () => {
-      arr[i] == 0 ? arr[i] = 1 : arr[i] = 0
-      saveData(i, arr[i])
-      arr[i] == 1 ? buttons[i].classList.add("active") : buttons[i].classList.remove("active")
-      console.log(JSON.parse(localStorage.getItem('wishlist')))
+      if (wishlist[i] != 1) {
+        wishlist[i] = 1;
+        buttons[i].classList.add("active")
+      } else {
+        wishlist[i] = 0
+        // console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
+        buttons[i].classList.remove("active")
+      }
+      // wishlist[i] =  0;
+      // presence = []
+      saveData(i, wishlist[i])
+      // console.log(JSON.parse(localStorage.getItem('wishlist')))
       })
   }
-  console.log(JSON.parse(localStorage.getItem('wishlist')))
+  console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
 </script>
 
 {% schema %}

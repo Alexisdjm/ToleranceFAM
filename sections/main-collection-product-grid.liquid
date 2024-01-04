@@ -282,12 +282,11 @@
   let presence = JSON.parse(localStorage.getItem('presence')) || [];
   
   const saveData = (item, bool) => {
-    // presence = []
     
     if (bool === 1) {
       wishlist[item] = 1
       // console.log(JSON.parse(localStorage.getItem('presence')))
-      // presence.unshift(item)
+      presence.unshift(item)
       console.log(presence)
     } else {
       wishlist[item] = 0;
@@ -296,7 +295,8 @@
       // presence = presence.filter(element => element !== item)
       // console.log(presence)
     }
-    wishlist[item] =  0;
+    // wishlist[item] =  0;
+    // presence = []
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
     // console.log(wishlist, presence)
@@ -352,7 +352,8 @@
         // console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
         buttons[i].classList.remove("active")
       }
-      wishlist[i] =  0;
+      // wishlist[i] =  0;
+      // presence = []
       saveData(i, wishlist[i])
       // console.log(JSON.parse(localStorage.getItem('wishlist')))
       })

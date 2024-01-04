@@ -283,7 +283,7 @@
   
   const saveData = (item, bool) => {
     // presence = []
-    wishlist[i] =  0;
+    
     if (bool === 1) {
       wishlist[item] = 1
       // console.log(JSON.parse(localStorage.getItem('presence')))
@@ -296,6 +296,7 @@
       // presence = presence.filter(element => element !== item)
       // console.log(presence)
     }
+    wishlist[i] =  0;
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
     // console.log(wishlist, presence)

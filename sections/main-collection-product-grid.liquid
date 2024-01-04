@@ -322,16 +322,15 @@
           const deletes = document.querySelectorAll(".swym-delete-btn");
           console.log(deletes.length)
           if (deletes.length > 0) {
-            deletes.forEach((deletee, index) => {
-              deletee.addEventListener("click", () => {
-                wishlist[presence[index - 1]] = 0;
-                presence = presence.filter(element => element !== index - 1)
+            for (let r = 0; r < deletes.length; r++) {
+              deletes[r].addEventListener("click", () => {
+                wishlist[presence[r]] = 0;
+                presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
-                console.log("r: "+index - 1, `wishlist[presence[${index - 1}]]: ${wishlist[presence[index - 1]]}`, `presence[${index - 1}]: ${presence[index - 1]}`, "wishlist: "+wishlist, "presence: "+presence)
+                console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)
               })
-            })
-            
+            } 
           }
         }, 250)
       })
@@ -354,8 +353,8 @@
         // console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       // console.log(JSON.parse(localStorage.getItem('wishlist')))
       })

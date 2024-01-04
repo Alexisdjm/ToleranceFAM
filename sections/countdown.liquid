@@ -98,41 +98,7 @@
                 {%- endcase -%}
               {%- endfor -%}
             </div>
-            <div class="countdown__col countdown--timer">
-              <!-- {%- for block in section.blocks -%}
-                {%- if block.type == '@app' -%}
-                  {% render block %}
-                {% endif %}
-              {% endfor %} -->
-              <!-- <div class="countdown__content">
-                <div class="countdown__time countdown--days">
-                  <div class="countdown__num">3</div>
-                <p class="countdown__count">DAYS</p>
-                </div>
-                <div class="countdown__time countdown--hours">
-                  <div class="countdown__num">2</div>
-                <p class="countdown__count">HRS</p>
-                </div>
-                <div class="countdown__time countdown--minutes">
-                  <div class="countdown__num">13</div>
-                <p class="countdown__count">MINS</p></div>
-                <div class="countdown__time countdown--seconds">
-                  <div class="countdown__num">53</div>
-              
-                <p class="countdown__count">SECS</p></div>
-              </div> -->
-            </div>
-            <div class="countdown__col countdown--button">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                  {%- when 'button' -%}
-                 
-                  <a href="{{block.settings.button_link}}" class="button button--outline">{{block.settings.btn_label}}</a>
             
-                {%- endcase -%}
-              {%- endfor -%}
-            </div>
-        </div>
     </div>
 </div>
 

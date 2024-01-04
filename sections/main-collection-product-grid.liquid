@@ -292,14 +292,13 @@
     }
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    console.log(wishlist, wishlist[item], presence)
+    console.log(wishlist, presence)
   }
 
   async function esperarElemento() {
     return new Promise(resolve => {
       const intervalo = setInterval(() => {
         const elemento = document.getElementById("notepad-anchor-title");
-  
         if (elemento) {
           clearInterval(intervalo); 
           resolve(elemento);

@@ -329,6 +329,7 @@
                 console.log(wishlist[presence[r]])
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
+                localStorage.setItem('wishlist', JSON.stringify(wishlist))
               })
             } 
           }

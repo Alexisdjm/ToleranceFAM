@@ -93,13 +93,17 @@
                   
                     {%- when 'paragraph' -%}
                     <p class="countdown__desc"> {{ block.settings.paragraph }}</p>
-                    {%- when '@app' -%}
-                      {% render block %}
+                    
                 {%- endcase -%}
               {%- endfor -%}
             </div>
             <div class="countdown__col countdown--timer">
-              <div class="countdown__content">
+              {%- for block in section.blocks -%}
+                {%- if block.type == '@app' -%}
+                  {% render block %}
+                {% endif %}
+              {% endfor %}
+              <!-- <div class="countdown__content">
                 <div class="countdown__time countdown--days">
                   <div class="countdown__num">3</div>
                 <p class="countdown__count">DAYS</p>
@@ -115,7 +119,7 @@
                   <div class="countdown__num">53</div>
               
                 <p class="countdown__count">SECS</p></div>
-              </div>
+              </div> -->
             </div>
             <div class="countdown__col countdown--button">
               {%- for block in section.blocks -%}

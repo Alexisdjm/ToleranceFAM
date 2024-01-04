@@ -43,18 +43,6 @@
     "b9674fab-dd8d-4300-8c15-df92fc6f866e": {
       "type": "countdown",
       "blocks": {
-        "template--21559637311762__b9674fab-dd8d-4300-8c15-df92fc6f866e-heading-1": {
-          "type": "heading",
-          "settings": {
-            "countdown__heading": "WATCH OUT FOR THE NEXT DROP"
-          }
-        },
-        "template--21559637311762__b9674fab-dd8d-4300-8c15-df92fc6f866e-paragraph-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "Nunc vulputate libero et velit interdum ac aliquet odio."
-          }
-        },
         "4b6e0082-00ec-4a2d-a3da-9582cddf14d9": {
           "type": "shopify:\/\/apps\/countdown-timer-bar-hextom\/blocks\/ctb-custom-placement\/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
           "settings": {
@@ -62,8 +50,6 @@
         }
       },
       "block_order": [
-        "template--21559637311762__b9674fab-dd8d-4300-8c15-df92fc6f866e-heading-1",
-        "template--21559637311762__b9674fab-dd8d-4300-8c15-df92fc6f866e-paragraph-1",
         "4b6e0082-00ec-4a2d-a3da-9582cddf14d9"
       ],
       "settings": {

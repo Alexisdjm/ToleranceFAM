@@ -84,19 +84,15 @@
     <div class="countdown__container page-width">
         <div class="countdown__inner-container">
             <div class="countdown__col countdown--heading">
-              {%- for block in section.blocks -%}
-                {%- case block.type -%}
-                    {%- when 'heading' -%}
-                    <h3 class="countdown__heading">
-                    {{ block.settings.countdown__heading }}
-                    </h3>
-                  
-                    {%- when 'paragraph' -%}
-                    <p class="countdown__desc"> {{ block.settings.paragraph }}</p>
-                    {%- when '@app' -%}
-                      {% render block %}
-                {%- endcase -%}
-              {%- endfor -%}
+              <h3 class="countdown__heading">
+                {{ section.settings.countdown__heading }}
+              </h3>
+              <p class="countdown__desc"> {{ section.settings.paragraph }}</p>
+              <div>
+                {%- for block in section.blocks -%}
+                    {% render block %}
+                {%- endfor -%}
+              </div>
             </div>
         </div>  
     </div>
@@ -115,6 +111,16 @@
       "label": "Background color",
       "default": "#073D17"
     },  
+    {
+      "type": "text",
+      "id": "countdown__heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Sub heading"
+    },
     {
       "type": "range",
       "id": "padding_top",
@@ -139,30 +145,6 @@
   "blocks":[
     {
       "type": "@app"
-    },
-    {
-      "type": "heading",
-      "name": "Heading",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "countdown__heading",
-          "label": "Heading"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "name": "Sub heading",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "paragraph",
-          "label": "Sub heading"
-        }
-      ]
     }
   ],
   "presets": [

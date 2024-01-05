@@ -329,10 +329,10 @@
                 const buttonIndex = Array.from(deletes).indexOf(deletes[r]);
                 console.log(buttonIndex)
                 const wishlistIndex = presence[buttonIndex];
-                if (wishlistIndex !== undefined) {
-                  wishlist[wishlistIndex] = 0;
-                  presence = presence.filter(element => element !== r)
-                }
+                // if (wishlistIndex !== undefined) {
+                //   wishlist[wishlistIndex] = 0;
+                //   presence = presence.filter(element => element !== r)
+                // }
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
                 console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)

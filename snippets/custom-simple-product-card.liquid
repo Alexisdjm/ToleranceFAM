@@ -9,8 +9,14 @@
       <div class="custom-product--cart--text">
           <a href="{{ item.url }}">{{ item.title }}</a>
       </div>
-      <div class="flex">
-        <button class="quick-add">{% render 'heart_icon' %}</button>
+      <div class="flex gap-5">
+        <button
+          class="swym-button swym-add-to-wishlist quick-add wishlist-custom--button"
+          data-with-epi="true"
+          data-swaction="addToWishlist"
+          data-product-id="{{ pro.id }}"
+          data-variant-id="{{ pro.variants[0].id }}"
+          data-product-url="{{ shop.url }}{{ pro.url }}">{% render 'heart_icon' %}</button>
         <form method="post" 
           action="/cart/add" 
           id="add-product--{{ item.id }}" 

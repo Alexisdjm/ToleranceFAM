@@ -79,8 +79,29 @@
         "section_margin": true
       }
     },
+    "17044035435d29bafc": {
+      "type": "apps",
+      "blocks": {
+        "1d44f51d-bfbe-4a62-99cd-4c78cdfadf59": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "1d44f51d-bfbe-4a62-99cd-4c78cdfadf59"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
     "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09": {
       "type": "custom-simple-gallery",
+      "disabled": true,
       "settings": {
         "first_image": "shopify:\/\/shop_images\/Mask_group_1.png",
         "second_image": "shopify:\/\/shop_images\/Mask_group_2.png",
@@ -159,6 +180,7 @@
     "main",
     "75952c47-4fb2-4c7e-8940-6d1879f10a3d",
     "15f6f601-1b63-45d5-8460-73d89f1e1289",
+    "17044035435d29bafc",
     "a7a5c9cd-f4aa-4e3a-b23b-acd8d1f4cc09",
     "54f0c35c-a476-451b-bef7-b4a3026bef78",
     "7bc008b2-9d65-4c89-9962-9b9c125327fc"

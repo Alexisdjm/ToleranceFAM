@@ -325,7 +325,8 @@
           if (count > 0) {
             for (let r = 0; r < count; r++) {
               deletes[r].addEventListener("click", () => {
-                const buttonIndex = Array.from(deletes).indexOf(deletes[r]);
+                const value = document.querySelectorAll(".swym-delete-btn").length;
+                const buttonIndex = Array.from(value).indexOf(value[r]);
                 console.log(buttonIndex)
                 const wishlistIndex = presence[buttonIndex];
                 if (wishlistIndex !== undefined) {

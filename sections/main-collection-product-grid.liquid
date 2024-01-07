@@ -325,8 +325,11 @@
           if (count > 0) {
             for (let r = 0; r < count; r++) {
               deletes[r].addEventListener("click", () => {
-                wishlist[r] = 0;
+                let updatedCount = document.querySelectorAll(".swym-delete-btn");.length
                 presence = presence.filter(element => element !== r)
+                if (count === updatedCount) {
+                  wishlist[r] = 0;
+                } 
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
                 console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)

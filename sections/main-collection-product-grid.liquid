@@ -328,9 +328,9 @@
                 const value = document.querySelectorAll(".swym-delete-btn").length;
                 for (let i = r; i < presence.length; i++) {
                   presence[i]--;
+                  wishlist[wi] = 0;
                 }
-                //   wishlist[wishlistIndex] = 0;
-                //   presence = presence.filter(element => element !== r)
+                  presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
                 console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)
@@ -358,8 +358,8 @@
         // console.log(JSON.parse(localStorage.getItem('wishlist')), JSON.parse(localStorage.getItem('presence')))
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       // console.log(JSON.parse(localStorage.getItem('wishlist')))
       })

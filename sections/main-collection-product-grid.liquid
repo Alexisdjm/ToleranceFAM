@@ -326,9 +326,9 @@
             for (let r = 0; r < count; r++) {
               deletes[r].addEventListener("click", () => {
                 const value = document.querySelectorAll(".swym-delete-btn").length;
-                const wishlistIndex = presence[r];
+                const searcher = presence
                 for (let i = r + 1; i < presence.length; i++) {
-                  presence[i - 1] = presence[i];
+                  searcher[i - 1] = presence[i];
                 }
                 // if (wishlistIndex !== undefined) {
                 //   wishlist[wishlistIndex] = 0;

@@ -7,6 +7,7 @@
       "blocks": {
         "d12b0790-ace5-493e-8fc9-e781774be666": {
           "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "disabled": true,
           "settings": {
             "title": "",
             "title_color": "",

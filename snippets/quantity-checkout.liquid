@@ -39,7 +39,7 @@
                 value="{{ element.selected_or_first_available_variant.quantity_rule.min }}"
                 form="{{ form_id }}"
             />
-            <button class="quantity__button no-js-hidden" name="plus" type="button">
+            <button class="custom-quantity--button quantity__button no-js-hidden" name="plus" type="button">
                 <span class="visually-hidden">
                 {{- 'products.element.quantity.increase' | t: product: element.title | escape -}}
                 </span>

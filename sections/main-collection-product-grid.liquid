@@ -327,13 +327,11 @@
                 }
                 if (count === updatedCount) {
                   wishlist[presence[r]] = 0;
-                } else {
-                  wishlist[presence[r - arr[r]]]
                 }
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
-                console.log("arr: "+arr, "wishlist: "+wishlist, "presence: "+presence)
+                console.log("arr: "+arr, "wishlist: "+wishlist, "presence: "+presence "position: "+ presence[r - arr[r]])
               })
             } 
           }
@@ -357,8 +355,8 @@
         wishlist[i] = 0
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       })
   }

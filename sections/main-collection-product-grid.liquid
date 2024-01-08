@@ -323,7 +323,7 @@
               arr.push(0)
               deletes[r].addEventListener("click", () => {
                 let updatedCount = document.querySelectorAll(".swym-delete-btn").length;
-                for (i = r + 1; i < updatedCount; i++) {
+                for (i = r + 1; i < count; i++) {
                   arr[i] = arr[i] + 1;
                 }
                 if (count === updatedCount) {
@@ -356,8 +356,8 @@
         wishlist[i] = 0
         buttons[i].classList.remove("active")
       }
-      wishlist[i] =  0;
-      presence = []
+      // wishlist[i] =  0;
+      // presence = []
       saveData(i, wishlist[i])
       })
   }

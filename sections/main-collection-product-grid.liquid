@@ -325,7 +325,7 @@
                 if (count === updatedCount) {
                   wishlist[presence[r]] = 0;
                 } else {
-                  wishlist[presence[r - arr[r]]] = 0
+                  wishlist[presence[(r - arr[r])]] = 0
                 }
                 for (i = r + 1; i < count; i++) {
                   arr[i] = arr[i] + 1;

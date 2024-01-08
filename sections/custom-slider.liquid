@@ -64,11 +64,13 @@
                                   </div>
                                 </div>
                             {% when 'collection' %}
-                              <a href="{{ block.settings.collection_selected.url }}" 
-                                class="custom-collection--card collection--{{ section.id }}" 
-                                style="background-image: url('{{ block.settings.col_image | img_url: "master" }}');">
-                                <h1>{{ block.settings.collection_selected.title }}</h1>
-                              </a>
+                              <div class="relative solid-card--collection">
+                                <a href="{{ block.settings.collection_selected.url }}" 
+                                  class="custom-collection--card collection--{{ section.id }}" 
+                                  style="background-image: url('{{ block.settings.col_image | img_url: "master" }}');">
+                                  <h1>{{ block.settings.collection_selected.title }}</h1>
+                                </a>
+                              </div>
                            {% when 'video' %} 
                               <video class="video--{{ section.id }}" width="230" height="400" controls>
                                   <source src="{{ block.settings.video | video_tag }}

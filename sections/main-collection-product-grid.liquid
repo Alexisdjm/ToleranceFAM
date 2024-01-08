@@ -326,8 +326,8 @@
                   wishlist[presence[r]] = 0;
                 } else {
                   let search = r - arr[r];
-                  console.log("search: "+ search, presence[search], wishlist[presence[search]], r, updatedCount)
-                  wishlist[presence[search]] = 1;
+                  console.log("search: "+ search, presence[search], wishlist[presence[search]], r)
+                  wishlist[presence[search]] = 0;
                 }
                 for (i = r + 1; i < count; i++) {
                   arr[i] = arr[i] + 1;

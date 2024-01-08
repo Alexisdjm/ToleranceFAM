@@ -292,7 +292,6 @@
       console.log(presence)
       presence = presence.filter(element => element !== item)
     }
-    // wishlist[item] =  0;
     // presence = []
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
@@ -357,8 +356,8 @@
         wishlist[i] = 0
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       })
   }

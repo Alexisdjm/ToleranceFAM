@@ -328,7 +328,9 @@
                 }
                 if (count === updatedCount) {
                   wishlist[presence[r]] = 0;
-                } 
+                } else {
+                  wishlist[presence[r - arr[r]]]
+                }
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))

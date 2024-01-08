@@ -325,9 +325,9 @@
                 if (count === updatedCount) {
                   wishlist[presence[r]] = 0;
                 } else {
-                  let search = r - arr[r];
+                  let search = updatedCount - r - arr[r];
                   console.log("search: "+ search, presence[search], wishlist[presence[search]], r, updatedCount)
-                  wishlist[presence[updatedCount - search]] = 1;
+                  wishlist[presence[search]] = 1;
                 }
                 for (i = r + 1; i < count; i++) {
                   arr[i] = arr[i] + 1;
@@ -335,7 +335,7 @@
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
-                console.log("arr: "+arr, "wishlist: "+wishlist, "presence: "+presence, "r - arr[r]: "+ (r - arr[r]))
+                console.log("arr: "+arr, "wishlist: "+wishlist, "presence: "+presence, "r - arr[r]: "+ (updatedCount - r - arr[r]))
               })
             } 
           }

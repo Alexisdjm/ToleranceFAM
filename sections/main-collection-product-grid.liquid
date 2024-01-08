@@ -317,18 +317,23 @@
         setTimeout(() => {
           const deletes = document.querySelectorAll(".swym-delete-btn");
           let count = deletes.length
+          let arr = []
           console.log(count)
           if (count > 0) {
-            for (let r = 0; r < count; r
+            for (let r = 0; r < count; r++) {
+              arr.push(0)
               deletes[r].addEventListener("click", () => {
                 let updatedCount = document.querySelectorAll(".swym-delete-btn").length;
+                for (i = r + 1; i < updatedCount) {
+                  arr[i] = arr[i] + 1;
+                }
                 if (count === updatedCount) {
                   wishlist[prensence[r]] = 0;
                 } 
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
-                console.log("wishlist: "+wishlist, "presence: "+presence)
+                console.log("arr: "+arr, "wishlist: "+wishlist, "presence: "+presence)
               })
             } 
           }
@@ -352,8 +357,8 @@
         wishlist[i] = 0
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       })
   }

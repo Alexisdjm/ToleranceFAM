@@ -326,7 +326,7 @@
                   wishlist[presence[r]] = 0;
                 } else {
                   let search = r - arr[r];
-                  let val = updatedCount - search + 1
+                  let val = updatedCount - search - 1
                   console.log("search: "+ search, val, presence[val])
                   wishlist[presence[val]] = 0;
                 }
@@ -360,8 +360,8 @@
         wishlist[i] = 0
         buttons[i].classList.remove("active")
       }
-      // wishlist[i] =  0;
-      // presence = []
+      wishlist[i] =  0;
+      presence = []
       saveData(i, wishlist[i])
       })
   }

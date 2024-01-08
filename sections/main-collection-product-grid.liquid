@@ -290,15 +290,12 @@
     } else {
       wishlist[item] = 0;
       console.log(JSON.parse(localStorage.getItem('presence')))
-      // console.log(item, presence.filter(element => element !== item))
       presence = presence.filter(element => element !== item)
-      // console.log(presence)
     }
     // wishlist[item] =  0;
     // presence = []
     localStorage.setItem('presence', JSON.stringify(presence))
     localStorage.setItem('wishlist', JSON.stringify(wishlist))
-    // console.log(wishlist, presence)
   }
 
   async function esperarElemento() {

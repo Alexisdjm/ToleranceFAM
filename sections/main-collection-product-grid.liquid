@@ -328,7 +328,7 @@
                 presence = presence.filter(element => element !== r)
                 localStorage.setItem('presence', JSON.stringify(presence))
                 localStorage.setItem('wishlist', JSON.stringify(wishlist))
-                console.log("r: "+r, `wishlist[presence[${r}]]: ${wishlist[presence[r]]}`, `presence[${r}]: ${presence[r]}`, "wishlist: "+wishlist, "presence: "+presence)
+                console.log( "wishlist: "+wishlist, "presence: "+presence)
               })
             } 
           }
